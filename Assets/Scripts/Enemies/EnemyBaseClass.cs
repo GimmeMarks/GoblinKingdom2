@@ -171,9 +171,15 @@ public class EnemyBaseClass : MonoBehaviour
     {
 
     }
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         eHealth -= damage;
+
+        if (eHealth <= 0)
+        {
+            // Handle enemy death (e.g., destroy the enemy)
+            Destroy(gameObject);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
