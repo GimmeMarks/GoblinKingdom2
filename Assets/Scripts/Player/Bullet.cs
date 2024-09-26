@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("You Hit..." + other.gameObject);
         // Check if the collider belongs to an enemy
         if (other.CompareTag("enemy"))
         {
@@ -30,7 +31,7 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (other.gameObject) // Destroy the bullet on any other collision
+        else if (other.CompareTag("OBJ")) // Destroy the bullet on any other collision
         {
             Destroy(gameObject);
         }

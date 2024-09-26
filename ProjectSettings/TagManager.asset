@@ -10,6 +10,9 @@ TagManager:
   - enemyBug
   - enemy
   - NPC
+  - ManaSprite
+  - HealthSprite
+  - OBJ
   layers:
   - Default
   - TransparentFX

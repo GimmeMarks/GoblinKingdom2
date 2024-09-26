@@ -7,7 +7,6 @@ public class WandShooting : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject bulletPrefab;
-    public int mana = 100;
     public int shootCost = 10;
 
     [SerializeField] private float bulletSpeed = 15f;
@@ -21,16 +20,15 @@ public class WandShooting : MonoBehaviour
         // Initialization if needed
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && mana >= shootCost && !isReloading)
+        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && HealthSystem.Instance.manaPoint >= shootCost && !isReloading)
         {
             Shoot();
-            mana -= shootCost;
+            HealthSystem.Instance.UseMana(shootCost); // Use mana from HealthSystem
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading) // Changed to KeyCode.R for better practice
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
         {
             StartCoroutine(Reload());
         }
@@ -40,9 +38,9 @@ public class WandShooting : MonoBehaviour
     {
         isReloading = true;
         Debug.Log("Reloading...");
-        yield return new WaitForSeconds(4f); // Wait for 4 seconds
-        mana = 100; // Restore mana
-        Debug.Log("Reload Complete! Mana is now: " + mana);
+        yield return new WaitForSeconds(4f);
+        HealthSystem.Instance.RestoreMana(100); // Restore full mana
+        Debug.Log("Reload Complete! Mana is now: " + HealthSystem.Instance.manaPoint);
         isReloading = false;
     }
 
@@ -54,3 +52,4 @@ public class WandShooting : MonoBehaviour
         Destroy(bullet, 5f); // Destroy the bullet after 5 seconds
     }
 }
+

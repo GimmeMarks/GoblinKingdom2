@@ -1,7 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,32 +8,33 @@ public class PlayerController : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
     public float gravity = 9.8f;
-    public int health = 100;
 
     private Camera playerCamera;
     private CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
 
+    public TextMeshProUGUI deathMessage; // Assign in the Inspector
+    private bool isDead = false;
 
     public static PlayerController Instance
     {
         get
         {
-            if (instance == null) instance = new GameObject("PlayerController").AddComponent<PlayerController>(); //create game manager object if required
+            if (instance == null) instance = new GameObject("PlayerController").AddComponent<PlayerController>();
             return instance;
         }
     }
     private static PlayerController instance = null;
+
     void Awake()
     {
-        //Check if there is an existing instance of this object
         if ((instance) && (instance.GetInstanceID() != GetInstanceID()))
-            DestroyImmediate(gameObject); //Delete duplicate
+            DestroyImmediate(gameObject);
         else
         {
-            instance = this; //Make this object the only instance
-            DontDestroyOnLoad(gameObject); //Set as do not destroy
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
     }
 
@@ -44,11 +44,13 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        deathMessage.gameObject.SetActive(false); // Hide the death message at start
     }
 
     void Update()
     {
-        // Movement
+        if (isDead) return; // Stop any movement if dead
+
         float moveDirectionY = moveDirection.y;
         moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
         moveDirection.y = moveDirectionY;
@@ -57,7 +59,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
             {
-                moveDirection.y = speed; // This can be adjusted for jump force
+                moveDirection.y = speed; // Adjust for jump force
             }
             else
             {
@@ -68,20 +70,35 @@ public class PlayerController : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
         characterController.Move(moveDirection * speed * Time.deltaTime);
 
-        // Camera rotation
         rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
         rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        
-        // Horizontal rotation (Y-axis)
+
         float rotationY = Input.GetAxis("Mouse X") * lookSpeed;
         transform.rotation *= Quaternion.Euler(0, rotationY, 0);
     }
+
     public void TakeDamage(int enemyDamage)
     {
-        health -= enemyDamage;
-        Debug.Log("Health = " + health);
+        HealthSystem.Instance.TakeDamage(enemyDamage); // Call the HealthSystem's TakeDamage
+        Debug.Log("Health = " + HealthSystem.Instance.hitPoint);
 
+        if (HealthSystem.Instance.hitPoint <= 0)
+        {
+            Die();
+        }
     }
-   }
-    
+
+    void Die()
+    {
+        isDead = true; // Set dead flag
+        deathMessage.gameObject.SetActive(true); // Show death message
+        deathMessage.text = "You Died!";
+
+        // Stop player movement and make them fall
+        characterController.enabled = false; // Disable movement
+        transform.rotation = Quaternion.Euler(-90, 0, 0); // Rotate player to fall over
+
+        GameManager.Instance.RestartGame(); // Call the GameManager to restart the game
+    }
+}
