@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4382991547889311033}
   m_Layer: 0
   m_Name: SmallEnemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,9 +103,14 @@ MonoBehaviour:
   eSpeed: 5
   eDamage: 0
   eName: 
-  isDead: 0
+  eAttackSpeed: 0
   baseTransform1: {fileID: 0}
   baseTransform2: {fileID: 0}
+  chaseDistance: 0
+  lingerDistance: 0
+  playerTransform: {fileID: 0}
+  attackDistance: 0
+  recoverTime: 0
 --- !u!65 &1026423086398530768
 BoxCollider:
   m_ObjectHideFlags: 0

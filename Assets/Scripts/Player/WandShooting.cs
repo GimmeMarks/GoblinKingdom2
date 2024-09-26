@@ -6,7 +6,7 @@ public class WandShooting : MonoBehaviour
 {
     public Transform firepoint;
     public GameObject bulletPrefab;
-    
+
 
     [SerializeField]private float bulletspeed = 15;
     [SerializeField] private float nextTimeToFire = 2;
@@ -26,13 +26,22 @@ public class WandShooting : MonoBehaviour
         }
     }
 
-
+   
     void Shoot()
     {
         nextTimeToFire = Time.time + fireRate;
         var bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
         bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletspeed;
         Destroy(bullet, 5);
+
+    }
+
+    private void OnCollisionEnter (Collision collision)
+    {
+        if (collision.gameObject.tag == "enemy")
+        {
+            Destroy(gameObject);
+        }
     }
 
 }
