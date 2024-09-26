@@ -136,8 +136,10 @@ GameObject:
   - component: {fileID: 813078170}
   - component: {fileID: 813078169}
   - component: {fileID: 813078173}
+  - component: {fileID: 813078174}
+  - component: {fileID: 813078175}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: PlayerTest
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -225,10 +227,11 @@ Transform:
   m_GameObject: {fileID: 813078168}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.51, z: -3.52}
+  m_LocalPosition: {x: 23.26, y: 1.51, z: -3.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2049210132}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &813078173
@@ -256,8 +259,51 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &813078174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813078168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b4fe834d324684980f687526b3ec20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 12
+  lookSpeed: 2
+  lookXLimit: 45
+  gravity: 9.8
+  health: 100
+--- !u!143 &813078175
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813078168}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &904085674
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,13 +899,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2049210129}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 50, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.08, y: -0, z: -0.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_Father: {fileID: 813078172}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1386946286679049809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -912,6 +958,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4514512635787827526, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514512635787827526, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8548810219690679611, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
       propertyPath: eName
       value: Grunt
@@ -922,7 +976,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8548810219690679611, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
       propertyPath: recoverTime
-      value: 10
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8548810219690679611, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
       propertyPath: eAttackSpeed
@@ -934,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8548810219690679611, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
       propertyPath: attackDistance
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8548810219690679611, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
       propertyPath: baseTransform1
@@ -946,7 +1000,7 @@ PrefabInstance:
       objectReference: {fileID: 1973960874}
     - target: {fileID: 8548810219690679611, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
       propertyPath: lingerDistance
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8548810219690679611, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
       propertyPath: playerTransform
@@ -964,7 +1018,6 @@ SceneRoots:
   - {fileID: 911831726}
   - {fileID: 1779353199}
   - {fileID: 1386946286679049809}
-  - {fileID: 2049210132}
   - {fileID: 1195568393}
   - {fileID: 1973960874}
   - {fileID: 904085677}
