@@ -9,6 +9,7 @@ TagManager:
   - Castle
   - enemyBug
   - enemy
+  - NPC
   layers:
   - Default
   - TransparentFX
