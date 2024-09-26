@@ -103,9 +103,14 @@ MonoBehaviour:
   eSpeed: 5
   eDamage: 0
   eName: 
-  isDead: 0
+  eAttackSpeed: 0
   baseTransform1: {fileID: 0}
   baseTransform2: {fileID: 0}
+  chaseDistance: 0
+  lingerDistance: 0
+  playerTransform: {fileID: 0}
+  attackDistance: 0
+  recoverTime: 0
 --- !u!65 &1026423086398530768
 BoxCollider:
   m_ObjectHideFlags: 0
