@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class SpawnerScript : MonoBehaviour
 {
+    [SerializeField] Transform[] spawnLocations;
+    int roundNumber = PlayerController.Instance.roundNumGlobal;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,4 +18,17 @@ public class SpawnerScript : MonoBehaviour
     {
         
     }
+
+    IEnumerator WaveManager()
+    {
+        
+
+
+
+
+        return null;
+    }
+
+
+
 }

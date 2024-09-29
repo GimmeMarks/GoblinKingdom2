@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public float lookXLimit = 45.0f;
     public float gravity = 9.8f;
     public int health = 100;
+    public TMP_Text waveNumberUI;
+    public int roundNumGlobal;
 
     private Camera playerCamera;
     private CharacterController characterController;
@@ -44,6 +47,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        roundManager(1);
     }
 
     void Update()
@@ -82,6 +86,14 @@ public class PlayerController : MonoBehaviour
         health -= enemyDamage;
         Debug.Log("Health = " + health);
 
+    }
+
+
+    public void roundManager(int roundNum)
+    {
+        roundNumGlobal = roundNum;
+        waveNumberUI.text = ("Round: " + roundNum.ToString());
+        
     }
     
    }

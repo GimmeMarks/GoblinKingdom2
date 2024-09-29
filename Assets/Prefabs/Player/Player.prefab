@@ -274,6 +274,8 @@ MonoBehaviour:
   lookXLimit: 45
   gravity: 23
   health: 100
+  waveNumberUI: {fileID: 0}
+  roundNumGlobal: 0
 --- !u!1 &3171167509957534295
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +434,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firepoint: {fileID: 2534882515244204790}
-  bulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
+  baseBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
+  explosionBulletPrefab: {fileID: 9122088148645627994, guid: f14e06ffefc134641b449736cc2c2cd7, type: 3}
+  iceBulletPrefab: {fileID: 239900978285612905, guid: b0cb4f24024d5fb4886fca638d01d605, type: 3}
+  laserBulletPrefab: {fileID: 4327763063461813562, guid: 9bcc0fa147419744b8992b5544c767ea, type: 3}
+  currentBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
+  SpellIndicator: {fileID: 0}
   bulletspeed: 15
   nextTimeToFire: 2
   fireRate: 0.5

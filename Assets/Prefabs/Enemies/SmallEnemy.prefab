@@ -99,18 +99,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b969f0c2b944e846b79d270b2f7c8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eHealth: 0
-  eSpeed: 5
-  eDamage: 0
-  eName: 
-  eAttackSpeed: 0
+  eHealth: 15
+  eSpeed: 8
+  eDamage: 3
+  eName: Grunt
+  eAttackSpeed: 5
   baseTransform1: {fileID: 0}
   baseTransform2: {fileID: 0}
-  chaseDistance: 0
-  lingerDistance: 0
+  chaseDistance: 20
+  lingerDistance: 30
   playerTransform: {fileID: 0}
-  attackDistance: 0
-  recoverTime: 0
+  attackDistance: 8
+  recoverTime: 3
 --- !u!65 &1026423086398530768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -155,9 +155,9 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!195 &4382991547889311033
 NavMeshAgent:
