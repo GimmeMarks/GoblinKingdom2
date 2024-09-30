@@ -17,6 +17,7 @@ public class SpawnerScript : MonoBehaviour
     //Base Locations
     public Transform baseLocation1; 
     public Transform baseLocation2;
+    public Transform playerLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +76,7 @@ public class SpawnerScript : MonoBehaviour
                 //assign them the location of the base points
                 enemyScript.baseTransform1 = baseLocation1;
                 enemyScript.baseTransform2 = baseLocation2;
+                enemyScript.playerTransform = playerLocation;
 
             }
 

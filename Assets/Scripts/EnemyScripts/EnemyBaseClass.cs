@@ -47,12 +47,12 @@ public class EnemyBaseClass : MonoBehaviour
         agent.speed = eSpeed;
         enemyState = EnemyState.March;
         ChangeState(enemyState);
-        Debug.Log(playerTransform.position + "Player is not null!");
+         
         
     }
     private void Update()
     {
-        
+        Debug.Log(playerTransform.position);
     }
     private void OnDrawGizmos()
     {
