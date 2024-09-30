@@ -17,6 +17,12 @@ public class WandShooting : MonoBehaviour
     [SerializeField]private float nextTimeToFire = 2;
     [SerializeField]private float fireRate = 0.5f;
 
+    //Mana and Reloading
+    private bool isReloading = false;
+    public int shootCost = 10;
+    public int maxMana = 100;
+    public int currMana = 100;
+
     
     void Start()
     {
@@ -28,9 +34,15 @@ public class WandShooting : MonoBehaviour
     public void Update()
     {
 
-        if (Input.GetButton("Fire1")&& Time.time >= nextTimeToFire)
+        if (Input.GetButton("Fire1")&& Time.time >= nextTimeToFire && currMana >= shootCost && !isReloading)
         {
             Shoot();
+            currMana -= shootCost;
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
+        {
+            StartCoroutine(Reload());
         }
        
         for (int i = 1; i <= 4; i++)
@@ -43,6 +55,14 @@ public class WandShooting : MonoBehaviour
             }
         }
 
+    }
+
+    IEnumerator Reload()
+    {
+        isReloading = true;
+        yield return new WaitForSeconds(2f);
+        currMana = maxMana;
+        isReloading = false;
     }
 
 

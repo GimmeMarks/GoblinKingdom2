@@ -56,7 +56,7 @@ MonoBehaviour:
   eAttackSpeed: 1
   chaseDistance: 20
   lingerDistance: 30
-  playerTransform: {fileID: 0}
+  playerTransform: {fileID: 4474298836982701179, guid: e9f2e30183953554cb1209f29c0bce01, type: 3}
   attackDistance: 2
 --- !u!33 &9086585270915458026
 MeshFilter:
