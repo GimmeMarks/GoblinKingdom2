@@ -20,6 +20,7 @@ public class WandShooting : MonoBehaviour
     //Mana and Reloading
     private bool isReloading = false;
     public int shootCost = 10;
+
     public int maxMana = 100;
     public int currMana = 100;
 

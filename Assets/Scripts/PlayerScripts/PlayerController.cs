@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
     public float gravity = 9.8f;
-    public int health = 100;
     public TMP_Text waveNumberUI;
     public int roundNumGlobal;
 
@@ -18,6 +17,9 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
+
+    public int maxHealth = 100;
+    public int currHealth = 100;
 
 
     // Singleton instance
@@ -79,8 +81,8 @@ public class PlayerController : MonoBehaviour
     }
     public void TakeDamage(int enemyDamage)
     {
-        health -= enemyDamage;
-        Debug.Log("Health = " + health);
+        currHealth -= enemyDamage;
+        Debug.Log("Health = " + currHealth);
 
     }
 
