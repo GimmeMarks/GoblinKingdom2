@@ -20,24 +20,20 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0;
 
 
-    public static PlayerController Instance
-    {
-        get
-        {
-            if (instance == null) instance = new GameObject("PlayerController").AddComponent<PlayerController>(); //create game manager object if required
-            return instance;
-        }
-    }
-    private static PlayerController instance = null;
+    // Singleton instance
+    public static PlayerController Instance { get; private set; }
+
     void Awake()
     {
-        //Check if there is an existing instance of this object
-        if ((instance) && (instance.GetInstanceID() != GetInstanceID()))
-            DestroyImmediate(gameObject); //Delete duplicate
-        else
+        
+        if (Instance == null)
         {
-            instance = this; //Make this object the only instance
-            DontDestroyOnLoad(gameObject); //Set as do not destroy
+            Instance = this; 
+            DontDestroyOnLoad(gameObject); 
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject); 
         }
     }
 
@@ -47,7 +43,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        roundManager(1);
+        
     }
 
     void Update()

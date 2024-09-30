@@ -14,7 +14,6 @@ public class WandShooting : MonoBehaviour
     public enum SpellType { Basic, Explosion, Ice, Laser}
 
     [SerializeField] private TMP_Text SpellIndicator;
-    [SerializeField]private float bulletspeed = 15;
     [SerializeField]private float nextTimeToFire = 2;
     [SerializeField]private float fireRate = 0.5f;
 
@@ -71,7 +70,8 @@ public class WandShooting : MonoBehaviour
     {
         nextTimeToFire = Time.time + fireRate;
         var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
-        bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletspeed;
+        var bulletSpeed = bullet.GetComponent<Bullet>().speed;
+        bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
         
 
     }
@@ -80,12 +80,5 @@ public class WandShooting : MonoBehaviour
         SpellIndicator.text = currentBulletPrefab.name;
     }
 
-    private void OnCollisionEnter (Collision collision)
-    {
-        if (collision.gameObject.tag == "enemy")
-        {
-            Destroy(gameObject);
-        }
-    }
 
 }

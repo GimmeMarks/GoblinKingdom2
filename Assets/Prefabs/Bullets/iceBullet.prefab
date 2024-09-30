@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 567367583172033862}
+  - component: {fileID: -5000972210836290883}
   - component: {fileID: 3826452713842482037}
   - component: {fileID: 4378215437996208429}
   - component: {fileID: 2075030930165596156}
@@ -16,7 +17,7 @@ GameObject:
   - component: {fileID: -2446605450584035835}
   m_Layer: 0
   m_Name: iceBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36,6 +37,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5000972210836290883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239900978285612905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a40ca8fbbd456584ab95a7011fa7ac51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 15
+  lifetime: 2
+  speed: 15
 --- !u!33 &3826452713842482037
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -101,7 +117,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2

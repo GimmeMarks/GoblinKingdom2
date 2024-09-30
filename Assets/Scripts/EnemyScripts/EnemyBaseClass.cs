@@ -25,11 +25,12 @@ public class EnemyBaseClass : MonoBehaviour
     [SerializeField] protected int eDamage;
     [SerializeField] protected string eName;
     [SerializeField] protected float eAttackSpeed;
+    
 
     //March info
     protected NavMeshAgent agent;
-    [SerializeField] protected Transform baseTransform1;
-    [SerializeField] protected Transform baseTransform2;
+    public Transform baseTransform1 { get; set; }
+    public Transform baseTransform2 { get; set; }
 
     //Chase info
     [SerializeField] protected float chaseDistance;
@@ -38,7 +39,6 @@ public class EnemyBaseClass : MonoBehaviour
 
     //Attack info
     [SerializeField] protected float attackDistance;
-    [SerializeField] protected float recoverTime;
 
     void Start()
     {
@@ -157,7 +157,7 @@ public class EnemyBaseClass : MonoBehaviour
             }
             elapsedTime += Time.deltaTime;
            
-            if (elapsedTime >= recoverTime)
+            if (elapsedTime >= eAttackSpeed)
             {
                 PlayerController.Instance.TakeDamage(eDamage);
                 Debug.Log(name + "Attacking for " + eDamage);
@@ -174,6 +174,8 @@ public class EnemyBaseClass : MonoBehaviour
     void TakeDamage(int damage)
     {
         eHealth -= damage;
+        if (eHealth <= 0)
+        Destroy(gameObject);
     }
     private void OnTriggerEnter(Collider other)
     {
