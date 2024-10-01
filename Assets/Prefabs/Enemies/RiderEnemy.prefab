@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b969f0c2b944e846b79d270b2f7c8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 75
   eSpeed: 2
   eDamage: 10

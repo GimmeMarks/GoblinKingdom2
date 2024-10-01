@@ -14,18 +14,18 @@ public class EnemyBaseClass : MonoBehaviour
     //Initialization
     public enum EnemyState { March, Chase, Attack}
     protected EnemyState enemyState;
-    private int waveNumber;
+    //private int waveNumber;
     protected Animator anim;
-    
-    
+    //Gold Prefab
+    [SerializeField] private GameObject goldDrop;
 
     //Base Stats
+    protected int eMaxHealth;
     [SerializeField] protected int eHealth;
     [SerializeField] protected int eSpeed;
     [SerializeField] protected int eDamage;
     [SerializeField] protected string eName;
     [SerializeField] protected float eAttackSpeed;
-    
 
     //March info
     protected NavMeshAgent agent;
@@ -40,22 +40,22 @@ public class EnemyBaseClass : MonoBehaviour
     //Attack info
     [SerializeField] protected float attackDistance;
 
+
     void Start()
     {
+        //Intitializing agents calling methods. 
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         agent.speed = eSpeed;
         enemyState = EnemyState.March;
         ChangeState(enemyState);
-         
+        eMaxHealth = eHealth;
         
     }
-    private void Update()
-    {
-        Debug.Log(playerTransform.position);
-    }
+ 
     private void OnDrawGizmos()
     {
+        //Visuals for different ranges
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, chaseDistance);
         Gizmos.color = Color.red;
@@ -68,6 +68,7 @@ public class EnemyBaseClass : MonoBehaviour
 
     void ChangeState(EnemyState newState)
     {
+        //State Machine
         StopAllCoroutines();
         enemyState = newState;
 
@@ -85,10 +86,13 @@ public class EnemyBaseClass : MonoBehaviour
         }
     }
 
+    //Default state, march to the base
     IEnumerator AI_March()
     {
 
+       
         print("March Beginning!");
+        //Depending on which base is closer, target the closest option
         if (Vector3.Distance(baseTransform1.position, transform.position) < Vector3.Distance(baseTransform2.position, transform.position))
             agent.SetDestination(baseTransform1.position);
         else
@@ -96,13 +100,14 @@ public class EnemyBaseClass : MonoBehaviour
 
         while (true)
         {
+            //If player is in range, chase!
             if (Vector3.Distance(playerTransform.position, transform.position) < chaseDistance)
             {
                 ChangeState(EnemyState.Chase);
                 yield break;
             }
 
-            // Continuously update the destination while marching
+            //Continuously update the destination while marching
             if (agent.remainingDistance < 0.5f)
             {
                 if (Vector3.Distance(baseTransform1.position, transform.position) < Vector3.Distance(baseTransform2.position, transform.position))
@@ -115,7 +120,7 @@ public class EnemyBaseClass : MonoBehaviour
         }
 
     }
-
+    //Chase behavior
     IEnumerator AI_Chase()
     {
         Debug.Log("Now Chasing!");
@@ -124,7 +129,7 @@ public class EnemyBaseClass : MonoBehaviour
         while (true)
         {
             agent.SetDestination(playerTransform.position);
-            
+            //if agent is in attack distance, attack!
             if(Vector3.Distance(transform.position, playerTransform.position) < attackDistance)
             {
                 agent.isStopped = true;
@@ -139,7 +144,7 @@ public class EnemyBaseClass : MonoBehaviour
             yield return null;
         }
     }
-
+    //enemy attacking behavior
     IEnumerator AI_Attack()
     {
         Debug.Log("Attacking, RAH!");
@@ -157,6 +162,7 @@ public class EnemyBaseClass : MonoBehaviour
             }
             elapsedTime += Time.deltaTime;
            
+            //if time passed > attack speed, attack
             if (elapsedTime >= eAttackSpeed)
             {
                 PlayerController.Instance.TakeDamage(eDamage);
@@ -166,16 +172,6 @@ public class EnemyBaseClass : MonoBehaviour
             }
             yield return null;
         }
-    }
-    void dropGold()
-    {
-
-    }
-    void TakeDamage(int damage)
-    {
-        eHealth -= damage;
-        if (eHealth <= 0)
-        Destroy(gameObject);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -189,5 +185,28 @@ public class EnemyBaseClass : MonoBehaviour
             }
         }
 
+    }
+    //If taking damage and health drops below zero, destroy and drop gold
+    void TakeDamage(int damage)
+    {
+        eHealth -= damage;
+        if (eHealth <= 0)
+        {
+            dropGold(CalcGold());
+            Destroy(gameObject);
+        }
+    }
+   
+    int CalcGold()
+    {
+        float rawGold = eMaxHealth * 0.1f;
+        int prettyGold = Mathf.RoundToInt(rawGold);
+        return prettyGold;
+    }
+    void dropGold(int gold)
+    {
+        GameObject goldInstance = Instantiate(goldDrop, transform.position, Quaternion.identity);
+        goldScript goldScript = goldInstance.GetComponent<goldScript>();
+        goldScript.setGold(gold);
     }
 }

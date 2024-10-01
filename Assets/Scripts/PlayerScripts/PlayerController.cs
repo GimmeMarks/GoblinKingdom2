@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public int maxHealth = 100;
     public int currHealth = 100;
+    public int goldCount;
 
 
     // Singleton instance
@@ -84,6 +85,16 @@ public class PlayerController : MonoBehaviour
         currHealth -= enemyDamage;
         Debug.Log("Health = " + currHealth);
 
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Gold"))
+        {
+            int yayGold = other.GetComponent<goldScript>().goldAmount;
+            goldCount += yayGold;
+
+        }
     }
 
 
