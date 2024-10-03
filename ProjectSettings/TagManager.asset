@@ -10,6 +10,7 @@ TagManager:
   - enemyBug
   - enemy
   - NPC
+  - Gold
   layers:
   - Default
   - TransparentFX

@@ -75,11 +75,36 @@ public class PlayerController : MonoBehaviour
         rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
         rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        
+
         // Horizontal rotation (Y-axis)
         float rotationY = Input.GetAxis("Mouse X") * lookSpeed;
         transform.rotation *= Quaternion.Euler(0, rotationY, 0);
+
+        // Check for NPCs within a radius
+        if (Input.GetMouseButtonDown(0))
+            {
+                Collider[] hitColliders = Physics.OverlapSphere(transform.position, 3f);
+                foreach (var hitCollider in hitColliders)
+                {
+                    if (hitCollider.CompareTag("NPC"))
+                    {
+                    TryOpenTrade(hitCollider.transform);
+                        break; // Exit loop after first interaction
+                    }
+                }
+            }
+        }
+
+     void TryOpenTrade(Transform t)
+    {
+        Shopkeeper shopkeeper = t.GetComponent<Shopkeeper>();
+        if (shopkeeper == null)
+        {
+            return;
+        }
+        shopkeeper.StartTrade();
     }
+
     public void TakeDamage(int enemyDamage)
     {
         currHealth -= enemyDamage;
