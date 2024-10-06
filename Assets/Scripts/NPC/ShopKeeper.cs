@@ -17,7 +17,7 @@ public class Shopkeeper : MonoBehaviour
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.transform.tag.Equals(playerTag))
+		if (other.transform.tag.Equals("Player"))
 		{
 			ChangeState(true);
 		}
@@ -25,7 +25,7 @@ public class Shopkeeper : MonoBehaviour
 
 	void OnTriggerExit(Collider other)
 	{
-		if (other.transform.tag.Equals(playerTag))
+		if (other.transform.tag.Equals("Player"))
 		{
 			ChangeState(false);
 			try
@@ -52,6 +52,7 @@ public class Shopkeeper : MonoBehaviour
 			return false;
 		}
 		shopSystem.OpenShop(this);
+		Debug.Log("Open Shop");
 		return true;
 	}
 }

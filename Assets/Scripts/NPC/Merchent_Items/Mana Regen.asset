@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4480602d7fc257c4f8e272a805487de9, type: 3}
-  m_Name: Food
+  m_Name: Mana Regen
   m_EditorClassIdentifier: 
   id: 0
-  icon: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  price: 15
+  icon: {fileID: 0}
+  price: 0
