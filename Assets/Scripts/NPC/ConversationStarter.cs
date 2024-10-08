@@ -17,7 +17,7 @@ public class ConversationStarter : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 ConversationManager.Instance.StartConversation(myConversation);
-                ConversationManager.Instance.SetInt("Gold", 0);
+                ConversationManager.Instance.SetInt("Gold", 100);
 
             }
 
