@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public int maxHealth = 100;
     public int currHealth = 100;
-    public int goldCount;
+    public static int goldCount;
 
 
     // Singleton instance
@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Gold"))
         {
