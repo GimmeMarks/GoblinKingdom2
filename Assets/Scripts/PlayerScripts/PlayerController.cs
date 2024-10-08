@@ -88,6 +88,8 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Health = " + currHealth);
 
     }
+    //Unfinished
+    /*
     IEnumerator PlayerHealthRegen()
     {
         Mathf.Clamp(currHealth, 0, maxHealth);
@@ -99,7 +101,7 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(5);
     }
-
+    */
 
     private void OnTriggerEnter(Collider other)
     {
