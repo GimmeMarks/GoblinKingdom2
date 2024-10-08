@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Gold"))
         {
@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-
+    */
 
     public void roundManager(int roundNum)
     {
