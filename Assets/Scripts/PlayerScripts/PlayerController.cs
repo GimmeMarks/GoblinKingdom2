@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
 
     public int maxHealth = 100;
     public int currHealth = 100;
-    public static int goldCount;
+    public static int goldCount = 100;
 
 
     // Singleton instance
