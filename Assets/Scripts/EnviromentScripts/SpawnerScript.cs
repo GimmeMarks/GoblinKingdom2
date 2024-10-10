@@ -39,7 +39,7 @@ public class SpawnerScript : MonoBehaviour
             while (nextWaveStartTime > 0)
             {
                 //Tick down the time
-                countdownText.text = ("Next wave starts in " + nextWaveStartTime.ToString());
+                //countdownText.text = ("Next wave starts in " + nextWaveStartTime.ToString());
                 yield return new WaitForSeconds(1);
                 nextWaveStartTime--;
             }

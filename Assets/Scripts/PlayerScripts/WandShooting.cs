@@ -98,7 +98,7 @@ public class WandShooting : MonoBehaviour
     }
     void UpdateGunUI()
     {
-        SpellIndicator.text = currentBulletPrefab.name;
+        //SpellIndicator.text = currentBulletPrefab.name;
     }
 
 

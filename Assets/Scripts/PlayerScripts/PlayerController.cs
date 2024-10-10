@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
     public void roundManager(int roundNum)
     {
         roundNumGlobal = roundNum;
-        waveNumberUI.text = ("Round: " + roundNum.ToString());
+        //waveNumberUI.text = ("Round: " + roundNum.ToString());
         
     }
 
