@@ -20,6 +20,9 @@ public class EventManager : MonoBehaviour
     }
 
     public event Action<int> OnBuyCannonTower;
+    public event Action<int> OnBuyMageTower;
+
+
 
     public void BuyCannonTower()
     {
@@ -28,6 +31,19 @@ public class EventManager : MonoBehaviour
             PlayerController.goldCount -= 50; 
             OnBuyCannonTower?.Invoke(50); // Triggers to buy tower
             Debug.Log("Cannon Tower bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyMageTower()
+    {
+        if (PlayerController.goldCount >= 100) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 100;
+            OnBuyMageTower?.Invoke(50); // Triggers to buy tower
+            Debug.Log("Mage Tower bought! Remaining gold: " + PlayerController.goldCount);
         }
         else
         {

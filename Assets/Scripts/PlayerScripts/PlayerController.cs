@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
 
         //Event stuuf
         EventManager.Instance.OnBuyCannonTower += UpdateGoldUI; // Subscribe to the event
-
+        EventManager.Instance.OnBuyMageTower += UpdateGoldUI; // Subscribe to the event
 
     }
 
@@ -115,12 +115,16 @@ public class PlayerController : MonoBehaviour
     {
         EventManager.Instance.BuyCannonTower();
     }
+    public void OnBuyMageTowerButtonPressed()
+    {
+        EventManager.Instance.BuyMageTower();
+    }
 
     private void UpdateGoldUI(int amount)
     {
-        // This can update your UI or any other logic you want when a tower is bought
+        // This can update your UI
         Debug.Log("Bought Cannon Tower, gold deducted: " + amount);
-        // Update your UI here if needed
+
     }
 
 }
