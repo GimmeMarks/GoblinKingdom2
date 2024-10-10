@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     public int maxHealth = 100;
     public int currHealth = 100;
-    public int goldCount;
+    public static int goldCount = 100;
 
 
     // Singleton instance
@@ -47,8 +47,11 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        
-        
+
+        //Event stuuf
+        EventManager.Instance.OnBuyCannonTower += UpdateGoldUI; // Subscribe to the event
+        EventManager.Instance.OnBuyMageTower += UpdateGoldUI; // Subscribe to the event
+
     }
 
     void Update()
@@ -77,11 +80,13 @@ public class PlayerController : MonoBehaviour
         rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
         rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-        
+
         // Horizontal rotation (Y-axis)
         float rotationY = Input.GetAxis("Mouse X") * lookSpeed;
         transform.rotation *= Quaternion.Euler(0, rotationY, 0);
-    }
+
+        }
+
     public void TakeDamage(int enemyDamage)
     {
         currHealth -= enemyDamage;
@@ -103,7 +108,7 @@ public class PlayerController : MonoBehaviour
     }
     */
 
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Gold"))
         {
@@ -120,6 +125,22 @@ public class PlayerController : MonoBehaviour
         waveNumberUI.text = ("Round: " + roundNum.ToString());
         
     }
-    
-   }
+
+    public void OnBuyCannonTowerButtonPressed()
+    {
+        EventManager.Instance.BuyCannonTower();
+    }
+    public void OnBuyMageTowerButtonPressed()
+    {
+        EventManager.Instance.BuyMageTower();
+    }
+
+    private void UpdateGoldUI(int amount)
+    {
+        // This can update your UI
+        Debug.Log("Bought Cannon Tower, gold deducted: " + amount);
+
+    }
+
+}
     
