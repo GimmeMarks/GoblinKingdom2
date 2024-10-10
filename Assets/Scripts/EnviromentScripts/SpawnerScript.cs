@@ -14,6 +14,7 @@ public class SpawnerScript : MonoBehaviour
     [SerializeField] GameObject riderEnemy;
     [SerializeField] GameObject flyerEnemy;
     [SerializeField] TMP_Text countdownText;
+    [SerializeField] GameObject countdownTimerUIObject;
     //Base Locations
     public Transform baseLocation1; 
     public Transform baseLocation2;
@@ -31,19 +32,20 @@ public class SpawnerScript : MonoBehaviour
     }
     IEnumerator WaveManager()
     {
-        int nextWaveStartTime = 15; // WaveDelay
+        int nextWaveStartTime = 30; // WaveDelay
 
         while (true)
         {
             // Countdown before starting the next wave
-            while (nextWaveStartTime > 0)
+            while (nextWaveStartTime >= 0)
             {
+                countdownTimerUIObject.SetActive(true);
                 //Tick down the time
-                countdownText.text = ("Next wave starts in " + nextWaveStartTime.ToString());
+                countdownText.text = ("Round Starts in " + nextWaveStartTime.ToString());
                 yield return new WaitForSeconds(1);
                 nextWaveStartTime--;
             }
-
+            countdownTimerUIObject.SetActive(false);
             //Smallest = Wavenumber * 3, Largest = Wavenumber * 5
             int enemyBudget = Random.Range(waveNumber * 3 + 5, waveNumber * 5 + 10);
             //Start the coroutine to spawn enemies by feeding it the value generated
@@ -53,7 +55,7 @@ public class SpawnerScript : MonoBehaviour
             //Once all enemies are dead, increase wave counter and push to the UI element
             waveNumber++;
             PlayerController.Instance.roundManager(waveNumber);
-            nextWaveStartTime = 15;
+            nextWaveStartTime = 30;
         }
     }
 

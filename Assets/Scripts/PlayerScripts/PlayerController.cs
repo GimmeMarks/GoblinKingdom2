@@ -114,8 +114,9 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Gold"))
         {
-            int yayGold = other.GetComponent<goldScript>().goldAmount;
-            goldCount += yayGold;
+            goldScript goldCode = other.GetComponent<goldScript>();
+            goldCount += goldCode.goldAmount;
+            goldCode.DestroyMe();
 
         }
     }
@@ -124,7 +125,7 @@ public class PlayerController : MonoBehaviour
     public void roundManager(int roundNum)
     {
         roundNumGlobal = roundNum;
-        waveNumberUI.text = ("Round: " + roundNum.ToString());
+        waveNumberUI.text = ("Round: " + (roundNum + 1).ToString());
         
     }
 

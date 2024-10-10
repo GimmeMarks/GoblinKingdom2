@@ -13881,6 +13881,7 @@ MonoBehaviour:
   riderEnemy: {fileID: 7233184053589551852, guid: 859f81c3b76eaf8488f6eacabf02054b, type: 3}
   flyerEnemy: {fileID: 3116840150935933324, guid: c63959965ba0f1e4ba6691a8b91672e2, type: 3}
   countdownText: {fileID: 1592348541}
+  countdownTimerUIObject: {fileID: 1777224179}
   baseLocation1: {fileID: 1400180849}
   baseLocation2: {fileID: 1937580371}
   playerLocation: {fileID: 1415198143}
@@ -15938,6 +15939,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+--- !u!1 &1777224179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8981985725894633217, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
+  m_PrefabInstance: {fileID: 1966416455}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1782571197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18625,9 +18631,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1704630535}
     m_Modifications:
+    - target: {fileID: 644795958840001744, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1154002824407288990, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
       propertyPath: m_Name
       value: GoldTextAmountUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5504904863015921405, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5567329700761540774, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
       propertyPath: m_FillAmount
@@ -18712,6 +18726,10 @@ PrefabInstance:
     - target: {fileID: 7057945526369429556, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7736006583444268628, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8515316054840289776, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
       propertyPath: m_Name
