@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public float lookXLimit = 45.0f;
     public float gravity = 9.8f;
     public TMP_Text waveNumberUI;
+    public TMP_Text goldTextUI;
     public int roundNumGlobal;
 
     private Camera playerCamera;
@@ -21,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public int maxHealth = 100;
     public int currHealth = 100;
-    public static int goldCount = 100;
+    public static int goldCount = 50;
 
 
     // Singleton instance
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
         float moveDirectionY = moveDirection.y;
         moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
         moveDirection.y = moveDirectionY;
+        goldTextUI.text = goldCount.ToString();
 
         if (characterController.isGrounded)
         {
@@ -122,7 +124,7 @@ public class PlayerController : MonoBehaviour
     public void roundManager(int roundNum)
     {
         roundNumGlobal = roundNum;
-        //waveNumberUI.text = ("Round: " + roundNum.ToString());
+        waveNumberUI.text = ("Round: " + roundNum.ToString());
         
     }
 
