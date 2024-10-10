@@ -46,7 +46,11 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        
+
+        //Event stuuf
+        EventManager.Instance.OnBuyCannonTower += UpdateGoldUI; // Subscribe to the event
+
+
     }
 
     void Update()
@@ -106,6 +110,18 @@ public class PlayerController : MonoBehaviour
         waveNumberUI.text = ("Round: " + roundNum.ToString());
         
     }
-    
-   }
+
+    public void OnBuyCannonTowerButtonPressed()
+    {
+        EventManager.Instance.BuyCannonTower();
+    }
+
+    private void UpdateGoldUI(int amount)
+    {
+        // This can update your UI or any other logic you want when a tower is bought
+        Debug.Log("Bought Cannon Tower, gold deducted: " + amount);
+        // Update your UI here if needed
+    }
+
+}
     
