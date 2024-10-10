@@ -9757,6 +9757,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 177415753}
     m_Modifications:
+    - target: {fileID: 5725060053948800286, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
+      propertyPath: SpellIndicator
+      value: 
+      objectReference: {fileID: 110224236}
     - target: {fileID: 8504879770236988975, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
       propertyPath: m_Name
       value: Player (1)
@@ -13870,10 +13874,10 @@ MonoBehaviour:
   largeEnemy: {fileID: 2202550640828498185, guid: 54d3a6a6bd8aee140bac1d39fa969dc1, type: 3}
   riderEnemy: {fileID: 7233184053589551852, guid: 859f81c3b76eaf8488f6eacabf02054b, type: 3}
   flyerEnemy: {fileID: 3116840150935933324, guid: c63959965ba0f1e4ba6691a8b91672e2, type: 3}
-  countdownText: {fileID: 0}
+  countdownText: {fileID: 1592348541}
   baseLocation1: {fileID: 1400180849}
   baseLocation2: {fileID: 1937580371}
-  playerLocation: {fileID: 0}
+  playerLocation: {fileID: 1415198143}
 --- !u!1001 &1517281841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14519,6 +14523,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
+--- !u!114 &1592348541 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3422683699080967094, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
+  m_PrefabInstance: {fileID: 1966416455}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1592372075
 PrefabInstance:
   m_ObjectHideFlags: 0
