@@ -21,14 +21,29 @@ public class EventManager : MonoBehaviour
 
     public event Action<int> OnBuyCannonTower;
     public event Action<int> OnBuyMageTower;
+    public event Action<int> OnBuyTrapTower;
+    public event Action<int> OnBuyHealthUp;
+    public event Action<int> OnBuyManaUp;
+    public event Action<int> OnBuyDamageUp;
+    public event Action<int> OnBuyCritUp;
+    public event Action<int> OnBuySpeedUp;
+    public event Action<int> OnBuyHealthS;
+    public event Action<int> OnBuyHealthL;
+    public event Action<int> OnBuyHealthM;
+    public event Action<int> OnBuyLaserWand;
+    public event Action<int> OnBuyIceWand;
+    public event Action<int> OnBuyExplosiveWand;
 
 
-
-    public void BuyCannonTower()
+    //----------------------------------------------------
+    //NPC Event Buys
+    //----------------------------------------------------
+    public void BuyCannonTowerLT()
     {
         if (PlayerController.goldCount >= 50) // Check if player has enough gold
         {
-            PlayerController.goldCount -= 50; 
+            PlayerController.goldCount -= 50;
+            PlayerController.Bought1 = true;
             OnBuyCannonTower?.Invoke(50); // Triggers to buy tower
             Debug.Log("Cannon Tower bought! Remaining gold: " + PlayerController.goldCount);
         }
@@ -37,13 +52,230 @@ public class EventManager : MonoBehaviour
             Debug.Log("Not enough gold!");
         }
     }
-    public void BuyMageTower()
+    public void BuyCannonTowerRT()
+    {
+        if (PlayerController.goldCount >= 50) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 50;
+            PlayerController.Bought3 = true;
+            OnBuyCannonTower?.Invoke(50); // Triggers to buy tower
+            Debug.Log("Cannon Tower bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyCannonTowerLB()
+    {
+        if (PlayerController.goldCount >= 50) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 50;
+            PlayerController.Bought4 = true;
+            OnBuyCannonTower?.Invoke(50); // Triggers to buy tower
+            Debug.Log("Cannon Tower bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyCannonTowerRB()
+    {
+        if (PlayerController.goldCount >= 50) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 50;
+            PlayerController.Bought6 = true;
+            OnBuyCannonTower?.Invoke(50); // Triggers to buy tower
+            Debug.Log("Cannon Tower bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyMageTowerT()
     {
         if (PlayerController.goldCount >= 100) // Check if player has enough gold
         {
             PlayerController.goldCount -= 100;
+            PlayerController.Bought2 = true;
             OnBuyMageTower?.Invoke(50); // Triggers to buy tower
             Debug.Log("Mage Tower bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyMageTowerB()
+    {
+        if (PlayerController.goldCount >= 100) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 100;
+            PlayerController.Bought5 = true;
+            OnBuyMageTower?.Invoke(50); // Triggers to buy tower
+            Debug.Log("Mage Tower bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+
+    public void BuyTrapTower()
+    {
+        if (PlayerController.goldCount >= 30) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 30;
+            OnBuyTrapTower?.Invoke(30); // Triggers to buy tower
+            Debug.Log("Wall Traps bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyHealthUp()
+    {
+        if (PlayerController.goldCount >= 30) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 30;
+            OnBuyHealthUp?.Invoke(30); // Triggers to buy Upgrade
+            Debug.Log("Health Upgrade bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyManaUp()
+    {
+        if (PlayerController.goldCount >= 30) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 30;
+            OnBuyManaUp?.Invoke(30); // Triggers to buy Upgrade
+            Debug.Log("Mana Upgrade bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyDamageUp()
+    {
+        if (PlayerController.goldCount >= 30) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 30;
+            OnBuyDamageUp?.Invoke(30); // Triggers to buy Upgrade
+            Debug.Log("Damage upgrade bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyCritUp()
+    {
+        if (PlayerController.goldCount >= 30) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 30;
+            OnBuyCritUp?.Invoke(30); // Triggers to buy Upgrade
+            Debug.Log("Crit chance upgrade bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuySpeedUp()
+    {
+        if (PlayerController.goldCount >= 30) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 30;
+            OnBuySpeedUp?.Invoke(30); // Triggers to buy Upgrade
+            Debug.Log("Speed upgrade bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyHealthS()
+    {
+        if (PlayerController.goldCount >= 15) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 15;
+            OnBuyHealthS?.Invoke(15); // Triggers to buy Health
+            Debug.Log("Health small bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyHealthL()
+    {
+        if (PlayerController.goldCount >= 40) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 40;
+            OnBuyHealthL?.Invoke(40); // Triggers to buy Health
+            Debug.Log("Health Large bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyHealthM()
+    {
+        if (PlayerController.goldCount >= 100) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 100;
+            OnBuyHealthM?.Invoke(100); // Triggers to buy Health
+            Debug.Log("Health Max bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyLaserWand()
+    {
+        if (PlayerController.goldCount >= 200) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 200;
+            PlayerController.LaserBought = true;
+            OnBuyLaserWand?.Invoke(200); // Triggers to buy Weapon
+            Debug.Log("Laser Wand bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyIceWand()
+    {
+        if (PlayerController.goldCount >= 400) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 400;
+            PlayerController.IceBought = true;
+            OnBuyIceWand?.Invoke(400); // Triggers to buy Weapon
+            Debug.Log("Ice Wand bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+    public void BuyExplosiveWand()
+    {
+        if (PlayerController.goldCount >= 800) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 800;
+            PlayerController.ExplosiveBought = true;
+            OnBuyExplosiveWand?.Invoke(800); // Triggers to buy Weapon
+            Debug.Log("Explosive Wand bought! Remaining gold: " + PlayerController.goldCount);
         }
         else
         {
