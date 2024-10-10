@@ -5,12 +5,21 @@ using UnityEngine;
 
 public class WandShooting : MonoBehaviour
 {
+    public Transform wandspawnpoint;
     public Transform firepoint;
     public GameObject baseBulletPrefab;
     public GameObject explosionBulletPrefab;
     public GameObject iceBulletPrefab;
     public GameObject laserBulletPrefab;
     public GameObject currentBulletPrefab;
+    public GameObject currentWandPrefab;
+
+    public GameObject WandBasic;
+    public GameObject WandExplosion;
+    public GameObject WandIce;
+    public GameObject WandLaser;
+
+    private GameObject currentWand;
     public enum SpellType { Basic, Explosion, Ice, Laser}
 
     [SerializeField] private TMP_Text SpellIndicator;
@@ -69,23 +78,38 @@ public class WandShooting : MonoBehaviour
 
     public void ChangeWeapon(int WeaponIndex)
     {
-      
+
+        if (currentWand != null)
+        {
+            Destroy(currentWand); // Destroy the previous wand
+        }
+
         switch (WeaponIndex)
         {
             case 1:
                 currentBulletPrefab = baseBulletPrefab;
+                currentWandPrefab = WandBasic;
                 break;
             case 2:
                 currentBulletPrefab = explosionBulletPrefab;
+                currentWandPrefab = WandExplosion;
                 break;
             case 3:
                 currentBulletPrefab = iceBulletPrefab;
+                currentWandPrefab = WandIce;
                 break;
             case 4:
                 currentBulletPrefab = laserBulletPrefab;
+                currentWandPrefab = WandLaser;
                 break;
         }
         UpdateGunUI();
+
+        if(currentWandPrefab != null)
+        {
+            currentWand = Instantiate(currentWandPrefab, wandspawnpoint.position, wandspawnpoint.rotation);
+            currentWand.transform.SetParent(Camera.main.transform);
+        }
     }
     void Shoot()
     {
@@ -98,7 +122,7 @@ public class WandShooting : MonoBehaviour
     }
     void UpdateGunUI()
     {
-        SpellIndicator.text = currentBulletPrefab.name;
+       // SpellIndicator.text = currentBulletPrefab.name;
     }
 
 
