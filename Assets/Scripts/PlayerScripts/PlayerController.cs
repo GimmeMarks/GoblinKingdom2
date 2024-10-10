@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -92,6 +93,20 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Health = " + currHealth);
 
     }
+    //Unfinished
+    /*
+    IEnumerator PlayerHealthRegen()
+    {
+        Mathf.Clamp(currHealth, 0, maxHealth);
+        
+        while (true){
+            currHealth += Math.Round(rou)
+        }
+
+
+        yield return new WaitForSeconds(5);
+    }
+    */
 
     public void OnTriggerEnter(Collider other)
     {
