@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public static bool Bought4 = false;
     public static bool Bought5 = false;
     public static bool Bought6 = false;
+    public static bool Bought7 = false;
+    public static bool Bought8 = false;
     public static bool LaserBought = false;
     public static bool IceBought = false;
     public static bool ExplosiveBought = false;
@@ -59,8 +61,10 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
+        //---------------------------------------------------------------------
+        //Event NPC stuuf:
+        //---------------------------------------------------------------------
 
-    //Event NPC stuuf:
         //Tower Buys
         EventManager.Instance.OnBuyCannonTower += UpdateGoldUI; // Subscribe to the cannon event
         EventManager.Instance.OnBuyMageTower += UpdateGoldUI; // Subscribe to the mage event
@@ -192,9 +196,14 @@ public class PlayerController : MonoBehaviour
         EventManager.Instance.BuyMageTowerB();
     }
 
-    public void OnBuyTrapTowerBButtonPressed()
+    public void OnBuyTrapTowerLButtonPressed()
     {
-        EventManager.Instance.BuyTrapTower();
+        EventManager.Instance.BuyTrapTowerL();
+    }
+
+    public void OnBuyTrapTowerRButtonPressed()
+    {
+        EventManager.Instance.BuyTrapTowerR();
     }
 
     //Upgrade Buys

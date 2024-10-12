@@ -24,6 +24,11 @@ public class ConversationStarter : MonoBehaviour
                 ConversationManager.Instance.SetBool("Bought4", PlayerController.Bought4);
                 ConversationManager.Instance.SetBool("Bought5", PlayerController.Bought5);
                 ConversationManager.Instance.SetBool("Bought6", PlayerController.Bought6);
+                ConversationManager.Instance.SetBool("Bought7", PlayerController.Bought7);
+                ConversationManager.Instance.SetBool("Bought8", PlayerController.Bought8);
+                ConversationManager.Instance.SetBool("LaserBought", PlayerController.LaserBought);
+                ConversationManager.Instance.SetBool("IceBought", PlayerController.IceBought);
+                ConversationManager.Instance.SetBool("ExplosiveBought", PlayerController.ExplosiveBought);
 
             }
 

@@ -35,6 +35,7 @@ public class EventManager : MonoBehaviour
     public event Action<int> OnBuyExplosiveWand;
 
 
+
     //----------------------------------------------------
     //NPC Event Buys
     //----------------------------------------------------
@@ -123,12 +124,13 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void BuyTrapTower()
+    public void BuyTrapTowerL()
     {
-        if (PlayerController.goldCount >= 30) // Check if player has enough gold
+        if (PlayerController.goldCount >= 50) // Check if player has enough gold
         {
-            PlayerController.goldCount -= 30;
-            OnBuyTrapTower?.Invoke(30); // Triggers to buy tower
+            PlayerController.goldCount -= 50;
+            PlayerController.Bought7 = true;
+            OnBuyTrapTower?.Invoke(50); // Triggers to buy tower
             Debug.Log("Wall Traps bought! Remaining gold: " + PlayerController.goldCount);
         }
         else
@@ -136,6 +138,22 @@ public class EventManager : MonoBehaviour
             Debug.Log("Not enough gold!");
         }
     }
+
+    public void BuyTrapTowerR()
+    {
+        if (PlayerController.goldCount >= 50) // Check if player has enough gold
+        {
+            PlayerController.goldCount -= 50;
+            PlayerController.Bought8 = true;
+            OnBuyTrapTower?.Invoke(50); // Triggers to buy tower
+            Debug.Log("Wall Traps bought! Remaining gold: " + PlayerController.goldCount);
+        }
+        else
+        {
+            Debug.Log("Not enough gold!");
+        }
+    }
+
     public void BuyHealthUp()
     {
         if (PlayerController.goldCount >= 30) // Check if player has enough gold
