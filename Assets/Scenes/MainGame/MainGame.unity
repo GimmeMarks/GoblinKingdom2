@@ -422,6 +422,8 @@ GameObject:
   - component: {fileID: 22785351}
   - component: {fileID: 22785350}
   - component: {fileID: 22785349}
+  - component: {fileID: 22785356}
+  - component: {fileID: 22785355}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -591,6 +593,44 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &22785355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22785347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 8
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &22785356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22785347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 7
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
@@ -2885,14 +2925,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 7
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":49}],"NodeUID":4},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":154,"yPos":184},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
-    (50 Gold)","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":426,"yPos":183},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
-    Now","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":320,"yPos":21},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"How
-    ya'' doing! Would you like me to build spike wall traps out there?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-22,"yPos":307},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
-    Get right to it!","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":200,"yPos":307},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Seems
-    your a bit short there bud.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":460,"yPos":310},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
-    be here when your ready.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  CurrentIDCounter: 9
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":49}],"NodeUID":4},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":11,"yPos":163},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
+    (50 Gold)","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":493,"yPos":162},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
+    Now","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":247,"yPos":164},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    want to upgrade traps","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"Bought7","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"Bought7","CheckType":1,"RequiredValue":true}],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"Bought7","CheckType":0,"RequiredValue":true}],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":266,"yPos":6},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"How
+    ya'' doing! Would you like me to build spike wall traps out there?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-168,"yPos":301},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
+    Get right to it!","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":41,"yPos":303},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Seems
+    your a bit short there bud.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":461,"yPos":291},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
+    be here when your ready.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":253,"yPos":393},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    dont have that ability yet... but soon","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Trapper
   DefaultSprite: {fileID: 0}
@@ -2904,6 +2946,8 @@ MonoBehaviour:
   - {fileID: 22785351}
   - {fileID: 22785350}
   - {fileID: 22785349}
+  - {fileID: 22785356}
+  - {fileID: 22785355}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
@@ -8069,6 +8113,8 @@ GameObject:
   - component: {fileID: 766572024}
   - component: {fileID: 766572023}
   - component: {fileID: 766572022}
+  - component: {fileID: 766572029}
+  - component: {fileID: 766572028}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -8238,6 +8284,44 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &766572028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766572020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 8
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &766572029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766572020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 7
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
@@ -9115,6 +9199,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1000224639}
     m_Modifications:
+    - target: {fileID: 979384606067372177, guid: caeb13be2604e0147bd9ac4f903cc00b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9bdf8ce8bfd44194d85a1e9b0b874af4, type: 2}
     - target: {fileID: 5520628493343291307, guid: caeb13be2604e0147bd9ac4f903cc00b, type: 3}
       propertyPath: m_Name
       value: Merchent
@@ -13447,14 +13535,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 7
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":49}],"NodeUID":4},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":154,"yPos":185},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
-    (50 Gold)","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":426,"yPos":184},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
-    Now","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":320,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"How
-    ya'' doing! Would you like me to build spike wall traps out there?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-23,"yPos":308},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
-    Get right to it!","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":200,"yPos":308},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Seems
-    your a bit short there bud.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":460,"yPos":311},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
-    be here when your ready.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  CurrentIDCounter: 9
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":49}],"NodeUID":4},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":13,"yPos":148},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes
+    (50 Gold)","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":496,"yPos":137},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
+    Now","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":259,"yPos":149},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Upgrade
+    Traps","parentUIDs":[0],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"Bought8","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"Bought8","CheckType":1,"RequiredValue":true}],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[{"__type":"EditableBoolCondition:#DialogueEditor","ParameterName":"Bought8","CheckType":0,"RequiredValue":true}],"NodeUID":7}],"EditorInfo":{"isRoot":true,"xPos":294,"yPos":-15},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"How
+    ya'' doing! Would you like me to build spike wall traps out there?","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-182,"yPos":276},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
+    Get right to it!","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":39,"yPos":274},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Seems
+    your a bit short there bud.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":492,"yPos":271},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"I''ll
+    be here when your ready.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":272,"yPos":338},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Cant
+    do that yet.","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Trapper","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Trapper
   DefaultSprite: {fileID: 0}
@@ -13466,47 +13556,13 @@ MonoBehaviour:
   - {fileID: 766572024}
   - {fileID: 766572023}
   - {fileID: 766572022}
+  - {fileID: 766572029}
+  - {fileID: 766572028}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1890906352}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 1415198144}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: OnBuyTrapTowerRButtonPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 893437181}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!65 &1320771824
 BoxCollider:
   m_ObjectHideFlags: 0
