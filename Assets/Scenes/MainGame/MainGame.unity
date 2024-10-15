@@ -4912,9 +4912,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1681963421493738193, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 5528271536474101480, guid: 538304db467938347aa0c1a14efc1645, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 641888075}
+      addedObject: {fileID: 543758269}
   m_SourcePrefab: {fileID: 100100000, guid: 538304db467938347aa0c1a14efc1645, type: 3}
 --- !u!1001 &406294201
 PrefabInstance:
@@ -5959,6 +5959,41 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c11b6a454fa5fd458d541957f1de507, type: 3}
+--- !u!1 &543758265 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5528271536474101480, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+  m_PrefabInstance: {fileID: 405471811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &543758269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543758265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ad580858fb74e459aedfa743bb95de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wandspawnpoint: {fileID: 1163577176}
+  firepoint: {fileID: 745066717}
+  baseBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
+  explosionBulletPrefab: {fileID: 9122088148645627994, guid: f14e06ffefc134641b449736cc2c2cd7, type: 3}
+  iceBulletPrefab: {fileID: 239900978285612905, guid: b0cb4f24024d5fb4886fca638d01d605, type: 3}
+  laserBulletPrefab: {fileID: 4327763063461813562, guid: 9bcc0fa147419744b8992b5544c767ea, type: 3}
+  currentBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
+  currentWandPrefab: {fileID: 801190878019318827, guid: e1a3a4cce6329484a826ac9bbbb287fb, type: 3}
+  WandBasic: {fileID: 801190878019318827, guid: e1a3a4cce6329484a826ac9bbbb287fb, type: 3}
+  WandExplosion: {fileID: 1894208621340011126, guid: bed691b6881a6cf45a8fb609498074b1, type: 3}
+  WandIce: {fileID: 4039412713285941216, guid: aeef5fb9fa706e94da414fb6855354b6, type: 3}
+  WandLaser: {fileID: 7706106833710840685, guid: 2c944149dc1a2c5429f7ef9e58b606fd, type: 3}
+  SpellIndicator: {fileID: 0}
+  nextTimeToFire: 2
+  fireRate: 0.5
+  shootCost: 10
+  maxMana: 100
+  currMana: 100
 --- !u!4 &549905240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4945775876562746, guid: 92cc6d2406e4cc547a83ad74708c2d87, type: 3}
@@ -6775,46 +6810,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4868598521721778, guid: 5c11b6a454fa5fd458d541957f1de507, type: 3}
   m_PrefabInstance: {fileID: 519048022}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &641888067 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1681963421493738193, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-  m_PrefabInstance: {fileID: 405471811}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &641888068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
   m_PrefabInstance: {fileID: 405471811}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &641888075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 641888067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ad580858fb74e459aedfa743bb95de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wandspawnpoint: {fileID: 0}
-  firepoint: {fileID: 745066717}
-  baseBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
-  explosionBulletPrefab: {fileID: 9122088148645627994, guid: f14e06ffefc134641b449736cc2c2cd7, type: 3}
-  iceBulletPrefab: {fileID: 239900978285612905, guid: b0cb4f24024d5fb4886fca638d01d605, type: 3}
-  laserBulletPrefab: {fileID: 4327763063461813562, guid: 9bcc0fa147419744b8992b5544c767ea, type: 3}
-  currentBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
-  currentWandPrefab: {fileID: 7281363964748600272, guid: 0f4cc006420b93c4aa4a17b3e197344e, type: 3}
-  WandBasic: {fileID: 7281363964748600272, guid: 0f4cc006420b93c4aa4a17b3e197344e, type: 3}
-  WandExplosion: {fileID: 1894208621340011126, guid: bed691b6881a6cf45a8fb609498074b1, type: 3}
-  WandIce: {fileID: 4039412713285941216, guid: aeef5fb9fa706e94da414fb6855354b6, type: 3}
-  WandLaser: {fileID: 7706106833710840685, guid: 2c944149dc1a2c5429f7ef9e58b606fd, type: 3}
-  SpellIndicator: {fileID: 0}
-  nextTimeToFire: 2
-  fireRate: 0.5
-  shootCost: 10
-  maxMana: 100
-  currMana: 100
 --- !u!1001 &642606584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12531,6 +12531,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1163577176 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8298253631005728402, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+  m_PrefabInstance: {fileID: 405471811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1164477068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4756003171135936, guid: 64b9fdd8926ce144fbdc31c4044b55f1, type: 3}
