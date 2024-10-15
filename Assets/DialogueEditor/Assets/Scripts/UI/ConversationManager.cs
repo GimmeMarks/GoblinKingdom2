@@ -146,10 +146,10 @@ namespace DialogueEditor
         public void StartConversation(NPCConversation conversation)
         {
             m_conversation = conversation.Deserialize();
-            if (OnConversationStarted != null)
-                OnConversationStarted.Invoke();
+            OnConversationStarted?.Invoke(); // Using null-conditional operator
 
             TurnOnUI();
+            UnlockMouse(); // Unlock mouse when starting conversation
             m_currentSpeech = m_conversation.Root;
             SetState(eState.TransitioningDialogueBoxOn);
         }
@@ -157,10 +157,23 @@ namespace DialogueEditor
         public void EndConversation()
         {
             SetState(eState.TransitioningDialogueOff);
+            LockMouse(); // Lock mouse when ending conversation
 
-            if (OnConversationEnded != null)
-                OnConversationEnded.Invoke();
+            OnConversationEnded?.Invoke(); // Using null-conditional operator
         }
+
+        private void LockMouse()
+        {
+            Cursor.lockState = CursorLockMode.Locked; // Lock the cursor
+            Cursor.visible = false; // Hide the cursor
+        }
+
+        private void UnlockMouse()
+        {
+            Cursor.lockState = CursorLockMode.None; // Unlock the cursor
+            Cursor.visible = true; // Show the cursor
+        }
+
 
         public void SelectNextOption()
         {

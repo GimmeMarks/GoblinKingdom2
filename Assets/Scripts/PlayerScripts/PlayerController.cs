@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
 
     public int maxHealth = 100;
     public int currHealth = 100;
-    public static int goldCount = 5000;
+    public static int goldCount = 0;
 
     //NPC Tower Buys (Allows to check if a tower is bought or not)
     public static bool Bought1 = false;
@@ -60,6 +60,8 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+
 
         //---------------------------------------------------------------------
         //Event NPC stuuf:
@@ -130,6 +132,7 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Health = " + currHealth);
 
     }
+
     //Unfinished
     /*
     IEnumerator PlayerHealthRegen()
@@ -154,6 +157,7 @@ public class PlayerController : MonoBehaviour
 
         }
     }
+
 
 
     public void roundManager(int roundNum)

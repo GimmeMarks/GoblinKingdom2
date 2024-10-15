@@ -14,8 +14,6 @@ public class ConversationStarter : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
                 ConversationManager.Instance.StartConversation(myConversation);
                 ConversationManager.Instance.SetInt("Gold", PlayerController.goldCount);
                 ConversationManager.Instance.SetBool("Bought1", PlayerController.Bought1);
@@ -33,7 +31,19 @@ public class ConversationStarter : MonoBehaviour
             }
 
         }
+
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        // Check if the exiting collider is the player
+        if (other.CompareTag("Player")) // Assuming the player has the tag "Player"
+        {
+            ConversationManager.Instance.EndConversation(); // Call the method to end the conversation
+        }
     }
 
 
+
 }
+
+

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
+    public SpawnerScript spawner;
 
     private void Awake()
     {
@@ -300,4 +301,5 @@ public class EventManager : MonoBehaviour
             Debug.Log("Not enough gold!");
         }
     }
+
 }
