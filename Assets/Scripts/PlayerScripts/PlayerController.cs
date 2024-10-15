@@ -133,6 +133,8 @@ public class PlayerController : MonoBehaviour
 
     }
 
+
+    /*private void OnTriggerEnter(Collider other)
     //Unfinished
     /*
     IEnumerator PlayerHealthRegen()
@@ -157,7 +159,7 @@ public class PlayerController : MonoBehaviour
 
         }
     }
-
+    */
 
 
     public void roundManager(int roundNum)
