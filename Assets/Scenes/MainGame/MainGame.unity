@@ -511,7 +511,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyTrapTowerLButtonPressed
         m_Mode: 1
@@ -1133,17 +1133,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.7084205, y: 1, z: 2.8216066}
   m_Center: {x: -0.75062466, y: 0.5, z: 1.0108014}
---- !u!114 &44127770 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7627427106648613061, guid: e98a7cb71308282448079a8d1fd54d67, type: 3}
-  m_PrefabInstance: {fileID: 1966416455}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &53241853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2355,7 +2344,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyCannonTowerRTButtonPressed
         m_Mode: 1
@@ -3073,11 +3062,11 @@ Transform:
   m_GameObject: {fileID: 177415752}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 520.19, y: 0.7, z: 313.9}
+  m_LocalPosition: {x: 1044.4, y: 0.7, z: 625.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1415198143}
+  - {fileID: 641888068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &185862705
@@ -3582,7 +3571,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyExplosiveWandButtonPressed
         m_Mode: 1
@@ -3613,7 +3602,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyIceWandButtonPressed
         m_Mode: 1
@@ -3644,7 +3633,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyLaserWandButtonPressed
         m_Mode: 1
@@ -4854,6 +4843,79 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4275966805485982, guid: 9000e31c84559634b8f9ce44b2636f4c, type: 3}
   m_PrefabInstance: {fileID: 402291722}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &405471811
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 177415753}
+    m_Modifications:
+    - target: {fileID: 1681963421493738193, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_Name
+      value: WorkingPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -512.37164
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.6800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -295.4188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: goldTextUI
+      value: 
+      objectReference: {fileID: 1127449072}
+    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: waveNumberUI
+      value: 
+      objectReference: {fileID: 110224236}
+    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      propertyPath: roundNumGlobal
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1529432139968453483, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1681963421493738193, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 641888075}
+  m_SourcePrefab: {fileID: 100100000, guid: 538304db467938347aa0c1a14efc1645, type: 3}
 --- !u!1001 &406294201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5652,7 +5714,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyCannonTowerLTButtonPressed
         m_Mode: 1
@@ -6713,6 +6775,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4868598521721778, guid: 5c11b6a454fa5fd458d541957f1de507, type: 3}
   m_PrefabInstance: {fileID: 519048022}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &641888067 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1681963421493738193, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+  m_PrefabInstance: {fileID: 405471811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &641888068 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+  m_PrefabInstance: {fileID: 405471811}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &641888075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641888067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ad580858fb74e459aedfa743bb95de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firepoint: {fileID: 745066717}
+  baseBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
+  explosionBulletPrefab: {fileID: 9122088148645627994, guid: f14e06ffefc134641b449736cc2c2cd7, type: 3}
+  iceBulletPrefab: {fileID: 239900978285612905, guid: b0cb4f24024d5fb4886fca638d01d605, type: 3}
+  laserBulletPrefab: {fileID: 4327763063461813562, guid: 9bcc0fa147419744b8992b5544c767ea, type: 3}
+  currentBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
+  SpellIndicator: {fileID: 0}
+  nextTimeToFire: 2
+  fireRate: 0.5
+  shootCost: 10
+  maxMana: 100
+  currMana: 100
 --- !u!1001 &642606584
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7327,7 +7423,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyMageTowerTButtonPressed
         m_Mode: 1
@@ -8318,6 +8414,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c11b6a454fa5fd458d541957f1de507, type: 3}
+--- !u!4 &745066717 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
+  m_PrefabInstance: {fileID: 405471811}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &746529929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8720,7 +8821,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyTrapTowerRButtonPressed
         m_Mode: 1
@@ -9908,7 +10009,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuySpeedUpButtonPressed
         m_Mode: 1
@@ -10899,7 +11000,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyMageTowerBButtonPressed
         m_Mode: 1
@@ -11080,75 +11181,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94a3318e328358d4095f16b054b14180, type: 3}
---- !u!1001 &1016807275
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 177415753}
-    m_Modifications:
-    - target: {fileID: 1173115865805049747, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: goldTextUI
-      value: 
-      objectReference: {fileID: 1127449072}
-    - target: {fileID: 1173115865805049747, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: waveNumberUI
-      value: 
-      objectReference: {fileID: 44127770}
-    - target: {fileID: 5725060053948800286, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: SpellIndicator
-      value: 
-      objectReference: {fileID: 110224236}
-    - target: {fileID: 8504879770236988975, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_Name
-      value: Player (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11.171265
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 19.465332
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
 --- !u!1001 &1025529308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13670,7 +13702,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyCannonTowerRBButtonPressed
         m_Mode: 1
@@ -14930,22 +14962,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93a135b5c8137e5468cb55d97a43df67, type: 3}
---- !u!4 &1415198143 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8698229629288782223, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-  m_PrefabInstance: {fileID: 1016807275}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1415198144 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1173115865805049747, guid: 32e40c994c6531348a4ffd42a635aeb2, type: 3}
-  m_PrefabInstance: {fileID: 1016807275}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06b4fe834d324684980f687526b3ec20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1421818830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15704,7 +15720,7 @@ MonoBehaviour:
   countdownText: {fileID: 1592348541}
   baseLocation1: {fileID: 1400180849}
   baseLocation2: {fileID: 1937580371}
-  playerLocation: {fileID: 1415198143}
+  playerLocation: {fileID: 0}
 --- !u!1001 &1517281841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18235,7 +18251,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyHealthMButtonPressed
         m_Mode: 1
@@ -18266,7 +18282,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyHealthLButtonPressed
         m_Mode: 1
@@ -18297,7 +18313,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyHealthSButtonPressed
         m_Mode: 1
@@ -18328,7 +18344,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuySpeedUpButtonPressed
         m_Mode: 1
@@ -18359,7 +18375,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyCritUpButtonPressed
         m_Mode: 1
@@ -18390,7 +18406,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyDamageUpButtonPressed
         m_Mode: 1
@@ -18421,7 +18437,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyManaUpButtonPressed
         m_Mode: 1
@@ -18452,7 +18468,7 @@ MonoBehaviour:
   Event:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyHealthUpButtonPressed
         m_Mode: 1
@@ -21964,7 +21980,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1415198144}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnBuyCannonTowerLBButtonPressed
         m_Mode: 1
