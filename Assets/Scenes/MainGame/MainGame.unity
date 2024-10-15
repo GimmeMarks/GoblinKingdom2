@@ -6797,12 +6797,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ad580858fb74e459aedfa743bb95de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wandspawnpoint: {fileID: 0}
   firepoint: {fileID: 745066717}
   baseBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
   explosionBulletPrefab: {fileID: 9122088148645627994, guid: f14e06ffefc134641b449736cc2c2cd7, type: 3}
   iceBulletPrefab: {fileID: 239900978285612905, guid: b0cb4f24024d5fb4886fca638d01d605, type: 3}
   laserBulletPrefab: {fileID: 4327763063461813562, guid: 9bcc0fa147419744b8992b5544c767ea, type: 3}
   currentBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
+  currentWandPrefab: {fileID: 7281363964748600272, guid: 0f4cc006420b93c4aa4a17b3e197344e, type: 3}
+  WandBasic: {fileID: 7281363964748600272, guid: 0f4cc006420b93c4aa4a17b3e197344e, type: 3}
+  WandExplosion: {fileID: 1894208621340011126, guid: bed691b6881a6cf45a8fb609498074b1, type: 3}
+  WandIce: {fileID: 4039412713285941216, guid: aeef5fb9fa706e94da414fb6855354b6, type: 3}
+  WandLaser: {fileID: 7706106833710840685, guid: 2c944149dc1a2c5429f7ef9e58b606fd, type: 3}
   SpellIndicator: {fileID: 0}
   nextTimeToFire: 2
   fireRate: 0.5
