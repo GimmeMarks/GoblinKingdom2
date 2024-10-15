@@ -4,13 +4,27 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public Image healthBar; // Drag your HealthBar image here in the inspector
-    public Image manaBar; // Drag your ManaBar image here in the inspector
-    public TMP_Text manaAmount;
-    public TMP_Text healthAmount;
-    public PlayerController playerController; // Reference to playerController
-    public WandShooting wandShooting; // Reference to Wand script
+    public Image healthBar; 
+    public Image manaBar;
+    private int health;
+    private int maxHealth;
 
+    private WandShooting wandShooting; // Reference to Wand script
+
+    public GameObject PlayerUI;
+    public GameObject WinScreen;
+    public GameObject LoseScreen;
+    
+
+    void Start()
+    {
+        health = PlayerController.Instance.currHealth;
+        maxHealth = PlayerController.Instance.maxHealth;
+
+        Debug.Log(health);
+        Debug.Log(maxHealth);
+        Debug.Log(health/maxHealth);
+    }
     void Update()
     {
         UpdateHealthBar();
@@ -19,25 +33,23 @@ public class UIManager : MonoBehaviour
 
     void UpdateHealthBar()
     {
-        if (playerController != null)
+        
+        Debug.Log(healthBar.fillAmount);
+        healthBar.fillAmount = (float)health / maxHealth;
+        
+        if (health <= 0)
         {
-            healthAmount.text = ("Health: " + playerController.currHealth.ToString() + "/" + playerController.maxHealth.ToString());
-            if (playerController.currHealth <= 0)
-            {
-                healthAmount.text = ("You Died!");
-            }
+            LoseScreen.SetActive(true);
+            PlayerUI.SetActive(false);
         }
+        
     }
 
     void UpdateManaBar()
     {
         if (wandShooting != null)
         {
-            manaAmount.text = ("Mana: " + wandShooting.currMana.ToString() + "/" + wandShooting.maxMana.ToString());
-            if (wandShooting.currMana == 0)
-            {
-                manaAmount.text = ("Press R to Reload!");
-            }
+           
         }
     }
 
