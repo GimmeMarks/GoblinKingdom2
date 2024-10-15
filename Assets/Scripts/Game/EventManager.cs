@@ -6,6 +6,7 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
     public SpawnerScript spawner;
+    private PlayerController PlayerController;
 
     private void Awake()
     {
