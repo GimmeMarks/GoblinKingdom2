@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
-    
-    public float lifetime;
-    public float speed;
-    public string bulletName;
-    public double damage;
-    public double damageBuff;
+    [SerializeField]public double damage;
+    [SerializeField] public float lifetime;
+    [SerializeField]public float speed;
+    [SerializeField] public double damageBuff;
     // Start is called before the first frame update
     void Start()
     {
