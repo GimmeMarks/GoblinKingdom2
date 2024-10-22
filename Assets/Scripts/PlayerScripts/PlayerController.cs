@@ -7,12 +7,17 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float lookSpeed = 2.0f;
-    public float lookXLimit = 45.0f;
-    public float gravity = 9.8f;
+
+    private float speed = 5.0f;
+    private float lookSpeed = 2.0f;
+    private float lookXLimit = 45.0f;
+    private float gravity = 9.8f;
+
     public TMP_Text waveNumberUI;
     public TMP_Text goldTextUI;
     public int roundNumGlobal;
+    private UIManager UIMANAGER;
+    
 
     private Camera playerCamera;
     private CharacterController characterController;
@@ -24,7 +29,10 @@ public class PlayerController : MonoBehaviour
     //Stats that can be changed buy NPCs
     public int maxHealth = 100;
     public int currHealth = 100;
-    public float speed = 5.0f;
+    public int currKingHealth = 500;
+    public int maxKingHealth = 500;
+    public static int goldCount = 50;
+
 
 
     //NPC Tower Buys (Allows to check if a tower is bought or not)
@@ -55,6 +63,8 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        UIMANAGER = FindObjectOfType<UIManager>();
     }
 
     void Start()
@@ -133,7 +143,10 @@ public class PlayerController : MonoBehaviour
     {
         currHealth -= enemyDamage;
         Debug.Log("Health = " + currHealth);
-
+        if (UIMANAGER != null)
+        {
+            UIMANAGER.UpdateHealthBar();
+        }
     }
 
     //Unfinished
@@ -155,8 +168,9 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Gold"))
         {
-            int yayGold = other.GetComponent<goldScript>().goldAmount;
-            goldCount += yayGold;
+            goldScript goldCode = other.GetComponent<goldScript>();
+            goldCount += goldCode.goldAmount;
+            goldCode.DestroyMe();
 
         }
     }
@@ -166,7 +180,7 @@ public class PlayerController : MonoBehaviour
     public void roundManager(int roundNum)
     {
         roundNumGlobal = roundNum;
-        waveNumberUI.text = ("Round: " + roundNum.ToString());
+        waveNumberUI.text = ("Round: " + (roundNum + 1).ToString();
 
     }
 
@@ -192,6 +206,7 @@ public class PlayerController : MonoBehaviour
     public void OnBuyCannonTowerRBButtonPressed()
     {
         EventManager.Instance.BuyCannonTowerRB();
+
     }
 
     public void OnBuyMageTowerTButtonPressed()

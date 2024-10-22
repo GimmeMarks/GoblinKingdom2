@@ -27,11 +27,8 @@ public class WandShooting : MonoBehaviour
     [SerializeField]private float fireRate = 0.5f;
 
     //Mana and Reloading
-    private bool isReloading = false;
     public int shootCost = 10;
     public int currMana = 100;
-
-    //Stats that can be changed buy NPCs
     public int maxMana = 100;
 
     public PlayerController PlayerController;
@@ -46,14 +43,15 @@ public class WandShooting : MonoBehaviour
     {
         ChangeWeapon(1);
         UpdateGunUI();
+        StartCoroutine(ManaRegenDefault());
 
     }
 
     // Update is called once per frame
     public void Update()
     {
-
-        if (Input.GetButton("Fire1")&& Time.time >= nextTimeToFire && currMana >= shootCost && !isReloading)
+        /*
+        if (Input.GetButton("Fire1")&& Time.time >= nextTimeToFire && currMana >= shootCost)
         {
             if (currentBulletPrefab == laserBulletPrefab)
             {
@@ -72,11 +70,23 @@ public class WandShooting : MonoBehaviour
                 currMana -= shootCost;
             }
         }
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
+        */
+        if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire)
+
         {
-            StartCoroutine(Reload());
+            if (currentBulletPrefab == baseBulletPrefab)
+                Shoot();
+            else
+            {
+                if (currMana >= shootCost)
+                {
+                    Shoot();
+                    currMana -= shootCost;
+                }
+            }
+
         }
-       
+
         for (int i = 1; i <= 4; i++)
         {
             // Use Enum.Parse to get the corresponding KeyCode dynamically
@@ -89,12 +99,15 @@ public class WandShooting : MonoBehaviour
 
     }
 
-    IEnumerator Reload()
+   IEnumerator ManaRegenDefault()
     {
-        isReloading = true;
-        yield return new WaitForSeconds(2f);
-        currMana = maxMana;
-        isReloading = false;
+        while (true)
+        {
+            if (currMana < maxMana)
+                currMana += 2;
+            yield return new WaitForSeconds(1f);
+        }
+        
     }
 
 
@@ -184,7 +197,9 @@ public class WandShooting : MonoBehaviour
     }
     void UpdateGunUI()
     {
-       // SpellIndicator.text = currentBulletPrefab.name;
+
+        SpellIndicator.text = currentBulletPrefab.GetComponent<Bullet>().bulletName;
+
     }
 
 }

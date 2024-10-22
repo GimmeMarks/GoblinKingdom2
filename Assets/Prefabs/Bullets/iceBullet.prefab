@@ -52,6 +52,7 @@ MonoBehaviour:
   damage: 15
   lifetime: 2
   speed: 15
+  bulletName: Icicle
 --- !u!33 &3826452713842482037
 MeshFilter:
   m_ObjectHideFlags: 0
