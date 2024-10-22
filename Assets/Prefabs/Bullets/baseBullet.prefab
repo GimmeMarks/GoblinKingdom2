@@ -149,3 +149,4 @@ MonoBehaviour:
   damage: 5
   lifetime: 1
   speed: 5
+  bulletName: Wand

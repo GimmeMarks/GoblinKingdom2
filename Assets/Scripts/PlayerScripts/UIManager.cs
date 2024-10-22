@@ -6,24 +6,19 @@ public class UIManager : MonoBehaviour
 {
     public Image healthBar; 
     public Image manaBar;
-    private int health;
-    private int maxHealth;
+    public Image kingdomHealthBar;
+    public GameObject wand;
 
     private WandShooting wandShooting; // Reference to Wand script
 
     public GameObject PlayerUI;
     public GameObject WinScreen;
     public GameObject LoseScreen;
-    
 
-    void Start()
+
+    private void Start()
     {
-        health = PlayerController.Instance.currHealth;
-        maxHealth = PlayerController.Instance.maxHealth;
-
-        Debug.Log(health);
-        Debug.Log(maxHealth);
-        Debug.Log(health/maxHealth);
+        wandShooting = wand.GetComponent<WandShooting>();
     }
     void Update()
     {
@@ -31,13 +26,12 @@ public class UIManager : MonoBehaviour
         UpdateManaBar();
     }
 
-    void UpdateHealthBar()
+    public void UpdateHealthBar()
     {
+
+        healthBar.fillAmount = (float)PlayerController.Instance.currHealth / PlayerController.Instance.maxHealth;
         
-        Debug.Log(healthBar.fillAmount);
-        healthBar.fillAmount = (float)health / maxHealth;
-        
-        if (health <= 0)
+        if (PlayerController.Instance.currHealth <= 0)
         {
             LoseScreen.SetActive(true);
             PlayerUI.SetActive(false);
@@ -45,14 +39,18 @@ public class UIManager : MonoBehaviour
         
     }
 
-    void UpdateManaBar()
+    public void UpdateManaBar()
     {
         if (wandShooting != null)
         {
-           
+            manaBar.fillAmount = (float)wandShooting.currMana / wandShooting.maxMana;
         }
     }
 
+    public void UpdateKingdomHealthBar()
+    {
+
+    }
 
 
 }

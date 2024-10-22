@@ -7,13 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f;
-    public float lookSpeed = 2.0f;
-    public float lookXLimit = 45.0f;
-    public float gravity = 9.8f;
+    private float speed = 5.0f;
+    private float lookSpeed = 2.0f;
+    private float lookXLimit = 45.0f;
+    private float gravity = 9.8f;
     public TMP_Text waveNumberUI;
     public TMP_Text goldTextUI;
     public int roundNumGlobal;
+    private UIManager UIMANAGER;
+    
 
     private Camera playerCamera;
     private CharacterController characterController;
@@ -22,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
     public int maxHealth = 100;
     public int currHealth = 100;
+    public int currKingHealth = 500;
+    public int maxKingHealth = 500;
+
     public static int goldCount = 50;
 
 
@@ -40,6 +45,8 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(gameObject); 
         }
+
+        UIMANAGER = FindObjectOfType<UIManager>();
     }
 
     void Start()
@@ -93,7 +100,10 @@ public class PlayerController : MonoBehaviour
     {
         currHealth -= enemyDamage;
         Debug.Log("Health = " + currHealth);
-
+        if (UIMANAGER != null)
+        {
+            UIMANAGER.UpdateHealthBar();
+        }
     }
     //Unfinished
     /*
