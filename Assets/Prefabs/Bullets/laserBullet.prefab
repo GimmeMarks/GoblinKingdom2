@@ -51,7 +51,6 @@ MonoBehaviour:
   damage: 3
   lifetime: 1
   speed: 4
-  bulletName: Laser
 --- !u!33 &7108811575884879957
 MeshFilter:
   m_ObjectHideFlags: 0

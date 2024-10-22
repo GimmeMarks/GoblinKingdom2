@@ -4,54 +4,44 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public Image healthBar; 
-    public Image manaBar;
-    public Image kingdomHealthBar;
-    public GameObject wand;
+    public Image healthBar; // Drag your HealthBar image here in the inspector
+    public Image manaBar; // Drag your ManaBar image here in the inspector
+    public TMP_Text manaAmount;
+    public TMP_Text healthAmount;
+    public PlayerController playerController; // Reference to playerController
+    public WandShooting wandShooting; // Reference to Wand script
 
-    private WandShooting wandShooting; // Reference to Wand script
-
-    public GameObject PlayerUI;
-    public GameObject WinScreen;
-    public GameObject LoseScreen;
-
-
-    private void Start()
-    {
-        wandShooting = wand.GetComponent<WandShooting>();
-    }
     void Update()
     {
         UpdateHealthBar();
         UpdateManaBar();
     }
 
-    public void UpdateHealthBar()
+    void UpdateHealthBar()
     {
-
-        healthBar.fillAmount = (float)PlayerController.Instance.currHealth / PlayerController.Instance.maxHealth;
-        
-        if (PlayerController.Instance.currHealth <= 0)
+        if (playerController != null)
         {
-            LoseScreen.SetActive(true);
-            PlayerUI.SetActive(false);
+            healthAmount.text = ("Health: " + playerController.currHealth.ToString() + "/" + playerController.maxHealth.ToString());
+            if (playerController.currHealth <= 0)
+            {
+                healthAmount.text = ("You Died!");
+            }
         }
-        
     }
 
-    public void UpdateManaBar()
+    void UpdateManaBar()
     {
         if (wandShooting != null)
         {
-            manaBar.fillAmount = (float)wandShooting.currMana / wandShooting.maxMana;
+            manaAmount.text = ("Mana: " + wandShooting.currMana.ToString() + "/" + wandShooting.maxMana.ToString());
+            if (wandShooting.currMana == 0)
+            {
+                manaAmount.text = ("Press R to Reload!");
+            }
         }
     }
     public void UpdateGold()
     {
-
-    public void UpdateKingdomHealthBar()
-    {
-
 
     }
 

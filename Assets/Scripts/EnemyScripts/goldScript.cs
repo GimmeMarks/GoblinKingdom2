@@ -10,10 +10,4 @@ public class goldScript : MonoBehaviour
     {
         goldAmount = goldFromEnemy;
     }
-
-    public void DestroyMe()
-    {
-        Destroy(gameObject);
-    }
-    
 }
