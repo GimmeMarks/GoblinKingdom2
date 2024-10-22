@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
-  eHealth: 100
+  eHealth: 50
   eSpeed: 2
   eDamage: 5
   eName: Knight

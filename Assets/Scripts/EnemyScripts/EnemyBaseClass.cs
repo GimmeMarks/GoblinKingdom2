@@ -187,9 +187,10 @@ public class EnemyBaseClass : MonoBehaviour
 
     }
     //If taking damage and health drops below zero, destroy and drop gold
-    void TakeDamage(int damage)
+    void TakeDamage(double damage)
     {
-        eHealth -= damage;
+
+        eHealth -= (int)damage;
         if (eHealth <= 0)
         {
             dropGold(CalcGold());

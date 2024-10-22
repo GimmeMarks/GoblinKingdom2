@@ -6,7 +6,9 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
     public SpawnerScript spawner;
-    private PlayerController PlayerController;
+    public PlayerController PlayerController;
+    private Bullet Bullet;
+    public WandShooting WandShooting;
 
     private void Awake()
     {
@@ -21,13 +23,15 @@ public class EventManager : MonoBehaviour
         }
     }
 
+
+
     public event Action<int> OnBuyCannonTower;
     public event Action<int> OnBuyMageTower;
     public event Action<int> OnBuyTrapTower;
     public event Action<int> OnBuyHealthUp;
     public event Action<int> OnBuyManaUp;
     public event Action<int> OnBuyDamageUp;
-    public event Action<int> OnBuyCritUp;
+    public event Action<int> OnBuyRegenUp;
     public event Action<int> OnBuySpeedUp;
     public event Action<int> OnBuyHealthS;
     public event Action<int> OnBuyHealthL;
@@ -163,6 +167,8 @@ public class EventManager : MonoBehaviour
             PlayerController.goldCount -= 30;
             OnBuyHealthUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Health Upgrade bought! Remaining gold: " + PlayerController.goldCount);
+
+            PlayerController.maxHealth += 20; // Increases player max health
         }
         else
         {
@@ -175,13 +181,16 @@ public class EventManager : MonoBehaviour
         {
             PlayerController.goldCount -= 30;
             OnBuyManaUp?.Invoke(30); // Triggers to buy Upgrade
-            Debug.Log("Mana Upgrade bought! Remaining gold: " + PlayerController.goldCount);
+            Debug.Log("Mana upgrade bought! Remaining gold: " + PlayerController.goldCount);
+
+            WandShooting.maxMana += 30; //Increase the max mana by 30 for the bullets
         }
         else
         {
             Debug.Log("Not enough gold!");
         }
     }
+
     public void BuyDamageUp()
     {
         if (PlayerController.goldCount >= 30) // Check if player has enough gold
@@ -189,19 +198,23 @@ public class EventManager : MonoBehaviour
             PlayerController.goldCount -= 30;
             OnBuyDamageUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Damage upgrade bought! Remaining gold: " + PlayerController.goldCount);
+
+            Bullet.damageBuff += 2; //Increase the damage multiplyer for the bullets
         }
         else
         {
             Debug.Log("Not enough gold!");
         }
     }
-    public void BuyCritUp()
+    public void BuyRegenUp()
     {
         if (PlayerController.goldCount >= 30) // Check if player has enough gold
         {
             PlayerController.goldCount -= 30;
-            OnBuyCritUp?.Invoke(30); // Triggers to buy Upgrade
-            Debug.Log("Crit chance upgrade bought! Remaining gold: " + PlayerController.goldCount);
+            OnBuyRegenUp?.Invoke(30); // Triggers to buy Upgrade
+            Debug.Log("Regen upgrade bought! Remaining gold: " + PlayerController.goldCount);
+
+            //Need to do
         }
         else
         {
@@ -215,6 +228,8 @@ public class EventManager : MonoBehaviour
             PlayerController.goldCount -= 30;
             OnBuySpeedUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Speed upgrade bought! Remaining gold: " + PlayerController.goldCount);
+
+            PlayerController.speed += 0.5f; //Increases player speed
         }
         else
         {
@@ -228,6 +243,8 @@ public class EventManager : MonoBehaviour
             PlayerController.goldCount -= 15;
             OnBuyHealthS?.Invoke(15); // Triggers to buy Health
             Debug.Log("Health small bought! Remaining gold: " + PlayerController.goldCount);
+
+            PlayerController.currHealth += 20;
         }
         else
         {
@@ -241,6 +258,8 @@ public class EventManager : MonoBehaviour
             PlayerController.goldCount -= 40;
             OnBuyHealthL?.Invoke(40); // Triggers to buy Health
             Debug.Log("Health Large bought! Remaining gold: " + PlayerController.goldCount);
+
+            PlayerController.currHealth += 50;
         }
         else
         {
@@ -249,11 +268,13 @@ public class EventManager : MonoBehaviour
     }
     public void BuyHealthM()
     {
-        if (PlayerController.goldCount >= 100) // Check if player has enough gold
+        if (PlayerController.goldCount >= 150) // Check if player has enough gold
         {
-            PlayerController.goldCount -= 100;
-            OnBuyHealthM?.Invoke(100); // Triggers to buy Health
+            PlayerController.goldCount -= 150;
+            OnBuyHealthM?.Invoke(150); // Triggers to buy Health
             Debug.Log("Health Max bought! Remaining gold: " + PlayerController.goldCount);
+
+            PlayerController.currHealth += PlayerController.maxHealth;
         }
         else
         {

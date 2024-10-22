@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 5.0f;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
     public float gravity = 9.8f;
@@ -20,9 +19,13 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
 
+    public static int goldCount = 5000;
+
+    //Stats that can be changed buy NPCs
     public int maxHealth = 100;
     public int currHealth = 100;
-    public static int goldCount = 0;
+    public float speed = 5.0f;
+
 
     //NPC Tower Buys (Allows to check if a tower is bought or not)
     public static bool Bought1 = false;
@@ -76,7 +79,7 @@ public class PlayerController : MonoBehaviour
         EventManager.Instance.OnBuyHealthUp += UpdateGoldUI; // Subscribe to the health upgrade event
         EventManager.Instance.OnBuyManaUp += UpdateGoldUI; // Subscribe to the mana upgrade event
         EventManager.Instance.OnBuyDamageUp += UpdateGoldUI; // Subscribe to the damage upgrade event
-        EventManager.Instance.OnBuyCritUp += UpdateGoldUI; // Subscribe to the crit upgrade event
+        EventManager.Instance.OnBuyRegenUp += UpdateGoldUI; // Subscribe to the regen event
         EventManager.Instance.OnBuySpeedUp += UpdateGoldUI; // Subscribe to the speed upgrade event
 
         //Heath Buys
@@ -223,9 +226,9 @@ public class PlayerController : MonoBehaviour
     {
         EventManager.Instance.BuyDamageUp();
     }
-    public void OnBuyCritUpButtonPressed()
+    public void OnBuyRegenUpButtonPressed()
     {
-        EventManager.Instance.BuyCritUp();
+        EventManager.Instance.BuyRegenUp();
     }
     public void OnBuySpeedUpButtonPressed()
     {
@@ -262,8 +265,6 @@ public class PlayerController : MonoBehaviour
 
     private void UpdateGoldUI(int amount)
     {
-        // This can update your UI
-        Debug.Log("Bought Cannon Tower, gold deducted: " + amount);
 
     }
 
