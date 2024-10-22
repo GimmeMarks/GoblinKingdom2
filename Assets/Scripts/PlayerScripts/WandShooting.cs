@@ -29,9 +29,11 @@ public class WandShooting : MonoBehaviour
     //Mana and Reloading
     private bool isReloading = false;
     public int shootCost = 10;
-
-    public int maxMana = 100;
     public int currMana = 100;
+
+    //Stats that can be changed buy NPCs
+    public int maxMana = 100;
+    
 
     //Charging for laser weapon
     private bool isCharging = false;
@@ -43,6 +45,7 @@ public class WandShooting : MonoBehaviour
     {
         ChangeWeapon(1);
         UpdateGunUI();
+
     }
 
     // Update is called once per frame
@@ -167,6 +170,5 @@ public class WandShooting : MonoBehaviour
     {
        // SpellIndicator.text = currentBulletPrefab.name;
     }
-
 
 }
