@@ -8,7 +8,7 @@ public class Compass : MonoBehaviour {
 
     private void Update()
     {
-        dir.z = playerTransform.eulerAngles.y;
+        dir.z = playerTransform.eulerAngles.y / 2;
         transform.localEulerAngles = dir;
     }
 }
