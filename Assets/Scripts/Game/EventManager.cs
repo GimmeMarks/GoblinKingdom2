@@ -6,9 +6,9 @@ public class EventManager : MonoBehaviour
 {
     public static EventManager Instance { get; private set; }
     public SpawnerScript spawner;
-    private PlayerController PlayerController;
+    public PlayerController PlayerController;
     private Bullet Bullet;
-    private WandShooting WandShooting;
+    public WandShooting WandShooting;
 
     private void Awake()
     {
@@ -22,6 +22,8 @@ public class EventManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+
 
     public event Action<int> OnBuyCannonTower;
     public event Action<int> OnBuyMageTower;
@@ -179,16 +181,16 @@ public class EventManager : MonoBehaviour
         {
             PlayerController.goldCount -= 30;
             OnBuyManaUp?.Invoke(30); // Triggers to buy Upgrade
-            Debug.Log("Mana Upgrade bought! Remaining gold: " + PlayerController.goldCount);
+            Debug.Log("Mana upgrade bought! Remaining gold: " + PlayerController.goldCount);
 
-            WandShooting.maxMana += 30; //Increases player max mana
-
+            WandShooting.maxMana += 30; //Increase the max mana by 30 for the bullets
         }
         else
         {
             Debug.Log("Not enough gold!");
         }
     }
+
     public void BuyDamageUp()
     {
         if (PlayerController.goldCount >= 30) // Check if player has enough gold

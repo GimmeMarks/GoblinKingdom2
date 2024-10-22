@@ -33,7 +33,8 @@ public class WandShooting : MonoBehaviour
 
     //Stats that can be changed buy NPCs
     public int maxMana = 100;
-    
+
+    public PlayerController PlayerController;
 
     //Charging for laser weapon
     private bool isCharging = false;
@@ -99,6 +100,21 @@ public class WandShooting : MonoBehaviour
 
     public void ChangeWeapon(int WeaponIndex)
     {
+
+        // Checks to see if the player has bought the wand, if not returns back to 1
+        if (WeaponIndex == 2 && !PlayerController.LaserBought)
+        {
+            WeaponIndex = 1; // Switch back to weapon 1
+        }
+        else if (WeaponIndex == 3 && !PlayerController.IceBought)
+        {
+            WeaponIndex = 1; // Switch back to weapon 1
+        }
+        else if (WeaponIndex == 4 && !PlayerController.ExplosiveBought)
+        {
+            WeaponIndex = 1; // Switch back to weapon 1
+        }
+
 
         if (currentWand != null)
         {
