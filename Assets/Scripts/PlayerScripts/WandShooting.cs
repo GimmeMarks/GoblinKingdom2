@@ -25,6 +25,8 @@ public class WandShooting : MonoBehaviour
     [SerializeField] private TMP_Text SpellIndicator;
     [SerializeField]private float nextTimeToFire = 2;
     [SerializeField]private float fireRate = 0.5f;
+    [SerializeField] private float laserFireRate = 0.1f; // Faster fire rate for laser
+    private float laserNextTimeToFire = 0; // Separate next time to fire for laser
 
     //Mana and Reloading
     private bool isReloading = false;
@@ -32,6 +34,13 @@ public class WandShooting : MonoBehaviour
 
     public int maxMana = 100;
     public int currMana = 100;
+
+    public bool Regenerate = true;
+    public int regen = 1;
+    private float timeleft = 0.0f;  // Left time for current interval
+    public float regenUpdateInterval = 5f;
+
+    public bool GodMode;
 
     //Charging for laser weapon
     private bool isCharging = false;
@@ -43,15 +52,17 @@ public class WandShooting : MonoBehaviour
     {
         ChangeWeapon(1);
         UpdateGunUI();
+        timeleft = regenUpdateInterval;
     }
 
     // Update is called once per frame
     public void Update()
     {
-
-        if (Input.GetButton("Fire1")&& Time.time >= nextTimeToFire && currMana >= shootCost && !isReloading)
+        // Check if the current weapon is the laser weapon
+        if (currentBulletPrefab == laserBulletPrefab)
         {
-            if (currentBulletPrefab == laserBulletPrefab)
+            // Use right-click for laser
+            if (Input.GetButton("Fire2") && Time.time >= laserNextTimeToFire && currMana >= shootCost && !isReloading)
             {
                 if (!isCharging)
                 {
@@ -62,20 +73,26 @@ public class WandShooting : MonoBehaviour
                     ShootLaser();
                 }
             }
-            else
+        }
+        else
+        {
+            // Use left-click for other weapons
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && currMana >= shootCost && !isReloading)
             {
                 Shoot();
                 currMana -= shootCost;
             }
         }
+
+        // Reload functionality
         if (Input.GetKeyDown(KeyCode.R) && !isReloading)
         {
             StartCoroutine(Reload());
         }
-       
+
+        // Weapon switching
         for (int i = 1; i <= 4; i++)
         {
-            // Use Enum.Parse to get the corresponding KeyCode dynamically
             if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), "Alpha" + i)))
             {
                 ChangeWeapon(i);
@@ -83,6 +100,39 @@ public class WandShooting : MonoBehaviour
             }
         }
 
+        // Mana regeneration
+        if (Regenerate)
+            Regen();
+    }
+
+
+    private void Regen()
+    {
+        timeleft -= Time.deltaTime;
+
+        if (timeleft <= 0.0) // Interval ended - update health & mana and start new interval
+        {
+            //Debug.Log("Mana Restore");
+            if (GodMode)
+            {
+                RestoreMana(maxMana);
+            }
+            else
+            { 
+                RestoreMana(regen);
+            }
+
+            timeleft = regenUpdateInterval;
+        }
+    }
+
+    public void RestoreMana(int Mana)
+    {
+        currMana += Mana;
+        if (currMana > maxMana)
+            currMana = maxMana;
+
+      
     }
 
     IEnumerator Reload()
@@ -93,6 +143,19 @@ public class WandShooting : MonoBehaviour
         isReloading = false;
     }
 
+    IEnumerator ChargeLaser()
+    {
+        isCharging = true;
+        Debug.Log("Charging laser... ");
+        yield return new WaitForSeconds(chargeTime);
+        isCharging = false;
+       
+
+        if (Time.time >= laserNextTimeToFire)
+        {
+            ShootLaser();
+        }
+    }
 
     public void ChangeWeapon(int WeaponIndex)
     {
@@ -141,18 +204,9 @@ public class WandShooting : MonoBehaviour
         bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
     }
 
-    IEnumerator ChargeLaser()
-    {
-        isCharging = true;
-        Debug.Log("Charging laser... ");
-        yield return new WaitForSeconds(chargeTime);
-        isCharging = false;
-        ShootLaser();
-    }
-
     void ShootLaser()
     {
-        nextTimeToFire = Time.time + fireRate; // Set fire rate after charging
+        laserNextTimeToFire = Time.time + laserFireRate; // Set fire rate after charging
         var laser = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
 
         laser.GetComponent<Bullet>().damage *= 2; // Double the damage for chared shot
@@ -165,7 +219,7 @@ public class WandShooting : MonoBehaviour
     }
     void UpdateGunUI()
     {
-       // SpellIndicator.text = currentBulletPrefab.name;
+        SpellIndicator.text = currentBulletPrefab.name;
     }
 
 
