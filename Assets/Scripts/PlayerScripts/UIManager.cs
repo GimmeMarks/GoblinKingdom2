@@ -46,11 +46,14 @@ public class UIManager : MonoBehaviour
             manaBar.fillAmount = (float)wandShooting.currMana / wandShooting.maxMana;
         }
     }
+    public void UpdateGold()
+    {
 
     public void UpdateKingdomHealthBar()
     {
 
+
     }
 
-
+   
 }
