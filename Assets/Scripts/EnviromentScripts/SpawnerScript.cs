@@ -14,8 +14,9 @@ public class SpawnerScript : MonoBehaviour
     [SerializeField] GameObject riderEnemy;
     [SerializeField] GameObject flyerEnemy;
     [SerializeField] TMP_Text countdownText;
+    [SerializeField] GameObject countdownTimerUIObject;
     //Base Locations
-    public Transform baseLocation1; 
+    public Transform baseLocation1;
     public Transform baseLocation2;
     public Transform playerLocation;
 
@@ -31,19 +32,20 @@ public class SpawnerScript : MonoBehaviour
     }
     IEnumerator WaveManager()
     {
-        int nextWaveStartTime = 15; // WaveDelay
+        int nextWaveStartTime = 30; // WaveDelay
 
         while (true)
         {
             // Countdown before starting the next wave
-            while (nextWaveStartTime > 0)
+            while (nextWaveStartTime >= 0)
             {
+                countdownTimerUIObject.SetActive(true);
                 //Tick down the time
-                countdownText.text = ("Next wave starts in " + nextWaveStartTime.ToString());
+                countdownText.text = ("Round Starts in " + nextWaveStartTime.ToString());
                 yield return new WaitForSeconds(1);
                 nextWaveStartTime--;
             }
-
+            countdownTimerUIObject.SetActive(false);
             //Smallest = Wavenumber * 3, Largest = Wavenumber * 5
             int enemyBudget = Random.Range(waveNumber * 3 + 5, waveNumber * 5 + 10);
             //Start the coroutine to spawn enemies by feeding it the value generated
@@ -53,7 +55,7 @@ public class SpawnerScript : MonoBehaviour
             //Once all enemies are dead, increase wave counter and push to the UI element
             waveNumber++;
             PlayerController.Instance.roundManager(waveNumber);
-            nextWaveStartTime = 15;
+            nextWaveStartTime = 30;
         }
     }
 
@@ -81,7 +83,7 @@ public class SpawnerScript : MonoBehaviour
             }
 
             //Delays enemy spawns
-            yield return new WaitForSeconds(Random.Range(0.5f, 2f)); 
+            yield return new WaitForSeconds(Random.Range(0.5f, 2f));
         }
     }
 
@@ -97,7 +99,7 @@ public class SpawnerScript : MonoBehaviour
     {
         //Defining enemy types and their costs
         GameObject[] enemyTypes = { smallEnemy, mediumEnemy, largeEnemy, riderEnemy, flyerEnemy };
-        int[] enemyCosts = { 1, 3, 10, 5, 1 }; 
+        int[] enemyCosts = { 1, 3, 10, 5, 1 };
 
         //Select a random enemy type that fits within the current budget
         int randomIndex = Random.Range(0, enemyTypes.Length);
@@ -106,12 +108,12 @@ public class SpawnerScript : MonoBehaviour
         if (enemyBudget >= enemyCosts[randomIndex])
         {
             //subtract the enemies cost from our budget
-            enemyBudget -= enemyCosts[randomIndex]; 
+            enemyBudget -= enemyCosts[randomIndex];
             //return the enemy type selected
-            return enemyTypes[randomIndex]; 
+            return enemyTypes[randomIndex];
         }
         //if u cant spawn the enemy, bye
-        return null; 
+        return null;
     }
 
 

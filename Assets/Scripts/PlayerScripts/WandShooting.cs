@@ -41,9 +41,12 @@ public class WandShooting : MonoBehaviour
     //Mana and Reloading
     private bool isReloading = false;
     public int shootCost = 10;
-
-    public int maxMana = 100;
     public int currMana = 100;
+
+    //Stats that can be changed buy NPCs
+    public int maxMana = 100;
+
+    public PlayerController PlayerController;
 
     public bool Regenerate = true;
     public int regen = 1;
@@ -64,6 +67,7 @@ public class WandShooting : MonoBehaviour
         ChangeWeapon(1);
         UpdateGunUI();
         timeleft = regenUpdateInterval;
+
     }
 
     // Update is called once per frame
@@ -84,11 +88,13 @@ public class WandShooting : MonoBehaviour
                     ShootLaser();
                 }
             }
+
         }
         else
         {
             // Use left-click for other weapons
             if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && currMana >= shootCost && !isReloading)
+          
             {
                 Shoot();
                 currMana -= shootCost;
@@ -172,6 +178,21 @@ public class WandShooting : MonoBehaviour
     public void ChangeWeapon(int WeaponIndex)
     {
 
+        // Checks to see if the player has bought the wand, if not returns back to 1
+        if (WeaponIndex == 2 && !PlayerController.LaserBought)
+        {
+            WeaponIndex = 1; // Switch back to weapon 1
+        }
+        else if (WeaponIndex == 3 && !PlayerController.IceBought)
+        {
+            WeaponIndex = 1; // Switch back to weapon 1
+        }
+        else if (WeaponIndex == 4 && !PlayerController.ExplosiveBought)
+        {
+            WeaponIndex = 1; // Switch back to weapon 1
+        }
+
+
         if (currentWand != null)
         {
             Destroy(currentWand); // Destroy the previous wand
@@ -206,6 +227,7 @@ public class WandShooting : MonoBehaviour
     }
     void Shoot()
     {
+
         nextTimeToFire = Time.time + fireRate;
         
         if (currentBulletPrefab == explosionBulletPrefab)
@@ -269,8 +291,8 @@ public class WandShooting : MonoBehaviour
     }
     void UpdateGunUI()
     {
-        SpellIndicator.text = currentBulletPrefab.name;
-    }
 
+        SpellIndicator.text = currentBulletPrefab.GetComponent<Bullet>().bulletName;
+    }
 
 }
