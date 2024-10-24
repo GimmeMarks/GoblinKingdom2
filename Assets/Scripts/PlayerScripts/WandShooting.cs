@@ -34,7 +34,7 @@ public class WandShooting : MonoBehaviour
     //Explosion weapon variables
     private float explosionRadius = 5.0f;
     private float explosionForce = 300.0F;
-    private float upwardsModifier = 2.0F;
+    //private float upwardsModifier = 2.0F;
     private float timeDelay = 1.5F;
 
 
@@ -212,7 +212,7 @@ public class WandShooting : MonoBehaviour
             StartCoroutine(Explode(firepoint.position));
             var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
             //Reset damage for regular shots
-            bullet.GetComponent<Bullet>().damage = 3; // Set to the default damage value
+            bullet.GetComponent<Bullet>(); // Set to the default damage value
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
         }
@@ -221,7 +221,7 @@ public class WandShooting : MonoBehaviour
         
             var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
             //Reset damage for regular shots
-            bullet.GetComponent<Bullet>().damage = 3; // Set to the default damage value
+            bullet.GetComponent<Bullet>(); // Set to the default damage value
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
         }
@@ -242,36 +242,16 @@ public class WandShooting : MonoBehaviour
             if (rb != null)
             {
                 Vector3 explosionDirection = hit.transform.position - explosionPosition;
-                rb.AddExplosionForce(explosionForce, explosionPosition, explosionRadius, upwardsModifier);
+                rb.AddExplosionForce(explosionForce, explosionPosition, explosionRadius);
+            }
+            Debug.Log("EXPLOSION!!");
+            if (hit is SphereCollider sphereCollider)
+            {
+                // Modify radius here (for example, double the radius)
+                sphereCollider.radius *= 10f; // Adjust this value as needed
             }
         }
     }
-
-        /*
-        IEnumerator Explode(Vector3 explosionPostions)
-        {
-            yield return new WaitForSeconds(timeDelay);
-
-            var bullet = Instantiate(explosionBulletPrefab, firepoint.position, firepoint.rotation);
-            var bulletSpeed = bullet.GetComponent<Bullet>().speed;
-            bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
-
-            Vector3 explosionPosition = transform.position;
-            Collider[] colliders = Physics.OverlapSphere(explosionPosition, explosionRadius);
-
-            foreach(Collider hit in colliders)
-            {
-                Rigidbody rb = hit.GetComponent<Rigidbody>();
-
-                if (rb != null)
-                {
-                    rb.AddExplosionForce(explosionForce, explosionPosition, explosionRadius, upwardsModifer);
-                }
-            }
-
-            Destroy(gameObject);
-        }
-        */
 
         void ShootLaser()
     {
