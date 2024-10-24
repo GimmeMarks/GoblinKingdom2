@@ -4,17 +4,19 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+
     public double damage;
     public float lifetime;
     public float speed;
     public double damageBuff;
     public string bulletName;
+    [SerializeField] public EventManager EventManger;
 
     // Start is called before the first frame update
     void Start()
     {
         EventManager.Instance.OnBuyManaUp += UpdateGoldUI; // Subscribe to the regen event
-        damage += (damage * (damageBuff * 0.55));
+        damage += (damage * (EventManger.damageBuff * 0.55));
         Destroy(gameObject, lifetime);
 
     }

@@ -7,8 +7,10 @@ public class EventManager : MonoBehaviour
     public static EventManager Instance { get; private set; }
     public SpawnerScript spawner;
     public PlayerController PlayerController;
-    private Bullet Bullet;
     public WandShooting WandShooting;
+
+    //public Bullet Bullet;
+    public double damageBuff;
 
     private void Awake()
     {
@@ -199,7 +201,7 @@ public class EventManager : MonoBehaviour
             OnBuyDamageUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Damage upgrade bought! Remaining gold: " + PlayerController.goldCount);
 
-            Bullet.damageBuff += 2; //Increase the damage multiplyer for the bullets
+            damageBuff += 2; //Increase the damage multiplyer for the bullets
         }
         else
         {
