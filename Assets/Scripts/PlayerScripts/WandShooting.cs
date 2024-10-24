@@ -154,14 +154,14 @@ public class WandShooting : MonoBehaviour
     }
     void Shoot()
     {
-        nextTimeToFire = Time.time + fireRate;
+        
         var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
-
         //Reset damage for regular shots
         bullet.GetComponent<Bullet>().damage = 3; // Set to the default damage value
 
         var bulletSpeed = bullet.GetComponent<Bullet>().speed;
         bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
+        nextTimeToFire = Time.time + fireRate;
     }
 
     IEnumerator ChargeLaser()
