@@ -55,6 +55,7 @@ public class WandShooting : MonoBehaviour
     //Charging for laser weapon
     private bool isCharging = false;
     private float chargeTime = 2f;
+    //Save for later
     private float chargeAmount = 100f;
 
     
