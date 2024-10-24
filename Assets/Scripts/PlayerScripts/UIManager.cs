@@ -34,6 +34,8 @@ public class UIManager : MonoBehaviour
         {
             LoseScreen.SetActive(true);
             PlayerUI.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = true;
         }
 
     }
