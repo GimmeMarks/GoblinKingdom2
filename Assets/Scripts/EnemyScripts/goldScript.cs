@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class goldScript : MonoBehaviour
@@ -10,4 +8,10 @@ public class goldScript : MonoBehaviour
     {
         goldAmount = goldFromEnemy;
     }
+
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
+    }
+
 }

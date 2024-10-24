@@ -66,6 +66,10 @@ public class WandShooting : MonoBehaviour
                     ShootLaser();
                 }
             }
+            else if (currentBulletPrefab == baseBulletPrefab)
+            {
+                Shoot();
+            }
             else
             {
                 Shoot();
@@ -184,7 +188,7 @@ public class WandShooting : MonoBehaviour
     }
     void UpdateGunUI()
     {
-       // SpellIndicator.text = currentBulletPrefab.name;
+        SpellIndicator.text = currentBulletPrefab.GetComponent<Bullet>().bulletName;
     }
 
 }

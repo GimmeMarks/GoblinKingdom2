@@ -51,6 +51,8 @@ MonoBehaviour:
   damage: 10
   lifetime: 10
   speed: 4
+  damageBuff: 0
+  bulletName: Explosion!
 --- !u!33 &5135760712305374082
 MeshFilter:
   m_ObjectHideFlags: 0
