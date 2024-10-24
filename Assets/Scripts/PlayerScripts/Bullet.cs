@@ -7,12 +7,12 @@ public class Bullet : MonoBehaviour
     [SerializeField]public double damage;
     [SerializeField] public float lifetime;
     [SerializeField]public float speed;
-    [SerializeField] public double damageBuff;
+    [SerializeField] public EventManager EventManger;
     // Start is called before the first frame update
     void Start()
     {
         EventManager.Instance.OnBuyManaUp += UpdateGoldUI; // Subscribe to the regen event
-        damage += (damage * (damageBuff * 0.55));
+        damage += (damage * (EventManger.damageBuff * 0.55));
         Destroy(gameObject, lifetime);
 
 
