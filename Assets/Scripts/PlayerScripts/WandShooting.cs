@@ -23,10 +23,20 @@ public class WandShooting : MonoBehaviour
     public enum SpellType { Basic, Explosion, Ice, Laser}
 
     [SerializeField] private TMP_Text SpellIndicator;
+
     [SerializeField]private float nextTimeToFire = 2;
     [SerializeField]private float fireRate = 0.5f;
+
+    //Laser weapon variables
     [SerializeField] private float laserFireRate = 0.1f; // Faster fire rate for laser
     private float laserNextTimeToFire = 0; // Separate next time to fire for laser
+
+    //Explosion weapon variables
+    private float explosionRadius = 5.0f;
+    private float explosionForce = 300.0F;
+    private float upwardsModifier = 2.0F;
+    private float timeDelay = 1.5F;
+
 
     //Mana and Reloading
     private bool isReloading = false;
@@ -135,6 +145,7 @@ public class WandShooting : MonoBehaviour
       
     }
 
+
     IEnumerator Reload()
     {
         isReloading = true;
@@ -195,16 +206,74 @@ public class WandShooting : MonoBehaviour
     void Shoot()
     {
         nextTimeToFire = Time.time + fireRate;
-        var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
-
-        //Reset damage for regular shots
-        bullet.GetComponent<Bullet>().damage = 3; // Set to the default damage value
-
-        var bulletSpeed = bullet.GetComponent<Bullet>().speed;
-        bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
+        
+        if (currentBulletPrefab == explosionBulletPrefab)
+        {
+            StartCoroutine(Explode(firepoint.position));
+            var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
+            //Reset damage for regular shots
+            bullet.GetComponent<Bullet>().damage = 3; // Set to the default damage value
+            var bulletSpeed = bullet.GetComponent<Bullet>().speed;
+            bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
+        }
+        else
+        {
+        
+            var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
+            //Reset damage for regular shots
+            bullet.GetComponent<Bullet>().damage = 3; // Set to the default damage value
+            var bulletSpeed = bullet.GetComponent<Bullet>().speed;
+            bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
+        }
     }
 
-    void ShootLaser()
+
+    private IEnumerator Explode(Vector3 explosionPosition)
+    {
+        // Wait for the explosion delay before applying damage
+        yield return new WaitForSeconds(timeDelay);
+
+        // Find all colliders within the explosion radius
+        Collider[] colliders = Physics.OverlapSphere(explosionPosition, explosionRadius);
+        foreach (Collider hit in colliders)
+        {
+            // Optionally, you can apply a force to the rigidbody if the object has one
+            Rigidbody rb = hit.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                Vector3 explosionDirection = hit.transform.position - explosionPosition;
+                rb.AddExplosionForce(explosionForce, explosionPosition, explosionRadius, upwardsModifier);
+            }
+        }
+    }
+
+        /*
+        IEnumerator Explode(Vector3 explosionPostions)
+        {
+            yield return new WaitForSeconds(timeDelay);
+
+            var bullet = Instantiate(explosionBulletPrefab, firepoint.position, firepoint.rotation);
+            var bulletSpeed = bullet.GetComponent<Bullet>().speed;
+            bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
+
+            Vector3 explosionPosition = transform.position;
+            Collider[] colliders = Physics.OverlapSphere(explosionPosition, explosionRadius);
+
+            foreach(Collider hit in colliders)
+            {
+                Rigidbody rb = hit.GetComponent<Rigidbody>();
+
+                if (rb != null)
+                {
+                    rb.AddExplosionForce(explosionForce, explosionPosition, explosionRadius, upwardsModifer);
+                }
+            }
+
+            Destroy(gameObject);
+        }
+        */
+
+        void ShootLaser()
     {
         laserNextTimeToFire = Time.time + laserFireRate; // Set fire rate after charging
         var laser = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
