@@ -6014,7 +6014,7 @@ MonoBehaviour:
   SpellIndicator: {fileID: 110224236}
   nextTimeToFire: 2
   fireRate: 0.5
-  laserFireRate: 0.1
+  chargeTime: 1
   shootCost: 10
   currMana: 100
   maxMana: 100
