@@ -28,8 +28,8 @@ public class WandShooting : MonoBehaviour
     [SerializeField]private float fireRate = 0.5f;
 
     //Laser weapon variables
-    [SerializeField] private float laserFireRate = 0.1f; // Faster fire rate for laser
-    private float laserNextTimeToFire = 0; // Separate next time to fire for laser
+    private bool isCharging = false;
+    public float chargeTime = 1f;
 
     //Explosion weapon variables
     private float explosionRadius = 5.0f;
@@ -51,13 +51,11 @@ public class WandShooting : MonoBehaviour
     public bool Regenerate = true;
     public int regen = 1;
     private float timeleft = 0.0f;  // Left time for current interval
-    public float regenUpdateInterval = 5f;
+    public float regenUpdateInterval = 2f;
 
     public bool GodMode;
 
-    //Charging for laser weapon
-    private bool isCharging = false;
-    private float chargeTime = 2f;
+
     //Save for later
     private float chargeAmount = 100f;
 
@@ -77,16 +75,13 @@ public class WandShooting : MonoBehaviour
         if (currentBulletPrefab == laserBulletPrefab)
         {
             // Use right-click for laser
-            if (Input.GetButton("Fire2") && Time.time >= laserNextTimeToFire && currMana >= shootCost && !isReloading)
+            if (Input.GetButton("Fire2") && currMana >= shootCost && !isReloading)
             {
                 if (!isCharging)
                 {
                     StartCoroutine(ChargeLaser());
                 }
-                else
-                {
-                    ShootLaser();
-                }
+
             }
 
         }
@@ -169,7 +164,7 @@ public class WandShooting : MonoBehaviour
         isCharging = false;
        
 
-        if (Time.time >= laserNextTimeToFire)
+        if (isCharging == false)
         {
             ShootLaser();
         }
@@ -278,11 +273,7 @@ public class WandShooting : MonoBehaviour
 
         void ShootLaser()
     {
-        laserNextTimeToFire = Time.time + laserFireRate; // Set fire rate after charging
         var laser = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
-
-        laser.GetComponent<Bullet>().damage *= 2; // Double the damage for chared shot
-
         var bulletSpeed = laser.GetComponent<Bullet>().speed;
         laser.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
         currMana -= shootCost; // Deduct mana cost

@@ -148,6 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   lifetime: 1
-  speed: 5
+  speed: 10
   damageBuff: 0
   bulletName: Wand
+  EventManger: {fileID: 0}
