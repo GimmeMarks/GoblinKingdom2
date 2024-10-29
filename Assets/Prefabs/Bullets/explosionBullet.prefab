@@ -48,12 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40ca8fbbd456584ab95a7011fa7ac51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 40
   lifetime: 10
   speed: 8
   damageBuff: 0
   bulletName: Explosion!
-  EventManger: {fileID: 0}
 --- !u!33 &5135760712305374082
 MeshFilter:
   m_ObjectHideFlags: 0

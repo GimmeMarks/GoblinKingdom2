@@ -51,15 +51,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
-  eHealth: 10
+  eHealth: 15
   eSpeed: 3
   eDamage: 2
   eName: Flyer
   eAttackSpeed: 2
-  chaseDistance: 20
-  lingerDistance: 30
+  chaseDistance: 0
+  lingerDistance: 0
   playerTransform: {fileID: 0}
-  attackDistance: 8
+  attackDistance: 0
 --- !u!33 &6491852470891984103
 MeshFilter:
   m_ObjectHideFlags: 0

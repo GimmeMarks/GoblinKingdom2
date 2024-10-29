@@ -146,9 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a40ca8fbbd456584ab95a7011fa7ac51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  damage: 10
   lifetime: 1
   speed: 10
   damageBuff: 0
   bulletName: Wand
-  EventManger: {fileID: 0}

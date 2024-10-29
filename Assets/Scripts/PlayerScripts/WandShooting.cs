@@ -28,11 +28,10 @@ public class WandShooting : MonoBehaviour
     [SerializeField] private TMP_Text SpellIndicator;
 
     [SerializeField] private float nextTimeToFire = 2;
-    [SerializeField] private float fireRate = 0.5f;
 
     // Laser weapon variables
     private bool isCharging = false;
-    public float chargeTime = 1f;
+    public float chargeTime;
 
     // Explosion weapon variables
     private float explosionRadius = 5.0f;
@@ -40,30 +39,35 @@ public class WandShooting : MonoBehaviour
     private float timeDelay = 1.5F;
 
     // Mana and Reloading
-    private bool isReloading = false;
-    public int shootCost = 10;
-    public int currMana = 100;
+    public int currMana;
+
+    //Weapon Costs
+    public int LaserShootCost;
+    public int IceShootCost;
+    public int ExplosionShootCost;
+
+    public float BasicFireRate;
+    public float LaserFireRate; // + chargeTime Delay
+    public float IceFireRate;
+    public float ExplosionFireRate;
+
 
     // Stats that can be changed by NPCs
     public int maxMana = 100;
 
     public PlayerController PlayerController;
 
-    public bool Regenerate = true;
     public int regen;
-    private float timeleft = 0.0f;
+    public float regenDelay;
     public float regenUpdateInterval;
     private bool inMenuLocal;
     public bool GodMode;
-
-    // Save for later
-    private float chargeAmount = 100f;
 
     void Start()
     {
         ChangeWeapon(1);
         UpdateGunUI();
-        timeleft = regenUpdateInterval;
+        regenDelay = regenUpdateInterval;
         
     }
 
@@ -71,30 +75,48 @@ public class WandShooting : MonoBehaviour
     public void Update()
     {
         inMenuLocal = PlayerController.Instance.inMenu;
+
+        Regen();
+
         // Check if the current weapon is the laser weapon
         if (currentBulletPrefab == laserBulletPrefab)
         {
             // Use right-click for laser
-            if (Input.GetButton("Fire2") && currMana >= shootCost && !isReloading && !inMenuLocal && !PlayerController.inConversation == true)
+            if (Input.GetButton("Fire1") && currMana >= LaserShootCost && !inMenuLocal && !PlayerController.inConversation == true)
             {
                 if (!isCharging)
                 {
+                    currMana -= LaserShootCost;
                     StartCoroutine(ChargeLaser());
+                }
+            }
+        }
+        // Checks if the current weapon is the explosion
+        else if (currentBulletPrefab == explosionBulletPrefab)
+        {
+            // Use left-click to fire explosion
+            if (Input.GetButton("Fire1") && currMana >= ExplosionShootCost && !inMenuLocal && !PlayerController.inConversation == true)
+            {
+                if (!isCharging)
+                {
+                    currMana -= ExplosionShootCost;
+                    Shoot();
                 }
             }
         }
         else
         {
+            //Check if the weapon is basic or ice
             if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal && !PlayerController.inConversation == true)
             {
                 if (currentBulletPrefab == baseBulletPrefab)
                     Shoot();
                 else
                 {
-                    if (currMana >= shootCost)
+                    if (currMana >= IceShootCost)
                     {
                         Shoot();
-                        currMana -= shootCost;
+                        currMana -= IceShootCost;
                     }
                 }
             }
@@ -108,18 +130,14 @@ public class WandShooting : MonoBehaviour
                     break; // Exit the loop once the key is found
                 }
             }
-
-            // Mana regeneration
-            if (Regenerate)
-                Regen();
         }
     }
 
     void Regen()
     {
-        timeleft -= Time.deltaTime;
+        regenDelay -= Time.deltaTime;
 
-        if (timeleft <= 0.0) // Interval ended - update health & mana and start new interval
+        if (regenDelay <= 0.0) // Interval ended - update health & mana and start new interval
         {
             if (GodMode)
             {
@@ -129,7 +147,7 @@ public class WandShooting : MonoBehaviour
             {
                 RestoreMana(regen);
             }
-            timeleft = regenUpdateInterval;
+            regenDelay = regenUpdateInterval;
         }
     }
 
@@ -204,7 +222,6 @@ public class WandShooting : MonoBehaviour
 
     void Shoot()
     {
-        nextTimeToFire = Time.time + fireRate;
 
         if (currentBulletPrefab == explosionBulletPrefab)
         {
@@ -212,6 +229,18 @@ public class WandShooting : MonoBehaviour
             var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
+
+            nextTimeToFire = Time.time + ExplosionFireRate;
+        }
+
+        else if (currentBulletPrefab == iceBulletPrefab)
+        {
+            StartCoroutine(Explode(firepoint.position));
+            var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
+            var bulletSpeed = bullet.GetComponent<Bullet>().speed;
+            bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
+
+            nextTimeToFire = Time.time + IceFireRate;
         }
 
         else
@@ -219,6 +248,8 @@ public class WandShooting : MonoBehaviour
             var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
+
+            nextTimeToFire = Time.time + BasicFireRate;
         }
     }
 
@@ -248,8 +279,7 @@ public class WandShooting : MonoBehaviour
         var laser = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
         var bulletSpeed = laser.GetComponent<Bullet>().speed;
         laser.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
-        currMana -= shootCost;
-        Debug.Log("Laser fired with increased damage!");
+        Debug.Log("Laser Fired!");
     }
 
     void UpdateGunUI()
