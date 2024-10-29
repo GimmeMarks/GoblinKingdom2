@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
 
-    public static int goldCount = 5000;
+    public static int goldCount = 0; //Got to start at ground zero
 
     //Stats that can be changed buy NPCs
     public int maxHealth = 100;
