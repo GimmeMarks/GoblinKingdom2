@@ -51,13 +51,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
-  eHealth: 15
+  eHealth: 25
   eSpeed: 3
   eDamage: 2
   eName: Grunt
   eAttackSpeed: 2
-  chaseDistance: 20
-  lingerDistance: 30
+  chaseDistance: 10
+  lingerDistance: 20
   playerTransform: {fileID: 0}
   attackDistance: 8
 --- !u!33 &319938310691870410

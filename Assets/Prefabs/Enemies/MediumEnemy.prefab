@@ -51,13 +51,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
-  eHealth: 50
+  eHealth: 55
   eSpeed: 2
   eDamage: 5
   eName: Knight
   eAttackSpeed: 3
-  chaseDistance: 20
-  lingerDistance: 30
+  chaseDistance: 10
+  lingerDistance: 20
   playerTransform: {fileID: 0}
   attackDistance: 3
 --- !u!33 &1711141723254415900
