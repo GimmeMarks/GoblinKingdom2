@@ -15742,6 +15742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef074f5b89c92042bb616a8ab2eda7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnLocations:
   redSpawnLocations:
   - {fileID: 936185805}
   - {fileID: 1861769281}
