@@ -7,8 +7,7 @@ public class SpawnerScript : MonoBehaviour
 {
     //Initalizing Variables
     int waveNumber;
-    [SerializeField] Transform[] redSpawnLocations;
-    [SerializeField] Transform[] blueSpawnLocations;
+    [SerializeField] Transform[] spawnLocations;
     [SerializeField] GameObject smallEnemy;
     [SerializeField] GameObject mediumEnemy;
     [SerializeField] GameObject largeEnemy;
@@ -50,7 +49,6 @@ public class SpawnerScript : MonoBehaviour
             //Smallest = Wavenumber * 3, Largest = Wavenumber * 5
             int enemyBudget = Random.Range(waveNumber * 3 + 5, waveNumber * 5 + 10);
             //Start the coroutine to spawn enemies by feeding it the value generated
-            
             StartCoroutine(SpawnEnemies(enemyBudget));
             //Wait until the game can't find any enemies left
             yield return new WaitUntil(() => AllEnemiesDefeated());
@@ -63,30 +61,16 @@ public class SpawnerScript : MonoBehaviour
 
     //Spawns enemies based on the current budget
     IEnumerator SpawnEnemies(int enemyBudget)
-        
     {
-        bool spawnSide = SpawnSideGenerator();
-        
-
         while (enemyBudget > 0)
         {
             //Pick a random enemy type based on the budget (different enemies cost different amounts)
             GameObject enemyToSpawn = GetEnemyBasedOnBudget(ref enemyBudget);
-            Transform spawnLocation = redSpawnLocations[Random.Range(0, redSpawnLocations.Length)];
             //if there are more enemies to spawn, pick a random location and spawn em!
             if (enemyToSpawn != null)
             {
-                if (spawnSide)
-                {
-                    //If true, set the spawns to red side
-                    spawnLocation = redSpawnLocations[Random.Range(0, redSpawnLocations.Length)];
-                }
-                else
-                {
-                    //If false, set the spawns to blue side
-                    spawnLocation = blueSpawnLocations[Random.Range(0, blueSpawnLocations.Length)];
-                }
-                
+                //Picking random spawn location
+                Transform spawnLocation = spawnLocations[Random.Range(0, spawnLocations.Length)];
                 //spawn
                 GameObject enemyInstance = Instantiate(enemyToSpawn, spawnLocation.position, Quaternion.identity);
                 //Get the instantiated enemies baseClass script
@@ -108,14 +92,6 @@ public class SpawnerScript : MonoBehaviour
     {
         //Do any game objects of type enemy exist?
         return FindObjectsOfType<EnemyBaseClass>().Length == 0;
-    }
-    bool SpawnSideGenerator()
-    {
-        if (Random.Range(0, 1) == 0)
-            return true;
-        else
-            return false;
-
     }
 
     //Select an enemy type based on the available budget
