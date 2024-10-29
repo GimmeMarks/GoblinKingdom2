@@ -1,3 +1,4 @@
+using DialogueEditor;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -49,9 +50,9 @@ public class WandShooting : MonoBehaviour
     public PlayerController PlayerController;
 
     public bool Regenerate = true;
-    public int regen = 1;
+    public int regen = 20;
     private float timeleft = 0.0f;
-    public float regenUpdateInterval = 2f;
+    public float regenUpdateInterval = 0.2f;
     private bool inMenuLocal;
     public bool GodMode;
 
@@ -74,7 +75,7 @@ public class WandShooting : MonoBehaviour
         if (currentBulletPrefab == laserBulletPrefab)
         {
             // Use right-click for laser
-            if (Input.GetButton("Fire2") && currMana >= shootCost && !isReloading && !inMenuLocal)
+            if (Input.GetButton("Fire2") && currMana >= shootCost && !isReloading && !inMenuLocal && !PlayerController.inConversation == true)
             {
                 if (!isCharging)
                 {
@@ -84,7 +85,7 @@ public class WandShooting : MonoBehaviour
         }
         else
         {
-            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal)
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal && !PlayerController.inConversation == true)
             {
                 if (currentBulletPrefab == baseBulletPrefab)
                     Shoot();
@@ -180,16 +181,16 @@ public class WandShooting : MonoBehaviour
                 currentWandPrefab = WandBasic;
                 break;
             case 2:
-                currentBulletPrefab = explosionBulletPrefab;
-                currentWandPrefab = WandExplosion;
+                currentBulletPrefab = laserBulletPrefab;
+                currentWandPrefab = WandLaser;
                 break;
             case 3:
                 currentBulletPrefab = iceBulletPrefab;
                 currentWandPrefab = WandIce;
                 break;
             case 4:
-                currentBulletPrefab = laserBulletPrefab;
-                currentWandPrefab = WandLaser;
+                currentBulletPrefab = explosionBulletPrefab;
+                currentWandPrefab = WandExplosion;
                 break;
         }
         UpdateGunUI();

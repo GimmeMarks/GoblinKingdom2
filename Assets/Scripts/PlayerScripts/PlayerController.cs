@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     public GameObject PlayerUI;
 
     //NPC Tower Buys (Allows to check if a tower is bought or not)
+    public bool inConversation = false;
     public static bool Bought1 = false;
     public static bool Bought2 = false;
     public static bool Bought3 = false;
@@ -195,8 +196,27 @@ public class PlayerController : MonoBehaviour
             goldCode.DestroyMe();
 
         }
+
     }
 
+    public void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("NPC"))
+        {
+            inConversation = true;
+
+        }
+
+    }
+    public void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("NPC"))
+        {
+            inConversation = false;
+
+        }
+
+    }
 
 
     public void roundManager(int roundNum)

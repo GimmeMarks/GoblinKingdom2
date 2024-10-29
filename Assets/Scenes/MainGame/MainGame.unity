@@ -956,6 +956,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Warlock
       objectReference: {fileID: 0}
+    - target: {fileID: 164886084576750851, guid: 36c7640494fdb3747b40e596d5d384da, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 2992214226611786996, guid: 36c7640494fdb3747b40e596d5d384da, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.807007
@@ -1878,6 +1882,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannoneer_RT
       objectReference: {fileID: 0}
+    - target: {fileID: 5372749354835768751, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 6411750983017333043, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
       propertyPath: _itemStates.Array.data[1].Item
       value: 
@@ -2554,6 +2562,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sharpshooter_T
       objectReference: {fileID: 0}
+    - target: {fileID: 1960543998511237524, guid: 631d622d627919444b693e26532ec73e, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2909,6 +2921,10 @@ PrefabInstance:
     - target: {fileID: 5372749354835768751, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
       propertyPath: m_Name
       value: Trapper_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372749354835768751, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 6411750983017333043, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
       propertyPath: _itemStates.Array.data[1].Item
@@ -6579,6 +6595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannoneer_LB
       objectReference: {fileID: 0}
+    - target: {fileID: 5372749354835768751, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 6411750983017333043, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
       propertyPath: _itemStates.Array.data[1].Item
       value: 
@@ -8066,6 +8086,10 @@ PrefabInstance:
     - target: {fileID: 5372749354835768751, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
       propertyPath: m_Name
       value: Cannoneer_RB
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372749354835768751, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 6411750983017333043, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
       propertyPath: _itemStates.Array.data[1].Item
@@ -13957,6 +13981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannoneer_LT
       objectReference: {fileID: 0}
+    - target: {fileID: 5372749354835768751, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
     - target: {fileID: 6411750983017333043, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
       propertyPath: _itemStates.Array.data[1].Item
       value: 
@@ -14607,6 +14635,10 @@ PrefabInstance:
     - target: {fileID: 5372749354835768751, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
       propertyPath: m_Name
       value: Trapper_R
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372749354835768751, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 6411750983017333043, guid: fddefbb9ad72a1d4fae1157e5a1520c9, type: 3}
       propertyPath: _itemStates.Array.data[1].Item
@@ -17407,6 +17439,10 @@ PrefabInstance:
     - target: {fileID: 1960543998511237524, guid: 631d622d627919444b693e26532ec73e, type: 3}
       propertyPath: m_Name
       value: Sharpshooter_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1960543998511237524, guid: 631d622d627919444b693e26532ec73e, type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -30,9 +30,11 @@ public class ConversationStarter : MonoBehaviour
                 ConversationManager.Instance.SetBool("IceBought", PlayerController.IceBought);
                 ConversationManager.Instance.SetBool("ExplosiveBought", PlayerController.ExplosiveBought);
 
+
             }
 
         }
+
 
     }
     private void OnTriggerExit(Collider other)
