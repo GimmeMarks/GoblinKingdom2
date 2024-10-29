@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class WandShooting : MonoBehaviour
 {
+    // Variables
     public Transform wandspawnpoint;
     public Transform firepoint;
     public GameObject baseBulletPrefab;
@@ -18,142 +19,124 @@ public class WandShooting : MonoBehaviour
     public GameObject WandExplosion;
     public GameObject WandIce;
     public GameObject WandLaser;
+    
 
     private GameObject currentWand;
-    public enum SpellType { Basic, Explosion, Ice, Laser}
+    public enum SpellType { Basic, Explosion, Ice, Laser }
 
     [SerializeField] private TMP_Text SpellIndicator;
 
-    [SerializeField]private float nextTimeToFire = 2;
-    [SerializeField]private float fireRate = 0.5f;
+    [SerializeField] private float nextTimeToFire = 2;
+    [SerializeField] private float fireRate = 0.5f;
 
-    //Laser weapon variables
+    // Laser weapon variables
     private bool isCharging = false;
     public float chargeTime = 1f;
 
-    //Explosion weapon variables
+    // Explosion weapon variables
     private float explosionRadius = 5.0f;
     private float explosionForce = 300.0F;
-    //private float upwardsModifier = 2.0F;
     private float timeDelay = 1.5F;
 
-
-    //Mana and Reloading
+    // Mana and Reloading
     private bool isReloading = false;
     public int shootCost = 10;
     public int currMana = 100;
 
-    //Stats that can be changed buy NPCs
+    // Stats that can be changed by NPCs
     public int maxMana = 100;
 
     public PlayerController PlayerController;
 
     public bool Regenerate = true;
     public int regen = 1;
-    private float timeleft = 0.0f;  // Left time for current interval
+    private float timeleft = 0.0f;
     public float regenUpdateInterval = 2f;
-
+    private bool inMenuLocal;
     public bool GodMode;
 
-
-    //Save for later
+    // Save for later
     private float chargeAmount = 100f;
 
-    
     void Start()
     {
         ChangeWeapon(1);
         UpdateGunUI();
         timeleft = regenUpdateInterval;
-
+        
     }
 
     // Update is called once per frame
     public void Update()
     {
+        inMenuLocal = PlayerController.Instance.inMenu;
         // Check if the current weapon is the laser weapon
         if (currentBulletPrefab == laserBulletPrefab)
         {
             // Use right-click for laser
-            if (Input.GetButton("Fire2") && currMana >= shootCost && !isReloading)
+            if (Input.GetButton("Fire2") && currMana >= shootCost && !isReloading && !inMenuLocal)
             {
                 if (!isCharging)
                 {
                     StartCoroutine(ChargeLaser());
                 }
-
             }
-
         }
         else
         {
-            // Use left-click for other weapons
-            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && currMana >= shootCost && !isReloading)
-          
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal)
             {
-                Shoot();
-                currMana -= shootCost;
+                if (currentBulletPrefab == baseBulletPrefab)
+                    Shoot();
+                else
+                {
+                    if (currMana >= shootCost)
+                    {
+                        Shoot();
+                        currMana -= shootCost;
+                    }
+                }
             }
-        }
 
-        // Reload functionality
-        if (Input.GetKeyDown(KeyCode.R) && !isReloading)
-        {
-            StartCoroutine(Reload());
-        }
-
-        // Weapon switching
-        for (int i = 1; i <= 4; i++)
-        {
-            if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), "Alpha" + i)))
+            // Weapon switching
+            for (int i = 1; i <= 4; i++)
             {
-                ChangeWeapon(i);
-                break; // Exit the loop once the key is found
+                if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), "Alpha" + i)))
+                {
+                    ChangeWeapon(i);
+                    break; // Exit the loop once the key is found
+                }
             }
-        }
 
-        // Mana regeneration
-        if (Regenerate)
-            Regen();
+            // Mana regeneration
+            if (Regenerate)
+                Regen();
+        }
     }
 
-
-    private void Regen()
+    void Regen()
     {
         timeleft -= Time.deltaTime;
 
         if (timeleft <= 0.0) // Interval ended - update health & mana and start new interval
         {
-            //Debug.Log("Mana Restore");
             if (GodMode)
             {
                 RestoreMana(maxMana);
             }
             else
-            { 
+            {
                 RestoreMana(regen);
             }
-
             timeleft = regenUpdateInterval;
         }
     }
 
-    public void RestoreMana(int Mana)
+    void RestoreMana(int Mana)
     {
         currMana += Mana;
         if (currMana > maxMana)
             currMana = maxMana;
-
-      
-    }
-
-
-    IEnumerator Reload()
-    {
-        isReloading = true;
-        yield return new WaitForSeconds(2f);
-        currMana = maxMana;
-        isReloading = false;
     }
 
     IEnumerator ChargeLaser()
@@ -162,7 +145,6 @@ public class WandShooting : MonoBehaviour
         Debug.Log("Charging laser... ");
         yield return new WaitForSeconds(chargeTime);
         isCharging = false;
-       
 
         if (isCharging == false)
         {
@@ -170,23 +152,21 @@ public class WandShooting : MonoBehaviour
         }
     }
 
-    public void ChangeWeapon(int WeaponIndex)
+    void ChangeWeapon(int WeaponIndex)
     {
-
         // Checks to see if the player has bought the wand, if not returns back to 1
         if (WeaponIndex == 2 && !PlayerController.LaserBought)
         {
-            WeaponIndex = 1; // Switch back to weapon 1
+            WeaponIndex = 1;
         }
         else if (WeaponIndex == 3 && !PlayerController.IceBought)
         {
-            WeaponIndex = 1; // Switch back to weapon 1
+            WeaponIndex = 1;
         }
         else if (WeaponIndex == 4 && !PlayerController.ExplosiveBought)
         {
-            WeaponIndex = 1; // Switch back to weapon 1
+            WeaponIndex = 1;
         }
-
 
         if (currentWand != null)
         {
@@ -214,48 +194,39 @@ public class WandShooting : MonoBehaviour
         }
         UpdateGunUI();
 
-        if(currentWandPrefab != null)
+        if (currentWandPrefab != null)
         {
             currentWand = Instantiate(currentWandPrefab, wandspawnpoint.position, wandspawnpoint.rotation);
             currentWand.transform.SetParent(Camera.main.transform);
         }
     }
+
     void Shoot()
     {
-
         nextTimeToFire = Time.time + fireRate;
-        
+
         if (currentBulletPrefab == explosionBulletPrefab)
         {
             StartCoroutine(Explode(firepoint.position));
             var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
-            //Reset damage for regular shots
-            bullet.GetComponent<Bullet>(); // Set to the default damage value
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
         }
         else
         {
-        
             var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
-            //Reset damage for regular shots
-            bullet.GetComponent<Bullet>(); // Set to the default damage value
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
         }
     }
 
-
-    private IEnumerator Explode(Vector3 explosionPosition)
+    IEnumerator Explode(Vector3 explosionPosition)
     {
-        // Wait for the explosion delay before applying damage
         yield return new WaitForSeconds(timeDelay);
 
-        // Find all colliders within the explosion radius
         Collider[] colliders = Physics.OverlapSphere(explosionPosition, explosionRadius);
         foreach (Collider hit in colliders)
         {
-            // Optionally, you can apply a force to the rigidbody if the object has one
             Rigidbody rb = hit.GetComponent<Rigidbody>();
             if (rb != null)
             {
@@ -265,25 +236,22 @@ public class WandShooting : MonoBehaviour
             Debug.Log("EXPLOSION!!");
             if (hit is SphereCollider sphereCollider)
             {
-                // Modify radius here (for example, double the radius)
-                sphereCollider.radius *= 10f; // Adjust this value as needed
+                sphereCollider.radius *= 10f;
             }
         }
     }
 
-        void ShootLaser()
+    void ShootLaser()
     {
         var laser = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
         var bulletSpeed = laser.GetComponent<Bullet>().speed;
         laser.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
-        currMana -= shootCost; // Deduct mana cost
+        currMana -= shootCost;
         Debug.Log("Laser fired with increased damage!");
-
     }
+
     void UpdateGunUI()
     {
-
         SpellIndicator.text = currentBulletPrefab.GetComponent<Bullet>().bulletName;
     }
-
 }

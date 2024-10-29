@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] Button StartOver;
+    [SerializeField] Button Quit;
+
+    private void Awake()
     {
-        
+        StartOver.onClick.AddListener(StartOverClick);
+        Quit.onClick.AddListener(quitClick);
     }
 
-    // Update is called once per frame
-    void Update()
+    void StartOverClick()
     {
-        
+        SceneManager.LoadScene("MainGame");
+    }
+    void quitClick()
+    {
+        SceneManager.LoadScene("TitleScreen");
     }
 }

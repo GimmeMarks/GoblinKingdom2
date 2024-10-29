@@ -184,6 +184,13 @@ public class EnemyBaseClass : MonoBehaviour
 
             }
         }
+        if (other.CompareTag("base"))
+        {
+            float healthDamage = eMaxHealth * 0.1f;
+            int healthDamageReal = Mathf.RoundToInt(healthDamage);
+            PlayerController.Instance.KingdomHealth -= healthDamageReal;
+            Destroy(gameObject);
+        }
 
     }
     //If taking damage and health drops below zero, destroy and drop gold

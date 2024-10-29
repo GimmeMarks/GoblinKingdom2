@@ -86,13 +86,14 @@ GameObject:
   - component: {fileID: 64353730457255759}
   - component: {fileID: 3714636468078393246}
   - component: {fileID: 7515488460240330990}
+  - component: {fileID: 5963328068455674465}
   m_Layer: 5
   m_Name: Win Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &64353730457255759
 RectTransform:
   m_ObjectHideFlags: 0
@@ -155,6 +156,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5963328068455674465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331445046228397726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f065b0473fda314cbcde057becebb03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartOver: {fileID: 6552353315106421818}
+  Quit: {fileID: 7590792416802717946}
 --- !u!1 &830785558519263338
 GameObject:
   m_ObjectHideFlags: 0

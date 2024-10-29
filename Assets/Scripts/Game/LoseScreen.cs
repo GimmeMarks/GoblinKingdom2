@@ -22,6 +22,6 @@ public class LoseScreen : MonoBehaviour
     }
     void quitClick()
     {
-        Application.Quit();
+        SceneManager.LoadScene("TitleScreen");
     }
 }

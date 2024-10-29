@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,19 +14,23 @@ public class PlayerController : MonoBehaviour
     public TMP_Text waveNumberUI;
     public TMP_Text goldTextUI;
     public int roundNumGlobal;
+    public Slider SensSlider;
 
     private Camera playerCamera;
     private CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
 
-    public static int goldCount = 5000;
+    public static int goldCount = 800;
 
     //Stats that can be changed buy NPCs
     public int maxHealth = 100;
     public int currHealth = 100;
+    public int KingdomHealth = 100;
+    public int kingdomMaxHealth = 100;
     public float speed = 5.0f;
-
+    public bool inMenu = false;
+    public GameObject PlayerUI;
 
     //NPC Tower Buys (Allows to check if a tower is bought or not)
     public static bool Bought1 = false;
@@ -95,6 +100,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void SetSensitivity()
+    {
+        lookSpeed = SensSlider.value;
+    }
     void Update()
     {
         // Movement
@@ -135,7 +144,33 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Health = " + currHealth);
 
     }
+    private void UnlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None; // Unlock the cursor
+        Cursor.visible = true; // Show the cursor
+    }
+    private void LockMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked; // Lock the cursor
+        Cursor.visible = false; // Hide the cursor
+    }
 
+
+    public void EndGame()
+    {
+        UnlockMouse();
+        PlayerUI.SetActive(false);
+        inMenu = true;
+        this.enabled = false;
+    }
+    public void ResumeGame()
+    {
+        LockMouse();
+        PlayerUI.SetActive(true);
+        inMenu = false;
+        this.enabled = true;
+    }
+    
     //Unfinished
     /*
     IEnumerator PlayerHealthRegen()

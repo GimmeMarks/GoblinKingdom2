@@ -7,14 +7,19 @@ public class SpawnerScript : MonoBehaviour
 {
     //Initalizing Variables
     int waveNumber;
-    [SerializeField] Transform[] spawnLocations;
+    int winNumber = 0;
+    [SerializeField] Transform[] redSpawnLocations;
+    [SerializeField] Transform[] blueSpawnLocations;
     [SerializeField] GameObject smallEnemy;
     [SerializeField] GameObject mediumEnemy;
     [SerializeField] GameObject largeEnemy;
     [SerializeField] GameObject riderEnemy;
     [SerializeField] GameObject flyerEnemy;
     [SerializeField] TMP_Text countdownText;
-    [SerializeField] GameObject countdownTimerUIObject;
+    [SerializeField] TMP_Text roundText;
+    [SerializeField] GameObject countdownTextObject;
+    [SerializeField] GameObject winScreen;
+    [SerializeField] GameObject playerUI;
     //Base Locations
     public Transform baseLocation1;
     public Transform baseLocation2;
@@ -30,38 +35,61 @@ public class SpawnerScript : MonoBehaviour
         StartCoroutine("WaveManager");
 
     }
+    private void UnlockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None; // Unlock the cursor
+        Cursor.visible = true; // Show the cursor
+    }
     IEnumerator WaveManager()
     {
-        int nextWaveStartTime = 30; // WaveDelay
+        int nextWaveStartTime = 1; // WaveDelay
 
         while (true)
         {
             // Countdown before starting the next wave
             while (nextWaveStartTime >= 0)
             {
-                countdownTimerUIObject.SetActive(true);
-                //Tick down the time
-                countdownText.text = ("Round Starts in " + nextWaveStartTime.ToString());
+                countdownTextObject.SetActive(true);
+                roundText.text = ("Round: " + (waveNumber + 1)).ToString();
+                countdownText.text = (waveNumber >= winNumber)
+                    ? "Final Round Starts in " + nextWaveStartTime.ToString()
+                    : "Round Starts in " + nextWaveStartTime.ToString();
+
                 yield return new WaitForSeconds(1);
                 nextWaveStartTime--;
             }
-            countdownTimerUIObject.SetActive(false);
+
+            countdownTextObject.SetActive(false);
+
             //Smallest = Wavenumber * 3, Largest = Wavenumber * 5
             int enemyBudget = Random.Range(waveNumber * 3 + 5, waveNumber * 5 + 10);
             //Start the coroutine to spawn enemies by feeding it the value generated
-            StartCoroutine(SpawnEnemies(enemyBudget));
+            yield return StartCoroutine(SpawnEnemies(enemyBudget));
             //Wait until the game can't find any enemies left
+            
             yield return new WaitUntil(() => AllEnemiesDefeated());
+           //Check if last wave is cleared
+            if (waveNumber >= winNumber)
+            {
+                
+                PlayerController.Instance.EndGame();
+                winScreen.SetActive(true);
+                break;
+            }
             //Once all enemies are dead, increase wave counter and push to the UI element
             waveNumber++;
             PlayerController.Instance.roundManager(waveNumber);
             nextWaveStartTime = 30;
+
         }
     }
 
     //Spawns enemies based on the current budget
     IEnumerator SpawnEnemies(int enemyBudget)
     {
+        bool spawnPoint = SpawnPointGenerator();
+        
+        Transform spawnLocation = redSpawnLocations[Random.Range(0, redSpawnLocations.Length)];
         while (enemyBudget > 0)
         {
             //Pick a random enemy type based on the budget (different enemies cost different amounts)
@@ -69,8 +97,16 @@ public class SpawnerScript : MonoBehaviour
             //if there are more enemies to spawn, pick a random location and spawn em!
             if (enemyToSpawn != null)
             {
-                //Picking random spawn location
-                Transform spawnLocation = spawnLocations[Random.Range(0, spawnLocations.Length)];
+                if (spawnPoint)
+                {
+                    //Picking random spawn location
+                    spawnLocation = redSpawnLocations[Random.Range(0, redSpawnLocations.Length)];
+                }
+                else
+                {
+                    //Picking random spawn location
+                    spawnLocation = blueSpawnLocations[Random.Range(0, blueSpawnLocations.Length)];
+                }
                 //spawn
                 GameObject enemyInstance = Instantiate(enemyToSpawn, spawnLocation.position, Quaternion.identity);
                 //Get the instantiated enemies baseClass script
@@ -92,6 +128,19 @@ public class SpawnerScript : MonoBehaviour
     {
         //Do any game objects of type enemy exist?
         return FindObjectsOfType<EnemyBaseClass>().Length == 0;
+    }
+    bool SpawnPointGenerator()
+    {
+        if (Random.Range(0,100) < 50)
+        {
+            roundText.text = ("Enemy Horde Approaching From Red Side!");
+            return true;
+        }
+        else
+        {
+            roundText.text = ("Enemy Horde Approaching From Blue Side!");
+            return false;
+        }
     }
 
     //Select an enemy type based on the available budget

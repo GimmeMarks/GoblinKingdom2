@@ -23,7 +23,9 @@ public class UIManager : MonoBehaviour
     {
         UpdateHealthBar();
         UpdateManaBar();
+        UpdateKingdomHealthBar();
     }
+    
 
     public void UpdateHealthBar()
     {
@@ -33,9 +35,7 @@ public class UIManager : MonoBehaviour
         if (PlayerController.Instance.currHealth <= 0)
         {
             LoseScreen.SetActive(true);
-            PlayerUI.SetActive(false);
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = true;
+            PlayerController.Instance.EndGame();
         }
 
     }
@@ -50,7 +50,13 @@ public class UIManager : MonoBehaviour
 
     public void UpdateKingdomHealthBar()
     {
+        kingdomHealthBar.fillAmount = (float)PlayerController.Instance.KingdomHealth / PlayerController.Instance.kingdomMaxHealth;
 
+        if (PlayerController.Instance.KingdomHealth <= 0)
+        {
+            LoseScreen.SetActive(true);
+            PlayerController.Instance.EndGame();
+        }
     }
 
 
