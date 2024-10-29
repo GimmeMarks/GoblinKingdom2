@@ -50,9 +50,9 @@ public class WandShooting : MonoBehaviour
     public PlayerController PlayerController;
 
     public bool Regenerate = true;
-    public int regen = 20;
+    public int regen;
     private float timeleft = 0.0f;
-    public float regenUpdateInterval = 0.2f;
+    public float regenUpdateInterval;
     private bool inMenuLocal;
     public bool GodMode;
 
@@ -213,6 +213,7 @@ public class WandShooting : MonoBehaviour
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
         }
+
         else
         {
             var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);

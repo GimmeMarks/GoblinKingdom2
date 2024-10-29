@@ -7,7 +7,15 @@ public class SpawnerScript : MonoBehaviour
 {
     //Initalizing Variables
     int waveNumber;
-    int winNumber = 0;
+
+    // ----------------------------------------
+    // Win Game Amount
+    // ----------------------------------------
+
+    int winNumber = 3;
+
+    // ----------------------------------------
+
     [SerializeField] Transform[] redSpawnLocations;
     [SerializeField] Transform[] blueSpawnLocations;
     [SerializeField] GameObject smallEnemy;

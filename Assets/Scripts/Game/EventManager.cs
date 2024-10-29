@@ -216,7 +216,7 @@ public class EventManager : MonoBehaviour
             OnBuyRegenUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Regen upgrade bought! Remaining gold: " + PlayerController.goldCount);
 
-            //Need to do
+            WandShooting.regen += 1;
         }
         else
         {
