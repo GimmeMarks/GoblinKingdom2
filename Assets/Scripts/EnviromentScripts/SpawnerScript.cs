@@ -37,16 +37,9 @@ public class SpawnerScript : MonoBehaviour
     void Start()
     {
         //Set Wave number
-        waveNumber = 0;
-        //call this to update the wave number UI
-        PlayerController.Instance.roundManager(waveNumber);
+        waveNumber = 1;
         StartCoroutine("WaveManager");
 
-    }
-    private void UnlockMouse()
-    {
-        Cursor.lockState = CursorLockMode.None; // Unlock the cursor
-        Cursor.visible = true; // Show the cursor
     }
     IEnumerator WaveManager()
     {
@@ -58,7 +51,7 @@ public class SpawnerScript : MonoBehaviour
             while (nextWaveStartTime >= 0)
             {
                 countdownTextObject.SetActive(true);
-                roundText.text = ("Round: " + (waveNumber + 1)).ToString();
+                roundText.text = ("Round: " + waveNumber).ToString();
                 countdownText.text = (waveNumber >= winNumber)
                     ? "Final Round Starts in " + nextWaveStartTime.ToString()
                     : "Round Starts in " + nextWaveStartTime.ToString();
@@ -86,7 +79,6 @@ public class SpawnerScript : MonoBehaviour
             }
             //Once all enemies are dead, increase wave counter and push to the UI element
             waveNumber++;
-            PlayerController.Instance.roundManager(waveNumber);
             nextWaveStartTime = 30;
 
         }

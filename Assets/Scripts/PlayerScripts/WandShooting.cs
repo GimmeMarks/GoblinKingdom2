@@ -27,7 +27,7 @@ public class WandShooting : MonoBehaviour
 
     [SerializeField] private TMP_Text SpellIndicator;
 
-    [SerializeField] private float nextTimeToFire = 2;
+    [SerializeField] private float nextTimeToFire = 0;
 
     // Laser weapon variables
     private bool isCharging = false;

@@ -148,6 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 10
   lifetime: 1
-  speed: 10
+  speed: 15
   damageBuff: 0
   bulletName: Wand

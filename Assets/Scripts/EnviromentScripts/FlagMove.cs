@@ -11,4 +11,8 @@ public class FlagMove : MonoBehaviour
         // Move the flag up by the specified amount
         transform.position += new Vector3(0, amount, 0);
     }
+
+
+
+
 }

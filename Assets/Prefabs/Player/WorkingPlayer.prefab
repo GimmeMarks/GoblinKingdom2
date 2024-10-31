@@ -9,12 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2573810528185644788}
+  - component: {fileID: 7079938769808752316}
   - component: {fileID: 4616297696246487978}
   - component: {fileID: 718937320989915058}
   - component: {fileID: 8259260768510195866}
   - component: {fileID: 1049726476795901100}
   - component: {fileID: 4929371050108608165}
-  - component: {fileID: 7079938769808752316}
   m_Layer: 0
   m_Name: WorkingPlayer
   m_TagString: Player
@@ -39,6 +39,32 @@ Transform:
   - {fileID: 4932127317299814380}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7079938769808752316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681963421493738193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b4fe834d324684980f687526b3ec20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lookSpeed: 2
+  lookXLimit: 45
+  gravity: 23
+  waveNumberUI: {fileID: 0}
+  goldTextUI: {fileID: 0}
+  SensSlider: {fileID: 0}
+  maxHealth: 100
+  currHealth: 100
+  KingdomHealth: 100
+  kingdomMaxHealth: 100
+  speed: 5
+  inMenu: 0
+  PlayerUI: {fileID: 0}
+  inConversation: 0
 --- !u!33 &4616297696246487978
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -165,27 +191,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7079938769808752316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681963421493738193}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06b4fe834d324684980f687526b3ec20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  lookSpeed: 2
-  lookXLimit: 45
-  gravity: 23
-  waveNumberUI: {fileID: 0}
-  goldTextUI: {fileID: 0}
-  roundNumGlobal: 0
-  maxHealth: 100
-  currHealth: 100
 --- !u!1 &4360656550464823374
 GameObject:
   m_ObjectHideFlags: 0
@@ -324,18 +329,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8ad580858fb74e459aedfa743bb95de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wandspawnpoint: {fileID: 0}
   firepoint: {fileID: 0}
   baseBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
   explosionBulletPrefab: {fileID: 9122088148645627994, guid: f14e06ffefc134641b449736cc2c2cd7, type: 3}
   iceBulletPrefab: {fileID: 239900978285612905, guid: b0cb4f24024d5fb4886fca638d01d605, type: 3}
   laserBulletPrefab: {fileID: 4327763063461813562, guid: 9bcc0fa147419744b8992b5544c767ea, type: 3}
   currentBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
+  currentWandPrefab: {fileID: 0}
+  WandBasic: {fileID: 0}
+  WandExplosion: {fileID: 0}
+  WandIce: {fileID: 0}
+  WandLaser: {fileID: 0}
   SpellIndicator: {fileID: 0}
   nextTimeToFire: 2
-  fireRate: 0.5
-  shootCost: 10
-  maxMana: 100
+  chargeTime: 0
   currMana: 100
+  LaserShootCost: 0
+  IceShootCost: 0
+  ExplosionShootCost: 0
+  BasicFireRate: 0
+  LaserFireRate: 0
+  IceFireRate: 0
+  ExplosionFireRate: 0
+  maxMana: 100
+  PlayerController: {fileID: 0}
+  regen: 0
+  regenDelay: 0
+  regenUpdateInterval: 0
+  GodMode: 0
 --- !u!1 &6891926118061412198
 GameObject:
   m_ObjectHideFlags: 0

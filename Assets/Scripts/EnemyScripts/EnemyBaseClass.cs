@@ -186,7 +186,7 @@ public class EnemyBaseClass : MonoBehaviour
         }
         if (other.CompareTag("base"))
         {
-            float healthDamage = eMaxHealth * 0.1f;
+            float healthDamage = eMaxHealth *.5f;
             int healthDamageReal = Mathf.RoundToInt(healthDamage);
             PlayerController.Instance.KingdomHealth -= healthDamageReal;
             Destroy(gameObject);
@@ -207,7 +207,7 @@ public class EnemyBaseClass : MonoBehaviour
    
     int CalcGold()
     {
-        float rawGold = eMaxHealth * 0.15f;
+        float rawGold = eMaxHealth;
         int prettyGold = Mathf.RoundToInt(rawGold);
         return prettyGold;
     }

@@ -5,33 +5,38 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using VInspector;
 
 public class PlayerController : MonoBehaviour
 {
+    [Tab("Movement")]
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
-    public float gravity = 9.8f;
+    public float gravity;
+    public float speed = 5.0f;
+    public float jumpForce = 3f;
+    public static int goldCount = 0; //Got to start at ground zero
+    [Tab("Serializables")]
+
     public TMP_Text waveNumberUI;
     public TMP_Text goldTextUI;
-    public int roundNumGlobal;
     public Slider SensSlider;
-
-    private Camera playerCamera;
-    private CharacterController characterController;
-    private Vector3 moveDirection = Vector3.zero;
-    private float rotationX = 0;
-
-    public static int goldCount = 0; //Got to start at ground zero
-
+    
+    [Tab("PlayerStats")]
     //Stats that can be changed buy NPCs
     public int maxHealth = 100;
     public int currHealth = 100;
     public int KingdomHealth = 100;
     public int kingdomMaxHealth = 100;
-    public float speed = 5.0f;
+    [EndTab]
+
     public bool inMenu = false;
     public GameObject PlayerUI;
-
+    private Camera playerCamera;
+    private CharacterController characterController;
+    private Vector3 moveDirection = Vector3.zero;
+    private float rotationX = 0;
+    
     //NPC Tower Buys (Allows to check if a tower is bought or not)
     public bool inConversation = false;
     public static bool Bought1 = false;
@@ -117,7 +122,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetButton("Jump"))
             {
-                moveDirection.y = speed; // This can be adjusted for jump force
+                moveDirection.y = jumpForce; // This can be adjusted for jump force
             }
             else
             {
@@ -219,12 +224,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void roundManager(int roundNum)
-    {
-        roundNumGlobal = roundNum;
-        waveNumberUI.text = ("Round: " + (roundNum + 1).ToString());
-
-    }
+    
 
 
 
