@@ -4,14 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CannonController : MonoBehaviour
+public class MageController : MonoBehaviour
 {
     public Transform pivotPoint; // The point around which the cannon rotates
     public GameObject bulletPrefab; // The cannonball prefab
     public float shootDelay = 1.0f; // Delay between shots
     public float rotationSpeed = 5.0f; // Speed at which the cannon rotates
     public float bulletForce = 1000f;
-
 
     private Collider AtackZone;
     public Transform targetEnemy;
