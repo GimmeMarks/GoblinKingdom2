@@ -28,9 +28,10 @@ public class PlayerController : MonoBehaviour
     public int currHealth = 100;
     public int KingdomHealth = 100;
     public int kingdomMaxHealth = 100;
+    public bool inMenu = false;
     [EndTab]
 
-    public bool inMenu = false;
+    
     public GameObject PlayerUI;
     private Camera playerCamera;
     private CharacterController characterController;
