@@ -135,14 +135,14 @@ public class PlayerController : MonoBehaviour
 
         if (!inConversation)
         {
-            // Camera rotation
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+                    // Camera rotation
+        rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+        rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
 
-            // Horizontal rotation (Y-axis)
-            float rotationY = Input.GetAxis("Mouse X") * lookSpeed;
-            transform.rotation *= Quaternion.Euler(0, rotationY, 0);
+        // Horizontal rotation (Y-axis)
+        float rotationY = Input.GetAxis("Mouse X") * lookSpeed;
+        transform.rotation *= Quaternion.Euler(0, rotationY, 0);
         }
 
 
@@ -159,14 +159,11 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.None; // Unlock the cursor
         Cursor.visible = true; // Show the cursor
 
-        lookSpeed = SensSlider.value;
     }
     private void LockMouse()
     {
         Cursor.lockState = CursorLockMode.Locked; // Lock the cursor
         Cursor.visible = false; // Hide the cursor
-
-        lookSpeed = 0f;
     }
 
 
