@@ -19,7 +19,7 @@ namespace DialogueEditor
             NONE,
         }
 
-        private const float TRANSITION_TIME = 0.2f; // Transition time for fades
+        private const float TRANSITION_TIME = 0.3f; // Transition time for fades
 
         public static ConversationManager Instance { get; private set; }
 
@@ -38,6 +38,7 @@ namespace DialogueEditor
         public Sprite OptionImage;
         public bool OptionImageSliced;
         public bool AllowMouseInteraction;
+        
 
         // Non-User facing 
         // Not exposed via custom inspector
@@ -166,12 +167,14 @@ namespace DialogueEditor
         {
             Cursor.lockState = CursorLockMode.Locked; // Lock the cursor
             Cursor.visible = false; // Hide the cursor
+           
         }
 
         private void UnlockMouse()
         {
             Cursor.lockState = CursorLockMode.None; // Unlock the cursor
             Cursor.visible = true; // Show the cursor
+
         }
 
 
@@ -353,7 +356,7 @@ namespace DialogueEditor
 
         private void ScrollingText_Update()
         {
-            const float charactersPerSecond = 1500;
+            const float charactersPerSecond = 3000;
             float timePerChar = (60.0f / charactersPerSecond);
             timePerChar *= ScrollSpeed;
 

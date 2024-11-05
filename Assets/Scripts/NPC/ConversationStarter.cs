@@ -7,13 +7,14 @@ public class ConversationStarter : MonoBehaviour
 {
 
     [SerializeField] private NPCConversation myConversation;
-    private PlayerController PlayerController;
+    private PlayerController PC;
 
 
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+
             if (Input.GetKeyDown(KeyCode.F))
             {
                 ConversationManager.Instance.StartConversation(myConversation);
