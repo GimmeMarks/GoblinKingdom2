@@ -191,6 +191,12 @@ public class EnemyBaseClass : MonoBehaviour
             PlayerController.Instance.KingdomHealth -= healthDamageReal;
             Destroy(gameObject);
         }
+        if (other.CompareTag("Spikes"))
+        {
+            TakeDamage(15);
+        }
+
+
 
     }
     //If taking damage and health drops below zero, destroy and drop gold

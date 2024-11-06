@@ -12,6 +12,8 @@ TagManager:
   - NPC
   - Gold
   - base
+  - Fire
+  - Spikes
   layers:
   - Default
   - TransparentFX

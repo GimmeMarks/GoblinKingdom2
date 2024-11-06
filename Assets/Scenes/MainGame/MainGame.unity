@@ -310,7 +310,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 14700308}
-  - component: {fileID: 14700307}
   m_Layer: 0
   m_Name: Totems
   m_TagString: Untagged
@@ -318,33 +317,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &14700307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 14700306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4421f64f479e58459919c3730e31798, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  totemPrefabs:
-  - {fileID: 6212276230601132520, guid: 22ea826b0ebee6d408223fd95b9cd0b4, type: 3}
-  - {fileID: 1612362347572609273, guid: bc5433d3ea355c4408772c7865dd1e50, type: 3}
-  - {fileID: 507158141635528154, guid: 57dd409cc0ec99340b9a56099dd37075, type: 3}
-  - {fileID: 453485627369650196, guid: 26ae961a9c3b1f841b254868220df315, type: 3}
-  spawnLocations:
-  - {fileID: 1532073590}
-  - {fileID: 512492414}
-  - {fileID: 1532102509}
-  - {fileID: 1506302873}
-  - {fileID: 271230536}
-  - {fileID: 645692672}
-  minSpawnTime: 5
-  maxSpawnTime: 10
-  totemLifetime: 45
 --- !u!4 &14700308
 Transform:
   m_ObjectHideFlags: 0
@@ -1793,6 +1765,14 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BW_L1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
@@ -4093,7 +4073,6 @@ GameObject:
   - component: {fileID: 271230536}
   - component: {fileID: 271230539}
   - component: {fileID: 271230538}
-  - component: {fileID: 271230537}
   m_Layer: 0
   m_Name: TotemSpawn5
   m_TagString: Untagged
@@ -4116,27 +4095,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 14700308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &271230537
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 271230535}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &271230538
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6439,7 +6397,6 @@ GameObject:
   - component: {fileID: 512492414}
   - component: {fileID: 512492417}
   - component: {fileID: 512492416}
-  - component: {fileID: 512492415}
   m_Layer: 0
   m_Name: TotemSpawn2
   m_TagString: Untagged
@@ -6462,27 +6419,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 14700308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &512492415
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 512492413}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &512492416
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6981,6 +6917,14 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BW_R5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
@@ -7681,7 +7625,6 @@ GameObject:
   - component: {fileID: 645692672}
   - component: {fileID: 645692675}
   - component: {fileID: 645692674}
-  - component: {fileID: 645692673}
   m_Layer: 0
   m_Name: TotemSpawn6
   m_TagString: Untagged
@@ -7704,27 +7647,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 14700308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &645692673
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 645692671}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &645692674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8927,6 +8849,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BW_R3
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -8995,6 +8925,14 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BW_L5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
@@ -10396,6 +10334,14 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BW_R1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
@@ -13386,6 +13332,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BW_L2
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -13865,6 +13819,65 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 45
   m_Center: {x: 0, y: 0, z: 35}
+--- !u!1 &1123260306
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1123260308}
+  - component: {fileID: 1123260307}
+  m_Layer: 0
+  m_Name: TotemSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1123260307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123260306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4421f64f479e58459919c3730e31798, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totemPrefabs:
+  - {fileID: 6212276230601132520, guid: 22ea826b0ebee6d408223fd95b9cd0b4, type: 3}
+  - {fileID: 1612362347572609273, guid: bc5433d3ea355c4408772c7865dd1e50, type: 3}
+  - {fileID: 507158141635528154, guid: 57dd409cc0ec99340b9a56099dd37075, type: 3}
+  - {fileID: 453485627369650196, guid: 26ae961a9c3b1f841b254868220df315, type: 3}
+  spawnLocations:
+  - {fileID: 1532073590}
+  - {fileID: 512492414}
+  - {fileID: 1532102509}
+  - {fileID: 1506302873}
+  - {fileID: 271230536}
+  - {fileID: 645692672}
+  minSpawnTime: 5
+  maxSpawnTime: 10
+  totemLifetime: 45
+--- !u!4 &1123260308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123260306}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 462.7483, y: -198.7981, z: 40.644287}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1515117448}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1129345370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4681897337901454, guid: 38688660962a01e41a8b7c8ad0493167, type: 3}
@@ -16290,6 +16303,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BW_R4
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -17511,7 +17532,6 @@ GameObject:
   - component: {fileID: 1506302873}
   - component: {fileID: 1506302876}
   - component: {fileID: 1506302875}
-  - component: {fileID: 1506302874}
   m_Layer: 0
   m_Name: TotemSpawn4
   m_TagString: Untagged
@@ -17534,27 +17554,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 14700308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1506302874
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1506302872}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1506302875
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17719,7 +17718,8 @@ Transform:
   m_LocalPosition: {x: 64.51996, y: 222, z: 294.0715}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1123260308}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1515117449
@@ -17832,6 +17832,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BW_R2
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -17905,7 +17913,6 @@ GameObject:
   - component: {fileID: 1532073590}
   - component: {fileID: 1532073593}
   - component: {fileID: 1532073592}
-  - component: {fileID: 1532073591}
   m_Layer: 0
   m_Name: TotemSpawn1
   m_TagString: Untagged
@@ -17928,27 +17935,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 14700308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1532073591
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532073589}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1532073592
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18010,7 +17996,6 @@ GameObject:
   - component: {fileID: 1532102509}
   - component: {fileID: 1532102512}
   - component: {fileID: 1532102511}
-  - component: {fileID: 1532102510}
   m_Layer: 0
   m_Name: TotemSpawn3
   m_TagString: Untagged
@@ -18033,27 +18018,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 14700308}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1532102510
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532102508}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1532102511
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -20690,6 +20654,14 @@ PrefabInstance:
     - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_Name
       value: BW_L3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
@@ -24959,6 +24931,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: BW_L4
       objectReference: {fileID: 0}
+    - target: {fileID: 2827270825187339625, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_TagString
+      value: Spikes
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169709538269680814, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3204218202950055891, guid: 17ae22a8c221d254f84fbe0e68ed0705, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -26154,7 +26134,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -26162,16 +26142,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 14700306}
+      objectReference: {fileID: 1515117447}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1123260306}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
@@ -26182,7 +26162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: 
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -26190,7 +26170,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: FlagMove, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
@@ -26206,7 +26186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: 
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6747807212155515765, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: m_CastShadows
