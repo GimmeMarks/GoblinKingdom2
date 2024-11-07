@@ -20,9 +20,9 @@ public class WandShooting : MonoBehaviour
     public GameObject WandExplosion;
     public GameObject WandIce;
     public GameObject WandLaser;
-    
 
     private GameObject currentWand;
+    private int currentWeaponIndex = 0;  // Start with an invalid index (0 means no weapon selected)
     public enum SpellType { Basic, Explosion, Ice, Laser }
 
     [SerializeField] private TMP_Text SpellIndicator;
@@ -41,7 +41,7 @@ public class WandShooting : MonoBehaviour
     // Mana and Reloading
     public int currMana;
 
-    //Weapon Costs
+    // Weapon Costs
     public int LaserShootCost;
     public int IceShootCost;
     public int ExplosionShootCost;
@@ -50,7 +50,6 @@ public class WandShooting : MonoBehaviour
     public float LaserFireRate; // + chargeTime Delay
     public float IceFireRate;
     public float ExplosionFireRate;
-
 
     // Stats that can be changed by NPCs
     public int maxMana = 100;
@@ -63,12 +62,22 @@ public class WandShooting : MonoBehaviour
     private bool inMenuLocal;
     public bool GodMode;
 
+    // Track which weapons have been bought
+    public bool BasicBought = true;
+    public bool LaserBought = false;
+    public bool IceBought = false;
+    public bool ExplosionBought = false;
+
     void Start()
     {
-        ChangeWeapon(1);
+        // Initially set the weapon based on what the player has bought
+        UpdateWeaponList();
+        if (currentWeaponIndex > 0)
+        {
+            ChangeWeapon(currentWeaponIndex); // Set to the first available weapon
+        }
         UpdateGunUI();
         regenDelay = regenUpdateInterval;
-        
     }
 
     // Update is called once per frame
@@ -78,59 +87,18 @@ public class WandShooting : MonoBehaviour
 
         Regen();
 
-        // Check if the current weapon is the laser weapon
-        if (currentBulletPrefab == laserBulletPrefab)
+        // Check for weapon switch inputs (scroll with 1 and 2)
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            // Use right-click for laser
-            if (Input.GetButton("Fire1") && currMana >= LaserShootCost && !inMenuLocal && !PlayerController.inConversation == true)
-            {
-                if (!isCharging)
-                {
-                    currMana -= LaserShootCost;
-                    StartCoroutine(ChargeLaser());
-                }
-            }
+            SwitchWeapon(-1);  // Scroll backward through available weapons
         }
-        // Checks if the current weapon is the explosion
-        else if (currentBulletPrefab == explosionBulletPrefab)
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            // Use left-click to fire explosion
-            if (Input.GetButton("Fire1") && currMana >= ExplosionShootCost && !inMenuLocal && !PlayerController.inConversation == true)
-            {
-                if (!isCharging)
-                {
-                    currMana -= ExplosionShootCost;
-                    Shoot();
-                }
-            }
+            SwitchWeapon(1);  // Scroll forward through available weapons
         }
-        else
-        {
-            //Check if the weapon is basic or ice
-            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal && !PlayerController.inConversation == true)
-            {
-                if (currentBulletPrefab == baseBulletPrefab)
-                    Shoot();
-                else
-                {
-                    if (currMana >= IceShootCost)
-                    {
-                        Shoot();
-                        currMana -= IceShootCost;
-                    }
-                }
-            }
 
-            // Weapon switching
-            for (int i = 1; i <= 4; i++)
-            {
-                if (Input.GetKey((KeyCode)System.Enum.Parse(typeof(KeyCode), "Alpha" + i)))
-                {
-                    ChangeWeapon(i);
-                    break; // Exit the loop once the key is found
-                }
-            }
-        }
+        // Continue the rest of your shooting logic as is
+        HandleShooting();
     }
 
     void Regen()
@@ -158,6 +126,50 @@ public class WandShooting : MonoBehaviour
             currMana = maxMana;
     }
 
+    void HandleShooting()
+    {
+        //Handles Laser Shoot
+        if (currentBulletPrefab == laserBulletPrefab)
+        {
+            if (Input.GetButton("Fire1") && currMana >= LaserShootCost && !inMenuLocal && !PlayerController.inConversation == true)
+            {
+                if (!isCharging)
+                {
+                    currMana -= LaserShootCost;
+                    StartCoroutine(ChargeLaser());
+                }
+            }
+        }
+        //Handles Explosion Shoot
+        else if (currentBulletPrefab == explosionBulletPrefab)
+        {
+            if (Input.GetButton("Fire1") && currMana >= ExplosionShootCost && !inMenuLocal && !PlayerController.inConversation == true)
+            {
+                if (!isCharging)
+                {
+                    currMana -= ExplosionShootCost;
+                    Shoot();
+                }
+            }
+        }
+        else if (currentBulletPrefab == iceBulletPrefab)
+        {
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal && !PlayerController.inConversation == true)
+            {
+                if (currentBulletPrefab == baseBulletPrefab)
+                    Shoot();
+                else
+                {
+                    if (currMana >= IceShootCost)
+                    {
+                        Shoot();
+                        currMana -= IceShootCost;
+                    }
+                }
+            }
+        }
+    }
+
     IEnumerator ChargeLaser()
     {
         isCharging = true;
@@ -173,56 +185,70 @@ public class WandShooting : MonoBehaviour
 
     void ChangeWeapon(int WeaponIndex)
     {
-        // Checks to see if the player has bought the wand, if not returns back to 1
-        if (WeaponIndex == 2 && !PlayerController.LaserBought)
+        // Only allow changing to a weapon if it's been bought
+        if (WeaponIndex == 1 && BasicBought)
         {
-            WeaponIndex = 1;
+            currentBulletPrefab = baseBulletPrefab;
+            currentWandPrefab = WandBasic;
         }
-        else if (WeaponIndex == 3 && !PlayerController.IceBought)
+        else if (WeaponIndex == 2 && LaserBought)
         {
-            WeaponIndex = 1;
+            currentBulletPrefab = laserBulletPrefab;
+            currentWandPrefab = WandLaser;
         }
-        else if (WeaponIndex == 4 && !PlayerController.ExplosiveBought)
+        else if (WeaponIndex == 3 && IceBought)
         {
-            WeaponIndex = 1;
+            currentBulletPrefab = iceBulletPrefab;
+            currentWandPrefab = WandIce;
+        }
+        else if (WeaponIndex == 4 && ExplosionBought)
+        {
+            currentBulletPrefab = explosionBulletPrefab;
+            currentWandPrefab = WandExplosion;
         }
 
-        if (currentWand != null)
-        {
-            Destroy(currentWand); // Destroy the previous wand
-        }
-
-        switch (WeaponIndex)
-        {
-            case 1:
-                currentBulletPrefab = baseBulletPrefab;
-                currentWandPrefab = WandBasic;
-                break;
-            case 2:
-                currentBulletPrefab = laserBulletPrefab;
-                currentWandPrefab = WandLaser;
-                break;
-            case 3:
-                currentBulletPrefab = iceBulletPrefab;
-                currentWandPrefab = WandIce;
-                break;
-            case 4:
-                currentBulletPrefab = explosionBulletPrefab;
-                currentWandPrefab = WandExplosion;
-                break;
-        }
         UpdateGunUI();
 
         if (currentWandPrefab != null)
         {
+            if (currentWand != null) Destroy(currentWand); // Destroy previous wand if any
             currentWand = Instantiate(currentWandPrefab, wandspawnpoint.position, wandspawnpoint.rotation);
             currentWand.transform.SetParent(Camera.main.transform);
         }
     }
 
+    void SwitchWeapon(int direction)
+    {
+        // Move to the next or previous available weapon in the list
+        int weaponCount = 0;
+        List<int> availableWeapons = new List<int>();
+
+        // Create a list of all available weapons
+        if (BasicBought) availableWeapons.Add(1);
+        if (LaserBought) availableWeapons.Add(2);
+        if (IceBought) availableWeapons.Add(3);
+        if (ExplosionBought) availableWeapons.Add(4);
+
+        // Get the current index in the list
+        weaponCount = availableWeapons.Count;
+
+        if (weaponCount == 0) return; // If no weapons are available, do nothing
+
+        // Get the index of the currently selected weapon
+        int currentIndex = availableWeapons.IndexOf(currentWeaponIndex);
+
+        // Calculate the new index by adding the direction
+        currentIndex = (currentIndex + direction + weaponCount) % weaponCount; // Ensures wrapping
+
+        // Set the currentWeaponIndex to the new weapon
+        currentWeaponIndex = availableWeapons[currentIndex];
+
+        // Change the weapon
+        ChangeWeapon(currentWeaponIndex);
+    }
+
     void Shoot()
     {
-
         if (currentBulletPrefab == explosionBulletPrefab)
         {
             StartCoroutine(Explode(firepoint.position));
@@ -232,17 +258,14 @@ public class WandShooting : MonoBehaviour
 
             nextTimeToFire = Time.time + ExplosionFireRate;
         }
-
         else if (currentBulletPrefab == iceBulletPrefab)
         {
-            StartCoroutine(Explode(firepoint.position));
             var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
 
             nextTimeToFire = Time.time + IceFireRate;
         }
-
         else
         {
             var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
@@ -284,6 +307,18 @@ public class WandShooting : MonoBehaviour
 
     void UpdateGunUI()
     {
+    
         SpellIndicator.text = currentBulletPrefab.GetComponent<Bullet>().bulletName;
+
+    }
+
+    void UpdateWeaponList()
+    {
+        // Set the available weapons based on what the player has bought
+        if (BasicBought) currentWeaponIndex = 1;
+        else if (LaserBought) currentWeaponIndex = 2;
+        else if (IceBought) currentWeaponIndex = 3;
+        else if (ExplosionBought) currentWeaponIndex = 4;
+        else currentWeaponIndex = 0; // No weapons bought
     }
 }
