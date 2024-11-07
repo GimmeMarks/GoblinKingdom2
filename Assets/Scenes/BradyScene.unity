@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2003931976}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6010,13 +6010,19 @@ MonoBehaviour:
   WandLaser: {fileID: 7706106833710840685, guid: 2c944149dc1a2c5429f7ef9e58b606fd, type: 3}
   SpellIndicator: {fileID: 110224236}
   nextTimeToFire: 2
-  fireRate: 0.5
-  laserFireRate: 0.1
-  shootCost: 10
-  maxMana: 100
+  chargeTime: 0
   currMana: 100
-  Regenerate: 1
+  LaserShootCost: 0
+  IceShootCost: 0
+  ExplosionShootCost: 0
+  BasicFireRate: 0
+  LaserFireRate: 0
+  IceFireRate: 0
+  ExplosionFireRate: 0
+  maxMana: 100
+  PlayerController: {fileID: 0}
   regen: 1
+  regenDelay: 0
   regenUpdateInterval: 1
   GodMode: 0
 --- !u!4 &549905240 stripped
@@ -7630,7 +7636,7 @@ Terrain:
   m_StaticShadowCaster: 0
   m_IgnoreQualitySettings: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10650, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 2100000, guid: 594ea882c5a793440b60ff72d896021e, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -12506,6 +12512,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 0}
+  PlayerController: {fileID: 0}
+  WandShooting: {fileID: 0}
+  damageBuff: 0
 --- !u!114 &1161993040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15741,19 +15750,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ef074f5b89c92042bb616a8ab2eda7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnLocations:
-  - {fileID: 936185805}
-  - {fileID: 1861769281}
-  - {fileID: 1053816032}
-  - {fileID: 1453723608}
-  - {fileID: 26939126}
-  - {fileID: 1745296395}
+  redSpawnLocations: []
+  blueSpawnLocations: []
   smallEnemy: {fileID: 1642028293503218175, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
   mediumEnemy: {fileID: 449021822638516710, guid: ca8fbbcd71107df4093ff41ee38d7868, type: 3}
   largeEnemy: {fileID: 2202550640828498185, guid: 54d3a6a6bd8aee140bac1d39fa969dc1, type: 3}
   riderEnemy: {fileID: 7233184053589551852, guid: 859f81c3b76eaf8488f6eacabf02054b, type: 3}
   flyerEnemy: {fileID: 3116840150935933324, guid: c63959965ba0f1e4ba6691a8b91672e2, type: 3}
   countdownText: {fileID: 1592348541}
+  roundText: {fileID: 0}
+  countdownTextObject: {fileID: 0}
+  winScreen: {fileID: 0}
+  playerUI: {fileID: 0}
   baseLocation1: {fileID: 1400180849}
   baseLocation2: {fileID: 1937580371}
   playerLocation: {fileID: 177415753}
@@ -17416,10 +17424,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
   manaBar: {fileID: 0}
-  manaAmount: {fileID: 0}
-  healthAmount: {fileID: 632770891}
-  playerController: {fileID: 0}
-  wandShooting: {fileID: 0}
+  kingdomHealthBar: {fileID: 0}
+  wand: {fileID: 0}
+  PlayerUI: {fileID: 0}
+  WinScreen: {fileID: 0}
+  LoseScreen: {fileID: 0}
 --- !u!4 &1711791679 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
@@ -20679,7 +20688,7 @@ MeshRenderer:
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
