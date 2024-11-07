@@ -6447,6 +6447,11 @@ MonoBehaviour:
   WandExplosion: {fileID: 1894208621340011126, guid: bed691b6881a6cf45a8fb609498074b1, type: 3}
   WandIce: {fileID: 4039412713285941216, guid: aeef5fb9fa706e94da414fb6855354b6, type: 3}
   WandLaser: {fileID: 7706106833710840685, guid: 2c944149dc1a2c5429f7ef9e58b606fd, type: 3}
+  basicWandSound: {fileID: 8300000, guid: addcc3776782a074482b22f378990d69, type: 3}
+  explosionWandSound: {fileID: 8300000, guid: 36663742d4554d14486270c4788998ee, type: 3}
+  laserWandSound: {fileID: 8300000, guid: 45ccf48d65f97f5429a0ad21a676da90, type: 3}
+  iceWandSound: {fileID: 8300000, guid: 0ab2d341e934a9045aafddf606b9f05c, type: 3}
+  audioSource: {fileID: 1532731872}
   SpellIndicator: {fileID: 110224236}
   nextTimeToFire: 0
   chargeTime: 1

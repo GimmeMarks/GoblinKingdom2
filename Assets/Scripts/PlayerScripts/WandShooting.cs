@@ -2,6 +2,7 @@ using DialogueEditor;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using UnityEditor;
 using UnityEngine;
 
 public class WandShooting : MonoBehaviour
@@ -20,7 +21,13 @@ public class WandShooting : MonoBehaviour
     public GameObject WandExplosion;
     public GameObject WandIce;
     public GameObject WandLaser;
-    
+
+    public AudioClip basicWandSound;
+    public AudioClip explosionWandSound;
+    public AudioClip laserWandSound;
+    public AudioClip iceWandSound;
+
+    public AudioSource audioSource;
 
     private GameObject currentWand;
     public enum SpellType { Basic, Explosion, Ice, Laser }
@@ -101,6 +108,7 @@ public class WandShooting : MonoBehaviour
                 {
                     currMana -= ExplosionShootCost;
                     Shoot();
+                    PlaySound(explosionWandSound);
                 }
             }
         }
@@ -110,13 +118,17 @@ public class WandShooting : MonoBehaviour
             if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal && !PlayerController.inConversation == true)
             {
                 if (currentBulletPrefab == baseBulletPrefab)
+                {
                     Shoot();
+                    PlaySound(basicWandSound);
+                }
                 else
                 {
                     if (currMana >= IceShootCost)
                     {
                         Shoot();
                         currMana -= IceShootCost;
+                        PlaySound(iceWandSound);
                     }
                 }
             }
@@ -130,6 +142,14 @@ public class WandShooting : MonoBehaviour
                     break; // Exit the loop once the key is found
                 }
             }
+        }
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if(clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 
@@ -162,6 +182,7 @@ public class WandShooting : MonoBehaviour
     {
         isCharging = true;
         Debug.Log("Charging laser... ");
+        PlaySound(laserWandSound);
         yield return new WaitForSeconds(chargeTime);
         isCharging = false;
 
