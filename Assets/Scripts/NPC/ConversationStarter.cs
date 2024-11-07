@@ -7,7 +7,6 @@ public class ConversationStarter : MonoBehaviour
 {
 
     [SerializeField] private NPCConversation myConversation;
-    private PlayerController PC;
 
 
     private void OnTriggerStay(Collider other)

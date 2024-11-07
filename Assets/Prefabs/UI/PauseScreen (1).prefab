@@ -1913,6 +1913,8 @@ MonoBehaviour:
   pauseMenu: {fileID: 3456462840625899220}
   Resume: {fileID: 7937515364694335046}
   Quit: {fileID: 5935065391651448997}
+  VolumeSlider: {fileID: 0}
+  SensSlider: {fileID: 0}
 --- !u!1 &7654159591090692286
 GameObject:
   m_ObjectHideFlags: 0

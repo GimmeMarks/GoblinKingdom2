@@ -288,7 +288,7 @@ public class EventManager : MonoBehaviour
         if (PlayerController.goldCount >= 50) // Check if player has enough gold
         {
             PlayerController.goldCount -= 50;
-            PlayerController.LaserBought = true;
+            WandShooting.LaserBought = true;
             OnBuyLaserWand?.Invoke(200); // Triggers to buy Weapon
             Debug.Log("Laser Wand bought! Remaining gold: " + PlayerController.goldCount);
         }
@@ -302,7 +302,7 @@ public class EventManager : MonoBehaviour
         if (PlayerController.goldCount >= 120) // Check if player has enough gold
         {
             PlayerController.goldCount -= 120;
-            PlayerController.IceBought = true;
+            WandShooting.IceBought = true;
             OnBuyIceWand?.Invoke(400); // Triggers to buy Weapon
             Debug.Log("Ice Wand bought! Remaining gold: " + PlayerController.goldCount);
         }
@@ -316,7 +316,7 @@ public class EventManager : MonoBehaviour
         if (PlayerController.goldCount >= 250) // Check if player has enough gold
         {
             PlayerController.goldCount -= 250;
-            PlayerController.ExplosiveBought = true;
+            WandShooting.ExplosionBought = true;
             OnBuyExplosiveWand?.Invoke(800); // Triggers to buy Weapon
             Debug.Log("Explosive Wand bought! Remaining gold: " + PlayerController.goldCount);
         }
