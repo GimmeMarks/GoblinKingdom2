@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manaIncrease: 20
-  particleEffectPrefab: {fileID: 0}
+  particleEffectPrefab: {fileID: 3209644647440563859, guid: 5580e2cd7ccafce4a9a8c55cb556708e, type: 3}
+  WandShooting: {fileID: 0}
 --- !u!1 &1226520772276799422
 GameObject:
   m_ObjectHideFlags: 0

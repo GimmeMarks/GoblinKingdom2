@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthIncrease: 20
-  particleEffectPrefab: {fileID: 0}
+  particleEffectPrefab: {fileID: 3209644647440563859, guid: c94985ebbe9780b4f9e0395d3474f8c5, type: 3}
+  PlayerController: {fileID: 0}
 --- !u!1 &4465050073468510041
 GameObject:
   m_ObjectHideFlags: 0

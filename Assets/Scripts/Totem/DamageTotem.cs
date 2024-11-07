@@ -9,7 +9,8 @@ public class DamageTotem : MonoBehaviour
     // Called when the player collects the totem
     private void OnTriggerEnter(Collider other)
     {
-        
+        EventManager = EventManager.Instance;
+
         if (other.CompareTag("Player"))
         {
             // Apply effect (increase damage)
@@ -28,7 +29,7 @@ public class DamageTotem : MonoBehaviour
         {
             // Instantiate particle effect at the totem's position
             GameObject particleEffect = Instantiate(particleEffectPrefab, transform.position, Quaternion.identity);
-            Destroy(particleEffect, 1f); // Destroy particle effect after 1 second
+            Destroy(particleEffect, 3f); // Destroy particle effect after 1 second
         }
 
         // Destroy the totem object

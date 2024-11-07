@@ -228,7 +228,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageIncrease: 5
-  particleEffectPrefab: {fileID: 0}
+  particleEffectPrefab: {fileID: 3209644647440563859, guid: 12ed4ddcf19098b42ba22dc8fb77c087, type: 3}
+  EventManager: {fileID: 0}
 --- !u!1001 &3359394755162269010
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ TagManager:
   - base
   - Fire
   - Spikes
+  - FirePoint
   layers:
   - Default
   - TransparentFX

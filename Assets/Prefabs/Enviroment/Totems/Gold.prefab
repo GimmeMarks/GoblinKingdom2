@@ -121,7 +121,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldIncrease: 20
-  particleEffectPrefab: {fileID: 0}
+  particleEffectPrefab: {fileID: 3209644647440563859, guid: fbef355ea7ec2a24aa3ccd9c868a75c4, type: 3}
+  PlayerController: {fileID: 0}
 --- !u!1 &3292107013341352410
 GameObject:
   m_ObjectHideFlags: 0

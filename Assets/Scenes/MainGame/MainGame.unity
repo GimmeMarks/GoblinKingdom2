@@ -1086,17 +1086,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 14
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":424,"yPos":199},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Let
-    me see what you can make.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":673,"yPos":200},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Leave","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":49}],"NodeUID":10},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":654,"yPos":349},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Laser 
-    Wand (50 Gold)","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":119}],"NodeUID":11},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":652,"yPos":447},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Ice
-    Wand (120 Gold)","parentUIDs":[5],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":249}],"NodeUID":12},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":655,"yPos":552},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Explosive
-    Wand (250 Gold)","parentUIDs":[5],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":647,"yPos":669},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind\n","parentUIDs":[5],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"LaserBought","BoolValue":false},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"IceBought","BoolValue":false},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"ExplosiveBought","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":574,"yPos":85},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Im
-    the Warlock, here to make the finest weapons around.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Warlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":919,"yPos":183},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"See
-    you soon.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Warlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":402,"yPos":325},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Check
-    it out","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Warlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":922,"yPos":334},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"Great
-    choice. Remember to hold fire to charge large amounts of damage.","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Warlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":923,"yPos":437},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Good
-    choice. May be slow, but it sure packs a punch!","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Warlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":930,"yPos":545},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"KaBOOOM!!!","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Warlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":926,"yPos":674},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Oooh,
-    coming in a little short on gold there pal.","parentUIDs":[6,7,8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Warlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  json: "{\"Options\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":5}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":427,\"yPos\":135},\"ID\":2,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Let
+    me see what you can make.\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":676,\"yPos\":136},\"ID\":3,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Leave\",\"parentUIDs\":[0],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Gold\",\"CheckType\":2,\"RequiredValue\":49}],\"NodeUID\":10},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":657,\"yPos\":285},\"ID\":6,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Laser 
+    Wand (50 Gold)\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Gold\",\"CheckType\":2,\"RequiredValue\":119}],\"NodeUID\":11},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":655,\"yPos\":383},\"ID\":7,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ice
+    Wand (120 Gold)\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[{\"__type\":\"EditableIntCondition:#DialogueEditor\",\"ParameterName\":\"Gold\",\"CheckType\":2,\"RequiredValue\":249}],\"NodeUID\":12},{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":13}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":658,\"yPos\":488},\"ID\":8,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Explosive
+    Wand (250 Gold)\",\"parentUIDs\":[5],\"SpeechUID\":-1},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":650,\"yPos\":605},\"ID\":9,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Nevermind\\n\",\"parentUIDs\":[5],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableIntParameter:#DialogueEditor\",\"ParameterName\":\"Gold\",\"IntValue\":0},{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"LaserBought\",\"BoolValue\":false},{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"IceBought\",\"BoolValue\":false},{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"ExplosiveBought\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":2},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":3}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":577,\"yPos\":19},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ahh,
+    a wand, eh? You're in luck! I craft wands that do wondrous things! But you\u2019ll
+    need some gold if you want 'em sharp, strong, and ready for magic.\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grimlock\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":6},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":7},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":8},{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":9}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":405,\"yPos\":261},\"ID\":5,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"What
+    could I intrest you in?\",\"parentUIDs\":[2],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grimlock\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":925,\"yPos\":270},\"ID\":10,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Oho!
+    A Laser Wand, eh? This little beauty will slice through anything in its path!
+    Just don\u2019t aim it at yourself, friend, unless you like burn marks! Hehe!\",\"parentUIDs\":[6],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grimlock\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":926,\"yPos\":374},\"ID\":11,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah,
+    the Ice Wand! You\u2019ll slice through your foes with these sharp icicles. Just
+    remember\u2014cold hands, cold heart, friend. Might make your enemies wish they'd
+    stayed warm!\",\"parentUIDs\":[7],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grimlock\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":935,\"yPos\":481},\"ID\":12,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"Ah,
+    the Explosion Wand! One flick and BOOM! And with everything around with it! Just...
+    don\u2019t get too close to the explosions, yeah?\",\"parentUIDs\":[8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grimlock\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":931,\"yPos\":610},\"ID\":13,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"You
+    want magic in your hands? You gotta pay for it, friend. Looks like you don\u2019t
+    have enough gold. Come back when you\u2019ve got more!\",\"parentUIDs\":[6,7,8],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Grimlock\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
   saveVersion: 110
   DefaultName: Warlock
   DefaultSprite: {fileID: 0}
@@ -1114,12 +1120,23 @@ MonoBehaviour:
   - {fileID: 258893187}
   - {fileID: 258893186}
   - {fileID: 258893185}
-  - {fileID: 258893198}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1161993039}
+        m_TargetAssemblyTypeName: EventManager, Assembly-CSharp
+        m_MethodName: BuyLaserWand
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &40153500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3035,7 +3052,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 641888068}
+  - {fileID: 2573810528317174967}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &180958747 stripped
@@ -3593,7 +3610,6 @@ GameObject:
   - component: {fileID: 258893187}
   - component: {fileID: 258893186}
   - component: {fileID: 258893185}
-  - component: {fileID: 258893198}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -3877,25 +3893,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   NodeID: 0
-  TMPFont: {fileID: 0}
-  Icon: {fileID: 0}
-  Audio: {fileID: 0}
---- !u!114 &258893198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 258893183}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event:
-    m_PersistentCalls:
-      m_Calls: []
-  NodeID: 4
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
@@ -5045,139 +5042,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4275966805485982, guid: 9000e31c84559634b8f9ce44b2636f4c, type: 3}
   m_PrefabInstance: {fileID: 402291722}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &405471811
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 177415753}
-    m_Modifications:
-    - target: {fileID: 1049726476795901100, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1681963421493738193, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_Name
-      value: WorkingPlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -512.37164
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 6.6800003
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -295.4188
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: wand
-      value: 
-      objectReference: {fileID: 543758265}
-    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: gravity
-      value: 9.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: PlayerUI
-      value: 
-      objectReference: {fileID: 8515316052909525943}
-    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: SensSlider
-      value: 
-      objectReference: {fileID: 1314291756}
-    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: goldTextUI
-      value: 
-      objectReference: {fileID: 3476678694507591831}
-    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: waveNumberUI
-      value: 
-      objectReference: {fileID: 110224236}
-    - target: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      propertyPath: roundNumGlobal
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1529432139968453483, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5528271536474101480, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 543758269}
-  m_SourcePrefab: {fileID: 100100000, guid: 538304db467938347aa0c1a14efc1645, type: 3}
 --- !u!1001 &406294201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6142,7 +6006,7 @@ PrefabInstance:
     - target: {fileID: 3773476913647774427, guid: 8eaf01187edbca146b921ce62e225c77, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 916127826}
+      objectReference: {fileID: 7079938769941200127}
     - target: {fileID: 3773476913647774427, guid: 8eaf01187edbca146b921ce62e225c77, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -6490,52 +6354,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c11b6a454fa5fd458d541957f1de507, type: 3}
---- !u!1 &543758265 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5528271536474101480, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-  m_PrefabInstance: {fileID: 405471811}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &543758269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543758265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ad580858fb74e459aedfa743bb95de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wandspawnpoint: {fileID: 1163577176}
-  firepoint: {fileID: 745066717}
-  baseBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
-  explosionBulletPrefab: {fileID: 9122088148645627994, guid: f14e06ffefc134641b449736cc2c2cd7, type: 3}
-  iceBulletPrefab: {fileID: 239900978285612905, guid: b0cb4f24024d5fb4886fca638d01d605, type: 3}
-  laserBulletPrefab: {fileID: 4327763063461813562, guid: 9bcc0fa147419744b8992b5544c767ea, type: 3}
-  currentBulletPrefab: {fileID: 242306683242931267, guid: fc04efc181a336a4d84c0a7b0a5b0da2, type: 3}
-  currentWandPrefab: {fileID: 801190878019318827, guid: e1a3a4cce6329484a826ac9bbbb287fb, type: 3}
-  WandBasic: {fileID: 801190878019318827, guid: e1a3a4cce6329484a826ac9bbbb287fb, type: 3}
-  WandExplosion: {fileID: 1894208621340011126, guid: bed691b6881a6cf45a8fb609498074b1, type: 3}
-  WandIce: {fileID: 4039412713285941216, guid: aeef5fb9fa706e94da414fb6855354b6, type: 3}
-  WandLaser: {fileID: 7706106833710840685, guid: 2c944149dc1a2c5429f7ef9e58b606fd, type: 3}
-  SpellIndicator: {fileID: 110224236}
-  nextTimeToFire: 0
-  chargeTime: 1
-  currMana: 100
-  LaserShootCost: 10
-  IceShootCost: 20
-  ExplosionShootCost: 50
-  BasicFireRate: 0.5
-  LaserFireRate: 1
-  IceFireRate: 1
-  ExplosionFireRate: 4
-  maxMana: 100
-  PlayerController: {fileID: 916127826}
-  regen: 1
-  regenDelay: 0
-  regenUpdateInterval: 1
-  GodMode: 0
 --- !u!4 &549905240 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4945775876562746, guid: 92cc6d2406e4cc547a83ad74708c2d87, type: 3}
@@ -7446,11 +7264,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4868598521721778, guid: 5c11b6a454fa5fd458d541957f1de507, type: 3}
   m_PrefabInstance: {fileID: 519048022}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &641888068 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2573810528185644788, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-  m_PrefabInstance: {fileID: 405471811}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &642606584
 PrefabInstance:
@@ -9275,11 +9088,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c11b6a454fa5fd458d541957f1de507, type: 3}
---- !u!4 &745066717 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5601190856267959927, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-  m_PrefabInstance: {fileID: 405471811}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &746529929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11480,17 +11288,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
   m_PrefabInstance: {fileID: 912162820}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &916127826 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7079938769808752316, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-  m_PrefabInstance: {fileID: 405471811}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06b4fe834d324684980f687526b3ec20, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &936089834
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14094,6 +13891,7 @@ GameObject:
   - component: {fileID: 1161993041}
   - component: {fileID: 1161993040}
   - component: {fileID: 1161993039}
+  - component: {fileID: 1161993043}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -14114,8 +13912,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawner: {fileID: 1515117449}
-  PlayerController: {fileID: 916127826}
-  WandShooting: {fileID: 543758269}
+  PlayerController: {fileID: 7079938769941200127}
+  WandShooting: {fileID: 2127933270}
   damageBuff: 0
 --- !u!114 &1161993040
 MonoBehaviour:
@@ -14160,18 +13958,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1161993038}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.00012207031, y: 0, z: 0.000061035156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1163577176 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8298253631005728402, guid: 538304db467938347aa0c1a14efc1645, type: 3}
-  m_PrefabInstance: {fileID: 405471811}
+--- !u!114 &1161993043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1161993038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e34e2e088132ae47aa7b3129d67df98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1164477068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4756003171135936, guid: 64b9fdd8926ce144fbdc31c4044b55f1, type: 3}
@@ -17734,7 +17539,7 @@ MonoBehaviour:
   playerUI: {fileID: 8515316052909525943}
   baseLocation1: {fileID: 1400180849}
   baseLocation2: {fileID: 1937580371}
-  playerLocation: {fileID: 641888068}
+  playerLocation: {fileID: 2573810528317174967}
 --- !u!1001 &1517281841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20110,7 +19915,7 @@ MonoBehaviour:
   healthBar: {fileID: 5567329701617908449}
   manaBar: {fileID: 3451791196950190560}
   kingdomHealthBar: {fileID: 2386892434298999314}
-  wand: {fileID: 543758265}
+  wand: {fileID: 5528271536875246763}
   PlayerUI: {fileID: 8515316052909525943}
   WinScreen: {fileID: 408896103}
   LoseScreen: {fileID: 1194286654}
@@ -25553,6 +25358,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64b9fdd8926ce144fbdc31c4044b55f1, type: 3}
+--- !u!114 &2127933270 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+  m_PrefabInstance: {fileID: 4548405587554351947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ad580858fb74e459aedfa743bb95de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2130352664
 GameObject:
   m_ObjectHideFlags: 0
@@ -25992,6 +25808,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &2573810528317174967 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+  m_PrefabInstance: {fileID: 4548405587554351947}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2992214225417403901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471964218652922812, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
@@ -26271,6 +26092,83 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
+--- !u!1001 &4548405587554351947
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 177415753}
+    m_Modifications:
+    - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: PlayerUI
+      value: 
+      objectReference: {fileID: 8515316052909525943}
+    - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: SensSlider
+      value: 
+      objectReference: {fileID: 1314291756}
+    - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: goldTextUI
+      value: 
+      objectReference: {fileID: 3476678694507591831}
+    - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: waveNumberUI
+      value: 
+      objectReference: {fileID: 110224236}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -512.37164
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.6800003
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -295.4188
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: SpellIndicator
+      value: 
+      objectReference: {fileID: 110224236}
+    - target: {fileID: 4082111688445329411, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_Name
+      value: WorkingPlayer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
 --- !u!1001 &5141543588614129234
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26343,6 +26241,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 835602669}
   m_SourcePrefab: {fileID: 100100000, guid: ae380db87f4084e49af2a23b38415684, type: 3}
+--- !u!1 &5528271536875246763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4831202898638318556, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+  m_PrefabInstance: {fileID: 4548405587554351947}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5567329701617908449 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4142708949701939130, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
@@ -26359,6 +26262,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5190538665783710064, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
   m_PrefabInstance: {fileID: 3857422303062298237}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7079938769941200127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+  m_PrefabInstance: {fileID: 4548405587554351947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b4fe834d324684980f687526b3ec20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7627427107501294210 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6192894157709613144, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
@@ -26464,9 +26378,9 @@ SceneRoots:
   - {fileID: 177415753}
   - {fileID: 1704630535}
   - {fileID: 2134253236}
+  - {fileID: 1161993042}
   - {fileID: 1515117448}
   - {fileID: 14700308}
   - {fileID: 1820364845}
-  - {fileID: 1161993042}
   - {fileID: 1692447840}
   - {fileID: 1441015313}

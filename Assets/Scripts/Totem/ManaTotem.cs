@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR;
 
 public class ManaTotem : MonoBehaviour
 {
@@ -6,9 +7,12 @@ public class ManaTotem : MonoBehaviour
     public GameObject particleEffectPrefab;        // Particle effect to show when collected
     private WandShooting WandShooting;
 
-    // Called when the player collects the totem
-    private void OnTriggerEnter(Collider other)
+        // Called when the player collects the totem
+        private void OnTriggerEnter(Collider other)
     {
+
+        WandShooting = other.GetComponent<WandShooting>();
+
         if (other.CompareTag("Player"))
         {
             // Apply effect (increase mana)
@@ -27,7 +31,7 @@ public class ManaTotem : MonoBehaviour
         {
             // Instantiate particle effect at the totem's position
             GameObject particleEffect = Instantiate(particleEffectPrefab, transform.position, Quaternion.identity);
-            Destroy(particleEffect, 1f); // Destroy particle effect after 1 second
+            Destroy(particleEffect, 3f); // Destroy particle effect after 1 second
         }
 
         // Destroy the totem object
