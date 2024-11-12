@@ -16,11 +16,16 @@ public class PlayerController : MonoBehaviour
     public float speed = 5.0f;
     public float jumpForce = 3f;
     public static int goldCount = 500; //Got to start at ground zero
-    [Tab("Serializables")]
 
+    [Tab("Serializables")]
     public TMP_Text waveNumberUI;
     public TMP_Text goldTextUI;
     public Slider SensSlider;
+    private AudioSource audioSource;
+
+    [Foldout("Sound Effects")]
+    public AudioClip coinCollect;
+    [EndFoldout]    
     
     [Tab("PlayerStats")]
     //Stats that can be changed buy NPCs
@@ -74,7 +79,7 @@ public class PlayerController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
+        audioSource = GetComponent<AudioSource>();
 
 
         //---------------------------------------------------------------------
@@ -201,6 +206,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Gold"))
         {
+            audioSource.PlayOneShot(coinCollect);
             goldScript goldCode = other.GetComponent<goldScript>();
             goldCount += goldCode.goldAmount;
             goldCode.DestroyMe();
