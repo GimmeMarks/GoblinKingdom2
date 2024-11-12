@@ -14,6 +14,8 @@ public class EnemyBaseClass : MonoBehaviour
     //Initialization
     public enum EnemyState { March, Chase, Attack}
     protected EnemyState enemyState;
+    protected AudioSource audioSource;
+    [SerializeField] protected AudioClip deathSound;
     //private int waveNumber;
     protected Animator anim;
     //Gold Prefab
@@ -26,6 +28,7 @@ public class EnemyBaseClass : MonoBehaviour
     [SerializeField] protected int eDamage;
     [SerializeField] protected string eName;
     [SerializeField] protected float eAttackSpeed;
+    
 
     //March info
     protected NavMeshAgent agent;
@@ -50,7 +53,7 @@ public class EnemyBaseClass : MonoBehaviour
         enemyState = EnemyState.March;
         ChangeState(enemyState);
         eMaxHealth = eHealth;
-        
+        audioSource = GetComponent<AudioSource>();
     }
  
     private void OnDrawGizmos()

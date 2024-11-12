@@ -40,6 +40,8 @@ public class WandShooting : MonoBehaviour
 
     // Mana and Reloading
     public int currMana;
+    // Stats that can be changed by NPCs
+    public int maxMana = 100;
 
     // Weapon Costs
     public int LaserShootCost;
@@ -51,8 +53,7 @@ public class WandShooting : MonoBehaviour
     public float IceFireRate;
     public float ExplosionFireRate;
 
-    // Stats that can be changed by NPCs
-    public int maxMana = 100;
+    
 
     public PlayerController PlayerController;
 
