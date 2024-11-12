@@ -938,15 +938,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 10
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":484,"yPos":134},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Lets
-    see what I can get.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":727,"yPos":270},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Laser
-    Wand (50)","parentUIDs":[3],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":577,"yPos":21},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ahh,
-    interested in a wand? I will be able to craft some need stuff for you.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Grimlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":468,"yPos":255},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Since
-    this is a tutorial, I''ll fancy you an offer.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Grimlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":722,"yPos":386},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"There
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":482,"yPos":135},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Lets
+    see what I can get.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":725,"yPos":271},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Laser
+    Wand (50)","parentUIDs":[3],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":575,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ahh,
+    interested in a wand? I will be able to craft some need stuff for you.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Grimlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":466,"yPos":256},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Since
+    this is a tutorial, I''ll fancy you an offer.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Grimlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":720,"yPos":387},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"There
     are lots of cool upgrades for the base, player, and more around the Kingdom.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":732,"yPos":513},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Be
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":730,"yPos":514},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Be
     sure to familiarize yourself with you kingdom before raising your flag.","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":734,"yPos":638},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Congrats
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":732,"yPos":639},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Congrats
     on finishing the tutorial. Press \"Tab\" and you may exit to the main game. See
     you soon!","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
     God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
@@ -5844,16 +5844,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 7
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":507,"yPos":-61},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
-    got a bit of gold from them too.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":525,"yPos":185},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Totems?","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":502,"yPos":-205},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Wow,
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":580,"yPos":166},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
+    got a bit of gold from them too.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":598,"yPos":412},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Totems?","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":575,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Wow,
     that was a lot of enemies!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tito
-    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":508,"yPos":31},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
+    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":581,"yPos":258},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
     your gunna need a lot more that. Make sure to take advantage of the random totems
     that could spawn in.","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tito
-    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":520,"yPos":290},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
+    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":593,"yPos":517},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
     they grant anything from lots of gold even to free upgrades. Make sure to go
     and get them when they spawn.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tito
-    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":525,"yPos":422},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Hey
+    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":598,"yPos":649},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Hey
     there''s one right there!","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tito
     the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -5871,19 +5871,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 935859004}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &468718538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6790,6 +6778,7 @@ MonoBehaviour:
   SpellIndicator: {fileID: 110224236}
   chargeTime: 1
   currMana: 100
+  maxMana: 100
   LaserShootCost: 10
   IceShootCost: 20
   ExplosionShootCost: 50
@@ -6797,7 +6786,6 @@ MonoBehaviour:
   LaserFireRate: 1
   IceFireRate: 1
   ExplosionFireRate: 4
-  maxMana: 100
   PlayerController: {fileID: 916127826}
   regen: 1
   regenDelay: 0
@@ -11584,6 +11572,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3b1ceba998f4d4419d82dc582c290dd, type: 3}
+--- !u!4 &857120158 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+  m_PrefabInstance: {fileID: 1695300357}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &859547939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12283,6 +12276,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2992214226611786996, guid: 36c7640494fdb3747b40e596d5d384da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 747100491}
+    - targetCorrespondingSourceObject: {fileID: 4219189026391889734, guid: 36c7640494fdb3747b40e596d5d384da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 857120158}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 164886084576750851, guid: 36c7640494fdb3747b40e596d5d384da, type: 3}
       insertIndex: -1
@@ -14026,6 +14022,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92cc6d2406e4cc547a83ad74708c2d87, type: 3}
+--- !u!4 &1084345456 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4219189026391889734, guid: 36c7640494fdb3747b40e596d5d384da, type: 3}
+  m_PrefabInstance: {fileID: 909487890}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1084946082 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4472924558029580, guid: 0af388c5f7d3fe8418aecd4b47e51d62, type: 3}
@@ -18147,68 +18148,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4080025454424268, guid: 80f9e1a5c4f1cd2418593a57c3a9896b, type: 3}
   m_PrefabInstance: {fileID: 832837202}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1430070543
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1430070544}
-  - component: {fileID: 1430070546}
-  - component: {fileID: 1430070545}
-  m_Layer: 0
-  m_Name: Barrier (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1430070544
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430070543}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9589934, z: -0, w: 0.2834287}
-  m_LocalPosition: {x: -16.3, y: 14.025252, z: 126.3}
-  m_LocalScale: {x: 46.449715, y: 11, z: 0.8542122}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1795491063}
-  m_LocalEulerAnglesHint: {x: 0, y: 147.07, z: 0}
---- !u!65 &1430070545
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430070543}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1430070546
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1430070543}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1441015312
 GameObject:
   m_ObjectHideFlags: 0
@@ -20706,68 +20645,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4602000202983218, guid: aa91054e6f5bee946ba66c9a32a3a5b9, type: 3}
   m_PrefabInstance: {fileID: 1632507741}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1636608394
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1636608395}
-  - component: {fileID: 1636608397}
-  - component: {fileID: 1636608396}
-  m_Layer: 0
-  m_Name: Barrier (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1636608395
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636608394}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.62895113, z: -0, w: 0.7774449}
-  m_LocalPosition: {x: -21.4, y: 14.025252, z: 76}
-  m_LocalScale: {x: 117.97151, y: 11, z: 0.8542122}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1795491063}
-  m_LocalEulerAnglesHint: {x: 0, y: 77.946, z: 0}
---- !u!65 &1636608396
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636608394}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &1636608397
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1636608394}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1647917290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4651050137903364, guid: 8e8f8660f45621a4a804df622b985183, type: 3}
@@ -21117,6 +20994,63 @@ Transform:
   - {fileID: 959965501}
   m_Father: {fileID: 1210425046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1695300357
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1084345456}
+    m_Modifications:
+    - target: {fileID: 6752620519106550057, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_Name
+      value: Indicator
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.365
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7869780750886140847, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6483c05dda97c144cbacb6e8d31768be, type: 3}
 --- !u!1 &1695548073
 GameObject:
   m_ObjectHideFlags: 0
@@ -23280,11 +23214,9 @@ Transform:
   - {fileID: 481537169}
   - {fileID: 736935121}
   - {fileID: 123235298}
-  - {fileID: 1636608395}
   - {fileID: 1571158637}
   - {fileID: 1685260134}
   - {fileID: 702553079}
-  - {fileID: 1430070544}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1806298518 stripped
@@ -27863,7 +27795,7 @@ PrefabInstance:
       objectReference: {fileID: 765743274}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
