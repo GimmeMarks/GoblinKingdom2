@@ -17,9 +17,21 @@ public class CannonController : MonoBehaviour
     public Transform targetEnemy;
     private bool canShoot = true;
 
+    public AudioClip cannontowerSound;
+
+    public AudioSource audioSource;
+
     void Start()
     {
 
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 
     void Update()
@@ -81,6 +93,7 @@ public class CannonController : MonoBehaviour
         if (rb != null)
         {
             rb.AddForce(pivotPoint.forward * bulletForce); // Adjust force as needed
+            PlaySound(cannontowerSound);
         }
 
         // Start the shoot delay coroutine

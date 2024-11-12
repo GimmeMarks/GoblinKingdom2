@@ -30,6 +30,12 @@ public class PlayerController : MonoBehaviour
     public int kingdomMaxHealth = 100;
     [EndTab]
 
+    [Tab("Sounds")]
+    public AudioClip jumpSound;
+    public AudioClip footstepSound;
+    public AudioSource audioSource;
+    [EndTab]
+
     public bool inMenu = false;
     public GameObject PlayerUI;
     private Camera playerCamera;
@@ -51,6 +57,7 @@ public class PlayerController : MonoBehaviour
     public static bool IceBought = false;
     public static bool ExplosiveBought = false;
 
+
     // Singleton instance
     public static PlayerController Instance { get; private set; }
 
@@ -65,6 +72,14 @@ public class PlayerController : MonoBehaviour
         else if (Instance != this)
         {
             Destroy(gameObject);
+        }
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 
@@ -110,6 +125,8 @@ public class PlayerController : MonoBehaviour
     {
         lookSpeed = SensSlider.value;
     }
+
+    private bool isMoving = false;  // To track if the player is moving
     void Update()
     {
         // Movement
@@ -118,20 +135,33 @@ public class PlayerController : MonoBehaviour
         moveDirection.y = moveDirectionY;
         goldTextUI.text = goldCount.ToString();
 
+        bool moving = moveDirection.x != 0 || moveDirection.z != 0;  // Check if there's horizontal or vertical movement
+
+
         if (characterController.isGrounded)
         {
             if (Input.GetButton("Jump"))
             {
                 moveDirection.y = jumpForce; // This can be adjusted for jump force
+                PlaySound(jumpSound);
             }
             else
             {
                 moveDirection.y = 0;
+                
             }
         }
 
-        moveDirection.y -= gravity * Time.deltaTime;
-        characterController.Move(moveDirection * speed * Time.deltaTime);
+            moveDirection.y -= gravity * Time.deltaTime;
+            characterController.Move(moveDirection * speed * Time.deltaTime);
+            
+        if(moving && !isMoving)
+        {
+            Debug.Log("FOOTSTEPS");
+            isMoving = true;
+            PlaySound(footstepSound);
+        }
+
 
         // Camera rotation
         rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
