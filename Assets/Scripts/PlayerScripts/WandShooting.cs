@@ -156,16 +156,19 @@ public class WandShooting : MonoBehaviour
         {
             if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal && !PlayerController.inConversation == true)
             {
-                if (currentBulletPrefab == baseBulletPrefab)
-                    Shoot();
-                else
+                if (currMana >= IceShootCost)
                 {
-                    if (currMana >= IceShootCost)
-                    {
-                        Shoot();
-                        currMana -= IceShootCost;
-                    }
+                    Shoot();
+                    currMana -= IceShootCost;
                 }
+
+            }
+        }
+        else if (currentBulletPrefab == baseBulletPrefab)
+        {
+            if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal && !PlayerController.inConversation == true)
+            {
+                Shoot();
             }
         }
     }
@@ -307,7 +310,7 @@ public class WandShooting : MonoBehaviour
 
     void UpdateGunUI()
     {
-    
+
         SpellIndicator.text = currentBulletPrefab.GetComponent<Bullet>().bulletName;
 
     }
