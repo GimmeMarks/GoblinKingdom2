@@ -53,7 +53,8 @@ public class WandShooting : MonoBehaviour
     public float IceFireRate;
     public float ExplosionFireRate;
 
-    
+    //Controls if player is in tutorial
+    public bool canShoot = true;
 
     public PlayerController PlayerController;
 
@@ -99,7 +100,20 @@ public class WandShooting : MonoBehaviour
         }
 
         // Continue the rest of your shooting logic as is
-        HandleShooting();
+        if (canShoot == true)
+        {
+            HandleShooting();
+        }
+    }
+
+    // Controls if the player can shoot or naw
+    public void ToggleShootOn()
+    {
+        canShoot = true;
+    }
+    public void ToggleShootOff()
+    {
+        canShoot = false;
     }
 
     void Regen()
