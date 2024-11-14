@@ -21,6 +21,14 @@ public class WandShooting : MonoBehaviour
     public GameObject WandIce;
     public GameObject WandLaser;
 
+    public AudioClip basicWandSound;
+    public AudioClip explosionWandSound;
+    public AudioClip laserWandSound;
+    public AudioClip iceWandSound;
+
+    public AudioSource audioSource;
+
+
     private GameObject currentWand;
     private int currentWeaponIndex = 0;  // Start with an invalid index (0 means no weapon selected)
     public enum SpellType { Basic, Explosion, Ice, Laser }
@@ -164,6 +172,7 @@ public class WandShooting : MonoBehaviour
                 {
                     currMana -= ExplosionShootCost;
                     Shoot();
+                    PlaySound(explosionWandSound);
                 }
             }
         }
@@ -175,6 +184,7 @@ public class WandShooting : MonoBehaviour
                 {
                     Shoot();
                     currMana -= IceShootCost;
+                    PlaySound(iceWandSound);
                 }
 
             }
@@ -184,7 +194,16 @@ public class WandShooting : MonoBehaviour
             if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal && !PlayerController.inConversation == true)
             {
                 Shoot();
+                PlaySound(basicWandSound);
             }
+        }
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 
@@ -192,6 +211,7 @@ public class WandShooting : MonoBehaviour
     {
         isCharging = true;
         Debug.Log("Charging laser... ");
+        PlaySound(laserWandSound);
         yield return new WaitForSeconds(chargeTime);
         isCharging = false;
 

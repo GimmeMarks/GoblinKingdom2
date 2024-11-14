@@ -16,10 +16,23 @@ public class MageController : MonoBehaviour
     public Transform targetEnemy;
     private bool canShoot = true;
 
+    public AudioClip magetowerSound;
+
+    public AudioSource audioSource;
+
     void Start()
     {
 
     }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
+    }
+
 
     void Update()
     {
@@ -80,6 +93,7 @@ public class MageController : MonoBehaviour
         if (rb != null)
         {
             rb.AddForce(pivotPoint.forward * bulletForce); // Adjust force as needed
+            PlaySound(magetowerSound);
         }
 
         // Start the shoot delay coroutine

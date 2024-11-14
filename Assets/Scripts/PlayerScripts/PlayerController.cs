@@ -25,8 +25,13 @@ public class PlayerController : MonoBehaviour
 
     [Foldout("Sound Effects")]
     public AudioClip coinCollect;
-    [EndFoldout]    
-    
+    [EndFoldout]
+
+    [Tab("Sounds")]
+    public AudioClip jumpSound;
+    public AudioClip footstepSound;
+    [EndTab]
+
     [Tab("PlayerStats")]
     //Stats that can be changed buy NPCs
     public int maxHealth = 100;
@@ -41,7 +46,8 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
-    
+    private bool isMoving = false;  // To track if the player is moving
+
     //NPC Tower Buys (Allows to check if a tower is bought or not)
     public bool inConversation = false;
     public static bool Bought1 = false;
@@ -70,6 +76,14 @@ public class PlayerController : MonoBehaviour
         else if (Instance != this)
         {
             Destroy(gameObject);
+        }
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
         }
     }
 
@@ -123,11 +137,15 @@ public class PlayerController : MonoBehaviour
         moveDirection.y = moveDirectionY;
         goldTextUI.text = goldCount.ToString();
 
+        bool moving = moveDirection.x != 0 || moveDirection.z != 0;  // Check if there's horizontal or vertical movement
+
+
         if (characterController.isGrounded)
         {
             if (Input.GetButton("Jump"))
             {
                 moveDirection.y = jumpForce; // This can be adjusted for jump force
+                PlaySound(jumpSound);
             }
             else
             {
@@ -138,16 +156,23 @@ public class PlayerController : MonoBehaviour
         moveDirection.y -= gravity * Time.deltaTime;
         characterController.Move(moveDirection * speed * Time.deltaTime);
 
+        if (moving && !isMoving)
+        {
+            Debug.Log("FOOTSTEPS");
+            isMoving = true;
+            PlaySound(footstepSound);
+        }
+
         if (!inConversation)
         {
-                    // Camera rotation
-        rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-        rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-        playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            // Camera rotation
+            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
+            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
 
-        // Horizontal rotation (Y-axis)
-        float rotationY = Input.GetAxis("Mouse X") * lookSpeed;
-        transform.rotation *= Quaternion.Euler(0, rotationY, 0);
+            // Horizontal rotation (Y-axis)
+            float rotationY = Input.GetAxis("Mouse X") * lookSpeed;
+            transform.rotation *= Quaternion.Euler(0, rotationY, 0);
         }
 
 
