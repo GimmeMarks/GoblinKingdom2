@@ -151,7 +151,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 48.7, y: 14.025252, z: 127.9}
-  m_LocalScale: {x: 51.12, y: 11, z: 0.85421216}
+  m_LocalScale: {x: 51.12, y: 20, z: 0.85421216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -945,19 +945,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83189876d4d389f43b7dd2e925aa112e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentIDCounter: 10
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":482,"yPos":135},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Lets
-    see what I can get.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":725,"yPos":271},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Laser
-    Wand (50)","parentUIDs":[3],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":575,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ahh,
-    interested in a wand? I will be able to craft some need stuff for you.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Grimlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":466,"yPos":256},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Since
-    this is a tutorial, I''ll fancy you an offer.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Grimlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":720,"yPos":387},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"There
+  CurrentIDCounter: 13
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":450.5,"yPos":135},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Lets
+    see what I can get.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":49}],"NodeUID":6},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":694.5,"yPos":271},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Laser
+    Wand (50)","parentUIDs":[3],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":435,"yPos":592},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"All
+    be back...","parentUIDs":[11],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":543.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Ahh,
+    interested in a wand? I will be able to craft some need stuff for you.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Grimlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":434.5,"yPos":256},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Since
+    this is a tutorial, I''ll fancy you an offer.","parentUIDs":[2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Grimlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":8}],"EditorInfo":{"isRoot":false,"xPos":688.5,"yPos":387},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"There
     are lots of cool upgrades for the base, player, and more around the Kingdom.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":730,"yPos":514},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Be
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":698.5,"yPos":514},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Be
     sure to familiarize yourself with you kingdom before raising your flag.","parentUIDs":[6],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":732,"yPos":639},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Congrats
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":700.5,"yPos":639},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Congrats
     on finishing the tutorial. Press \"Tab\" and you may exit to the main game. See
     you soon!","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":12}],"EditorInfo":{"isRoot":false,"xPos":440,"yPos":478},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Hmm,
+    your a bit poor. Try collecting that totem and you may have enough.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Grimlock","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: 
   DefaultSprite: {fileID: 0}
@@ -970,11 +972,75 @@ MonoBehaviour:
   - {fileID: 258893214}
   - {fileID: 258893213}
   - {fileID: 258893212}
+  - {fileID: 258893219}
+  - {fileID: 258893218}
   ContinueFont: {fileID: 0}
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &50970080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 50970081}
+  - component: {fileID: 50970083}
+  - component: {fileID: 50970082}
+  m_Layer: 0
+  m_Name: Barrier (21)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &50970081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50970080}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 28, y: 9.57, z: 102.37}
+  m_LocalScale: {x: 20.580465, y: 20, z: 0.34389836}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1795491063}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!65 &50970082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50970080}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &50970083
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50970080}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &53241853
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2129,7 +2195,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -11.35, y: 14.025252, z: 29.49}
-  m_LocalScale: {x: 28.2885, y: 11, z: 0.8542122}
+  m_LocalScale: {x: 28.2885, y: 20, z: 0.8542122}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -3247,6 +3313,8 @@ GameObject:
   - component: {fileID: 258893214}
   - component: {fileID: 258893213}
   - component: {fileID: 258893212}
+  - component: {fileID: 258893219}
+  - component: {fileID: 258893218}
   m_Layer: 0
   m_Name: ConversationEventInfo
   m_TagString: Untagged
@@ -3932,6 +4000,44 @@ MonoBehaviour:
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
   Audio: {fileID: 0}
+--- !u!114 &258893218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258893183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 12
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
+--- !u!114 &258893219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 258893183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00abedce3cdbbba46bf2d86c9518c9f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+    m_PersistentCalls:
+      m_Calls: []
+  NodeID: 11
+  TMPFont: {fileID: 0}
+  Icon: {fileID: 0}
+  Audio: {fileID: 0}
 --- !u!1001 &263007945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4095,7 +4201,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 37.566982, y: 14.025252, z: 92.749}
-  m_LocalScale: {x: 20.580465, y: 4.428504, z: 0.34389836}
+  m_LocalScale: {x: 20.580465, y: 20, z: 0.34389836}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -5085,7 +5191,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -82, y: 14.025252, z: 101.4}
-  m_LocalScale: {x: 348.99878, y: 48.9203, z: 3.7989378}
+  m_LocalScale: {x: 348.99878, y: 20, z: 3.7989378}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -5863,16 +5969,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 7
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":580,"yPos":166},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
-    got a bit of gold from them too.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":598,"yPos":412},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Totems?","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":575,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Wow,
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":false,"xPos":549.5,"yPos":166},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
+    got a bit of gold from them too.","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":567.5,"yPos":412},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Totems?","parentUIDs":[2],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1}],"EditorInfo":{"isRoot":true,"xPos":544.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Wow,
     that was a lot of enemies!","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tito
-    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":581,"yPos":258},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
+    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":550.5,"yPos":258},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
     your gunna need a lot more that. Make sure to take advantage of the random totems
     that could spawn in.","parentUIDs":[1],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tito
-    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":593,"yPos":517},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
+    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":562.5,"yPos":517},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Yea,
     they grant anything from lots of gold even to free upgrades. Make sure to go
     and get them when they spawn.","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tito
-    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":598,"yPos":649},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Hey
+    the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":567.5,"yPos":649},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Hey
     there''s one right there!","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tito
     the Guide","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -5890,7 +5996,31 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 935859004}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 50970080}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &468718538
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5989,7 +6119,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 33.5, y: 14.025252, z: 34.5}
-  m_LocalScale: {x: 89.638916, y: 11, z: 0.85421216}
+  m_LocalScale: {x: 89.638916, y: 20, z: 0.85421216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -7231,6 +7361,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5833316, y: 1, z: 3.2725477}
   m_Center: {x: -1.4216783, y: 0.5, z: 1.2362698}
+--- !u!1 &587954649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8340296056879788000, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
+  m_PrefabInstance: {fileID: 3857422303062298237}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &592323514 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4776272554816088, guid: 94a3318e328358d4095f16b054b14180, type: 3}
@@ -7964,7 +8099,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.322937, y: 14.025252, z: 30.1}
-  m_LocalScale: {x: 22, y: 11, z: 0.85421216}
+  m_LocalScale: {x: 22, y: 20, z: 0.85421216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -8822,7 +8957,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9589934, z: -0, w: 0.2834287}
   m_LocalPosition: {x: 16.45, y: 14.025252, z: 38.25}
-  m_LocalScale: {x: 28.2885, y: 11, z: 0.8542122}
+  m_LocalScale: {x: 28.2885, y: 20, z: 0.8542122}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -9459,7 +9594,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 4.717041, y: 14.025252, z: 25}
-  m_LocalScale: {x: 23.897999, y: 11, z: 0.8542122}
+  m_LocalScale: {x: 23.897999, y: 20, z: 0.8542122}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -10592,7 +10727,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 47.6, y: 14.025252, z: 78.3}
-  m_LocalScale: {x: 51.12, y: 11, z: 0.85421216}
+  m_LocalScale: {x: 51.12, y: 20, z: 0.85421216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -11770,37 +11905,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 53
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":-308,"yPos":-3},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Shop
-    for Upgades","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":775,"yPos":41},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Shop
-    for Health Potions","parentUIDs":[2],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":814,"yPos":-68},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Leave","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":-526,"yPos":157},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Health
-    Increase","parentUIDs":[49],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":-580,"yPos":404},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Mana
-    Increase","parentUIDs":[50],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":-579,"yPos":516},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"Damage
-    Boost","parentUIDs":[50],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-579,"yPos":458},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Mana
-    Regen Speed","parentUIDs":[50],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":-524,"yPos":220},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Speed
-    Increase","parentUIDs":[49],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":14}],"NodeUID":38},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":781,"yPos":219},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Small
-    Potion (15 Gold)","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":39}],"NodeUID":39},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":812,"yPos":315},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Large
-    Potion (40 Gold)","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":99}],"NodeUID":40},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":852,"yPos":409},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"Max
-    Potion (150 Gold)","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":37},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":182,"yPos":577},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[21],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":138,"yPos":662},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":33},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":178,"yPos":125},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[17],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":116,"yPos":185},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":34},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":159,"yPos":243},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[18],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":117,"yPos":295},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[18],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":35},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":180,"yPos":351},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[19],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":122,"yPos":403},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[19],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":36},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":180,"yPos":460},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[20],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":117,"yPos":512},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind\n","parentUIDs":[20],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-578,"yPos":573},"ID":44,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[50],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":727,"yPos":522},"ID":45,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":49}],"EditorInfo":{"isRoot":false,"xPos":-1110,"yPos":207},"ID":46,"ParamActions":[],"TMPFontGUID":null,"Text":"Stats","parentUIDs":[7],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":50}],"EditorInfo":{"isRoot":false,"xPos":-1150,"yPos":435},"ID":47,"ParamActions":[],"TMPFontGUID":null,"Text":"Wands\n","parentUIDs":[7],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-596,"yPos":302},"ID":51,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[49],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-1094,"yPos":587},"ID":52,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind\n","parentUIDs":[7],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":-38,"yPos":-150},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
-    to my tavern. The names Gronk.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":-37,"yPos":-48},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"What
-    could I do for you?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":46},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":47},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":52}],"EditorInfo":{"isRoot":false,"xPos":-889,"yPos":52},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Which
-    would you like to upgrade?","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":15},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":45}],"EditorInfo":{"isRoot":false,"xPos":779,"yPos":118},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Which
-    Potion could I intrest you in?","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":24},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":-90,"yPos":148},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
-    your Health by 20?\nIt''ll cost you 30 Gold.","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":26},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":-92,"yPos":242},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
-    your Mana by 30?\nIt''ll cost you 30 Gold.","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":28},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":-92,"yPos":329},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
-    your wand Damage?\nIt''ll cost you 30 Gold.","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":30},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":-93,"yPos":453},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
-    your mana regeneration?\nIt''ll cost you 30 Gold.","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":22},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":23}],"EditorInfo":{"isRoot":false,"xPos":-86,"yPos":570},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
-    your Speed?\nIt''ll cost you 30 Gold.","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":397,"yPos":114},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
-    up and feel that heart grow.","parentUIDs":[24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":392,"yPos":230},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
-    up and watch your mana grow.","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":402,"yPos":336},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
-    you and feel yourself become stronger","parentUIDs":[28],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":404,"yPos":451},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
-    up and watch your mana raise quickly.","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":423,"yPos":567},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
-    up and feel faster.","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1046,"yPos":203},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"One
-    small drink coming up.","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1062,"yPos":300},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"One
-    large drink coming up.","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1082,"yPos":397},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
-    one MEGA drink coming up.","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1057,"yPos":533},"ID":41,"ParamActions":[],"TMPFontGUID":null,"Text":"Ah,
-    a little too expensive for you.","parentUIDs":[14,15,16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":371,"yPos":686},"ID":42,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
-    enough gold.","parentUIDs":[22,24,26,28,30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":12},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":51}],"EditorInfo":{"isRoot":false,"xPos":-771,"yPos":174},"ID":49,"ParamActions":[],"TMPFontGUID":null,"Text":"Ah,
-    what stat are you looking to increase?","parentUIDs":[46],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":44}],"EditorInfo":{"isRoot":false,"xPos":-855,"yPos":461},"ID":50,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":103.5,"yPos":54},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Shop
+    for Upgades","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":13}],"EditorInfo":{"isRoot":false,"xPos":1186.5,"yPos":98},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Shop
+    for Health Potions","parentUIDs":[2],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1225.5,"yPos":-11},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Leave","parentUIDs":[2],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":false,"xPos":-114.5,"yPos":214},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Health
+    Increase","parentUIDs":[49],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":18}],"EditorInfo":{"isRoot":false,"xPos":-168.5,"yPos":461},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"Mana
+    Increase","parentUIDs":[50],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":-167.5,"yPos":573},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"Damage
+    Boost","parentUIDs":[50],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":20}],"EditorInfo":{"isRoot":false,"xPos":-167.5,"yPos":515},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Mana
+    Regen Speed","parentUIDs":[50],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":21}],"EditorInfo":{"isRoot":false,"xPos":-112.5,"yPos":277},"ID":12,"ParamActions":[],"TMPFontGUID":null,"Text":"Speed
+    Increase","parentUIDs":[49],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":14}],"NodeUID":38},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":1192.5,"yPos":276},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Small
+    Potion (15 Gold)","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":39}],"NodeUID":39},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":1223.5,"yPos":372},"ID":15,"ParamActions":[],"TMPFontGUID":null,"Text":"Large
+    Potion (40 Gold)","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":99}],"NodeUID":40},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":41}],"EditorInfo":{"isRoot":false,"xPos":1263.5,"yPos":466},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"Max
+    Potion (150 Gold)","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":37},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":593.5,"yPos":634},"ID":22,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[21],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":549.5,"yPos":719},"ID":23,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[21],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":33},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":578.5,"yPos":184},"ID":24,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[17],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":527.5,"yPos":242},"ID":25,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[17],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":34},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":570.5,"yPos":300},"ID":26,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[18],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":528.5,"yPos":352},"ID":27,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[18],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":35},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":591.5,"yPos":408},"ID":28,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[19],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":533.5,"yPos":460},"ID":29,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[19],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[{"__type":"EditableIntCondition:#DialogueEditor","ParameterName":"Gold","CheckType":2,"RequiredValue":29}],"NodeUID":36},{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":42}],"EditorInfo":{"isRoot":false,"xPos":591.5,"yPos":517},"ID":30,"ParamActions":[],"TMPFontGUID":null,"Text":"Sure","parentUIDs":[20],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":528.5,"yPos":569},"ID":31,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind\n","parentUIDs":[20],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-166.5,"yPos":630},"ID":44,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[50],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1138.5,"yPos":579},"ID":45,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[13],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":49}],"EditorInfo":{"isRoot":false,"xPos":-698.5,"yPos":264},"ID":46,"ParamActions":[],"TMPFontGUID":null,"Text":"Stats","parentUIDs":[7],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":50}],"EditorInfo":{"isRoot":false,"xPos":-738.5,"yPos":492},"ID":47,"ParamActions":[],"TMPFontGUID":null,"Text":"Wands\n","parentUIDs":[7],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-184.5,"yPos":359},"ID":51,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind","parentUIDs":[49],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":-682.5,"yPos":644},"ID":52,"ParamActions":[],"TMPFontGUID":null,"Text":"Nevermind\n","parentUIDs":[7],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":373.5,"yPos":-93},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
+    to my tavern. The names Gronk.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":4},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":374.5,"yPos":9},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"What
+    could I do for you?","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":46},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":47},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":52}],"EditorInfo":{"isRoot":false,"xPos":-500.5,"yPos":100},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"Which
+    would you like to upgrade?","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":15},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":16},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":45}],"EditorInfo":{"isRoot":false,"xPos":1190.5,"yPos":175},"ID":13,"ParamActions":[],"TMPFontGUID":null,"Text":"Which
+    Potion could I intrest you in?","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":24},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":25}],"EditorInfo":{"isRoot":false,"xPos":321.5,"yPos":205},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
+    your Health by 20?\nIt''ll cost you 30 Gold.","parentUIDs":[8],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":26},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":27}],"EditorInfo":{"isRoot":false,"xPos":319.5,"yPos":299},"ID":18,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
+    your Mana by 30?\nIt''ll cost you 30 Gold.","parentUIDs":[9],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":28},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":29}],"EditorInfo":{"isRoot":false,"xPos":319.5,"yPos":386},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
+    your wand Damage?\nIt''ll cost you 30 Gold.","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":30},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":31}],"EditorInfo":{"isRoot":false,"xPos":318.5,"yPos":510},"ID":20,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
+    your mana regeneration?\nIt''ll cost you 30 Gold.","parentUIDs":[11],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":22},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":23}],"EditorInfo":{"isRoot":false,"xPos":325.5,"yPos":627},"ID":21,"ParamActions":[],"TMPFontGUID":null,"Text":"Increase
+    your Speed?\nIt''ll cost you 30 Gold.","parentUIDs":[12],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":808.5,"yPos":171},"ID":33,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
+    up and feel that heart grow.","parentUIDs":[24],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":803.5,"yPos":287},"ID":34,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
+    up and watch your mana grow.","parentUIDs":[26],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":813.5,"yPos":393},"ID":35,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
+    you and feel yourself become stronger","parentUIDs":[28],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":815.5,"yPos":508},"ID":36,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
+    up and watch your mana raise quickly.","parentUIDs":[30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":834.5,"yPos":624},"ID":37,"ParamActions":[],"TMPFontGUID":null,"Text":"Drink
+    up and feel faster.","parentUIDs":[22],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1457.5,"yPos":260},"ID":38,"ParamActions":[],"TMPFontGUID":null,"Text":"One
+    small drink coming up.","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1473.5,"yPos":357},"ID":39,"ParamActions":[],"TMPFontGUID":null,"Text":"One
+    large drink coming up.","parentUIDs":[15],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1493.5,"yPos":454},"ID":40,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
+    one MEGA drink coming up.","parentUIDs":[16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":1468.5,"yPos":590},"ID":41,"ParamActions":[],"TMPFontGUID":null,"Text":"Ah,
+    a little too expensive for you.","parentUIDs":[14,15,16],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":782.5,"yPos":743},"ID":42,"ParamActions":[],"TMPFontGUID":null,"Text":"Not
+    enough gold.","parentUIDs":[22,24,26,28,30],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":12},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":51}],"EditorInfo":{"isRoot":false,"xPos":-359.5,"yPos":230},"ID":49,"ParamActions":[],"TMPFontGUID":null,"Text":"Ah,
+    what stat are you looking to increase?","parentUIDs":[46],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":11},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":44}],"EditorInfo":{"isRoot":false,"xPos":-443.5,"yPos":518},"ID":50,"ParamActions":[],"TMPFontGUID":null,"Text":"Oh,
     A nice upgrade on your wand? What''cha looking for?","parentUIDs":[47],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Merchant","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Merchant
@@ -12216,7 +12351,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.322937, y: 14.025252, z: 19.885834}
-  m_LocalScale: {x: 22, y: 11, z: 0.85421216}
+  m_LocalScale: {x: 22, y: 20, z: 0.85421216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -13928,18 +14063,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 12
-  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":394,"yPos":156},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Oooo","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":734,"yPos":159},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Nice!","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":577,"yPos":455},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"I
-    HAVE LEGS!! WAAAAA-","parentUIDs":[3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":584,"yPos":703},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"They
-    can fly?","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":588,"yPos":896},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"Wait,
-    I''m a Goblin... what''s an \"F\" key?","parentUIDs":[9],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":575,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
+  json: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":363.5,"yPos":156},"ID":1,"ParamActions":[],"TMPFontGUID":null,"Text":"Oooo","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":false,"xPos":703.5,"yPos":159},"ID":2,"ParamActions":[],"TMPFontGUID":null,"Text":"Nice!","parentUIDs":[0],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":false,"xPos":546.5,"yPos":455},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"I
+    HAVE LEGS!! WAAAAA-","parentUIDs":[3],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":553.5,"yPos":703},"ID":7,"ParamActions":[],"TMPFontGUID":null,"Text":"They
+    can fly?","parentUIDs":[6],"SpeechUID":-1},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":11}],"EditorInfo":{"isRoot":false,"xPos":557.5,"yPos":896},"ID":10,"ParamActions":[],"TMPFontGUID":null,"Text":"Wait,
+    I''m a Goblin... what''s an \"F\" key?","parentUIDs":[9],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":1},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":2}],"EditorInfo":{"isRoot":true,"xPos":544.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Welcome
     to Goblin Kingdom! Use your mouse to traverse through conversations.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":572,"yPos":326},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Use
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":541.5,"yPos":326},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Use
     WASD to move around. Try it out!","parentUIDs":[1,2],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":583,"yPos":566},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Use
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":7}],"EditorInfo":{"isRoot":false,"xPos":552.5,"yPos":566},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Use
     Spacebar to jump. This will make it easier to attack flying enemies.","parentUIDs":[5],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":583,"yPos":783},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"To
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":10}],"EditorInfo":{"isRoot":false,"xPos":552.5,"yPos":783},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"To
     interact with NPC''s and Flags, use the \"F\" Key.","parentUIDs":[7],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":590,"yPos":989},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Now,
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":559.5,"yPos":989},"ID":11,"ParamActions":[],"TMPFontGUID":null,"Text":"Now,
     make your way to your goblin  up ahead!","parentUIDs":[10],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
     God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
@@ -13961,19 +14096,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 543758269}
-        m_TargetAssemblyTypeName: WandShooting, Assembly-CSharp
-        m_MethodName: ToggleShootOff
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1053905776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15670,12 +15793,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 6
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":575,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Outside
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":true,"xPos":544.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Outside
     the Kingdom is where you will be fighting against the hordes of enemies.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":577,"yPos":173},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Out
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":5}],"EditorInfo":{"isRoot":false,"xPos":546.5,"yPos":173},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Out
     here, you will be able to fight, collect gold, and defend your kingdom from being
     destroyed.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
-    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":582,"yPos":308},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Oncoming
+    God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":551.5,"yPos":308},"ID":5,"ParamActions":[],"TMPFontGUID":null,"Text":"Oncoming
     enemies will always try to reach the base, but if you get too close, they may
     fight you instead.","parentUIDs":[4],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial
     God","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
@@ -15691,19 +15814,7 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1240973474}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1001 &1241778761
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16321,7 +16432,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 48.154984, y: 14.025252, z: 102.37}
-  m_LocalScale: {x: 20.580465, y: 4.428504, z: 0.34389836}
+  m_LocalScale: {x: 20.580465, y: 20, z: 0.34389836}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -17643,6 +17754,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 50970080}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 6
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -18754,7 +18877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1498784772}
   m_Layer: 0
-  m_Name: redSpawnLocations
+  m_Name: blueSpawnLocations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18989,7 +19112,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1515117447}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 389704879865c134e9f21644052734b7, type: 3}
+  m_Script: {fileID: 11500000, guid: f65b6d49f7af8164d8d6f8d7ea925639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   redSpawnLocations: []
@@ -19000,13 +19123,14 @@ MonoBehaviour:
   smallEnemy: {fileID: 1642028293503218175, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
   mediumEnemy: {fileID: 1642028293503218175, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
   largeEnemy: {fileID: 1642028293503218175, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
-  riderEnemy: {fileID: 3116840150935933324, guid: c63959965ba0f1e4ba6691a8b91672e2, type: 3}
-  flyerEnemy: {fileID: 449021822638516710, guid: ca8fbbcd71107df4093ff41ee38d7868, type: 3}
-  countdownText: {fileID: 3422683699832459761}
+  riderEnemy: {fileID: 449021822638516710, guid: ca8fbbcd71107df4093ff41ee38d7868, type: 3}
+  flyerEnemy: {fileID: 3116840150935933324, guid: c63959965ba0f1e4ba6691a8b91672e2, type: 3}
+  countdownText: {fileID: 1756820534}
   roundText: {fileID: 7627427107501294210}
-  countdownTextObject: {fileID: 7736006584336270355}
+  countdownTextObject: {fileID: 587954649}
   winScreen: {fileID: 408896103}
   playerUI: {fileID: 8515316052909525943}
+  bridgeBarrier: {fileID: 1571158636}
   baseLocation1: {fileID: 1400180849}
   baseLocation2: {fileID: 1937580371}
   playerLocation: {fileID: 641888068}
@@ -19893,7 +20017,7 @@ GameObject:
   - component: {fileID: 1571158639}
   - component: {fileID: 1571158638}
   m_Layer: 0
-  m_Name: Barrier (5)
+  m_Name: BridgeBarrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19909,7 +20033,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.62895113, z: -0, w: 0.7774449}
   m_LocalPosition: {x: 13.7, y: 14.025252, z: 86.5}
-  m_LocalScale: {x: 117.97151, y: 11, z: 0.8542122}
+  m_LocalScale: {x: 117.97151, y: 20, z: 0.8542122}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -20100,7 +20224,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 73.9, y: 14.025252, z: 102.2}
-  m_LocalScale: {x: 51.12, y: 11, z: 0.85421216}
+  m_LocalScale: {x: 51.12, y: 20, z: 0.85421216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -20383,7 +20507,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 162.55, y: 14.025252, z: 101.22}
-  m_LocalScale: {x: 227.34596, y: 48.9203, z: 3.7989378}
+  m_LocalScale: {x: 227.34596, y: 20, z: 3.7989378}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -20511,7 +20635,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 50.48, y: 14.025252, z: 215.52}
-  m_LocalScale: {x: 313.1236, y: 48.9203, z: 3.7989378}
+  m_LocalScale: {x: 313.1236, y: 20, z: 3.7989378}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -21101,7 +21225,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.98431516, z: -0, w: -0.17641938}
   m_LocalPosition: {x: -0.8, y: 14.025252, z: 38.9}
-  m_LocalScale: {x: 28.2885, y: 11, z: 0.8542122}
+  m_LocalScale: {x: 28.2885, y: 20, z: 0.8542122}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -21519,7 +21643,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 38.01, y: 14.025252, z: 112.72}
-  m_LocalScale: {x: 20.580465, y: 4.428504, z: 0.34389836}
+  m_LocalScale: {x: 20.580465, y: 20, z: 0.34389836}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -21959,6 +22083,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4023013654594124, guid: 86263e8355f96ba4ab9fdf4e96c2090f, type: 3}
   m_PrefabInstance: {fileID: 1756033224}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1756820534 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6226947921171520045, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
+  m_PrefabInstance: {fileID: 3857422303062298237}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1760368328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23383,6 +23518,7 @@ Transform:
   - {fileID: 1603528221}
   - {fileID: 1589974649}
   - {fileID: 1281600315}
+  - {fileID: 50970081}
   - {fileID: 1598613854}
   - {fileID: 1807125877}
   - {fileID: 481537169}
@@ -23426,7 +23562,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 32.9, y: 14.025252, z: 160.8}
-  m_LocalScale: {x: 82.02204, y: 11, z: 0.85421216}
+  m_LocalScale: {x: 82.02204, y: 20, z: 0.85421216}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -23890,7 +24026,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 45.588, y: 14.025252, z: -5.0688}
-  m_LocalScale: {x: 348.99878, y: 48.9203, z: 3.7989378}
+  m_LocalScale: {x: 348.99878, y: 20, z: 3.7989378}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1795491063}
@@ -27907,17 +28043,6 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 732114679937973192, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
   m_PrefabInstance: {fileID: 3615419669704474271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3422683699832459761 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6226947921171520045, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
-  m_PrefabInstance: {fileID: 3857422303062298237}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3451791196950190560 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2148089162452740941, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
@@ -28014,16 +28139,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: json
-      value: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":424,"yPos":351},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes","parentUIDs":[19],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"LaserBought","BoolValue":false},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"IceBought","BoolValue":false},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"ExplosiveBought","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":true,"xPos":575,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"The
-        game will only start when the flag is up.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":418,"yPos":489},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"Starting
-        the round. Defend the base from the on coming wave.","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":583,"yPos":123},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"There
+      value: '{"Options":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":16}],"EditorInfo":{"isRoot":false,"xPos":416.5,"yPos":351},"ID":14,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes","parentUIDs":[19],"SpeechUID":-1}],"Parameters":[{"__type":"EditableIntParameter:#DialogueEditor","ParameterName":"Gold","IntValue":0},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"LaserBought","BoolValue":false},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"IceBought","BoolValue":false},{"__type":"EditableBoolParameter:#DialogueEditor","ParameterName":"ExplosiveBought","BoolValue":false}],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":17}],"EditorInfo":{"isRoot":true,"xPos":567.5,"yPos":22},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"The
+        game will only start when the flag is up.","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":411.5,"yPos":489},"ID":16,"ParamActions":[],"TMPFontGUID":null,"Text":"Starting
+        the round. Defend the base from the on coming wave.","parentUIDs":[14],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":19}],"EditorInfo":{"isRoot":false,"xPos":575.5,"yPos":123},"ID":17,"ParamActions":[],"TMPFontGUID":null,"Text":"There
         are brief grace periods between rounds where you can quickly buy upgrades
-        and ready youself.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":591,"yPos":230},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"Would
+        and ready youself.","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":14}],"EditorInfo":{"isRoot":false,"xPos":583.5,"yPos":230},"ID":19,"ParamActions":[],"TMPFontGUID":null,"Text":"Would
         you like to raise the flag.","parentUIDs":[17],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: CurrentIDCounter
-      value: 20
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: NodeSerializedDataList.Array.size
@@ -28046,6 +28171,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 6
       objectReference: {fileID: 0}
@@ -28060,7 +28189,7 @@ PrefabInstance:
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 1571158636}
+      objectReference: {fileID: 2992214225417403904}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
@@ -28074,20 +28203,32 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
-      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: set_enabled
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: set_enabled
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
-      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.Collider, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: UnityEngine.Collider, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
@@ -28096,6 +28237,10 @@ PrefabInstance:
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
+      propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5631442416611677821, guid: 52fc0df7a8062754db32cd44e5785913, type: 3}
       propertyPath: Event.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -28330,11 +28475,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &7736006584336270355 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8340296056879788000, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
-  m_PrefabInstance: {fileID: 3857422303062298237}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8295289554818693516
 PrefabInstance:
   m_ObjectHideFlags: 0

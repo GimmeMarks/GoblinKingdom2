@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     public float gravity;
     public float speed = 5.0f;
     public float jumpForce = 3f;
-    public static int goldCount = 500; //Got to start at ground zero
+    public static int goldCount; //Got to start at ground zero
 
     [Tab("Serializables")]
     public TMP_Text waveNumberUI;
@@ -80,6 +80,8 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         audioSource = GetComponent<AudioSource>();
+
+        goldCount = 0;
 
 
         //---------------------------------------------------------------------
