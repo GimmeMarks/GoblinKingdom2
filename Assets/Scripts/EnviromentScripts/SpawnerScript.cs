@@ -12,7 +12,7 @@ public class SpawnerScript : MonoBehaviour
     // Win Game Amount
     // ----------------------------------------
 
-    int winNumber = 3;
+    int winNumber = 5;
 
     // ----------------------------------------
 

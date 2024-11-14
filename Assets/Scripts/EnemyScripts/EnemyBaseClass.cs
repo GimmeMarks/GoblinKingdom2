@@ -216,7 +216,7 @@ public class EnemyBaseClass : MonoBehaviour
    
     int CalcGold()
     {
-        float rawGold = eMaxHealth;
+        float rawGold = eMaxHealth * 0.20f;
         int prettyGold = Mathf.RoundToInt(rawGold);
         return prettyGold;
     }
