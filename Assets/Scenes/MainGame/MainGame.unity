@@ -10879,6 +10879,8 @@ MonoBehaviour:
   rotationSpeed: 30
   bulletForce: 20000
   targetEnemy: {fileID: 0}
+  magetowerSound: {fileID: 8300000, guid: 3648efbba527a844282478c5427d408a, type: 3}
+  audioSource: {fileID: 1532731872}
 --- !u!4 &835695103 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4502592042031614, guid: 8379f308d5dcffd4ab2f3ee5959a1076, type: 3}
@@ -12071,6 +12073,8 @@ MonoBehaviour:
   rotationSpeed: 10
   bulletForce: 2500
   targetEnemy: {fileID: 0}
+  cannontowerSound: {fileID: 8300000, guid: 3ece77dfee0511a429a655faace69308, type: 3}
+  audioSource: {fileID: 1532731872}
 --- !u!135 &966422021
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13869,6 +13873,8 @@ MonoBehaviour:
   rotationSpeed: 10
   bulletForce: 2500
   targetEnemy: {fileID: 0}
+  cannontowerSound: {fileID: 8300000, guid: 3ece77dfee0511a429a655faace69308, type: 3}
+  audioSource: {fileID: 1532731872}
 --- !u!135 &1119165280
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -17603,6 +17609,8 @@ MonoBehaviour:
   rotationSpeed: 10
   bulletForce: 2500
   targetEnemy: {fileID: 0}
+  cannontowerSound: {fileID: 8300000, guid: 3ece77dfee0511a429a655faace69308, type: 3}
+  audioSource: {fileID: 1532731872}
 --- !u!135 &1484027827
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -18572,6 +18580,8 @@ MonoBehaviour:
   rotationSpeed: 10
   bulletForce: 2500
   targetEnemy: {fileID: 0}
+  cannontowerSound: {fileID: 8300000, guid: 3ece77dfee0511a429a655faace69308, type: 3}
+  audioSource: {fileID: 1532731872}
 --- !u!135 &1533165388
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -22775,6 +22785,8 @@ MonoBehaviour:
   rotationSpeed: 30
   bulletForce: 20000
   targetEnemy: {fileID: 0}
+  magetowerSound: {fileID: 8300000, guid: 3648efbba527a844282478c5427d408a, type: 3}
+  audioSource: {fileID: 1532731872}
 --- !u!1001 &1850482098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26935,6 +26947,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8515316052909525943}
     - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fae1bfcf5f1ff4c459257a2828bb5a46, type: 3}
+    - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: SensSlider
       value: 
       objectReference: {fileID: 1314291756}
@@ -26950,6 +26966,10 @@ PrefabInstance:
       propertyPath: waveNumberUI
       value: 
       objectReference: {fileID: 110224236}
+    - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1b6e166e552a9cf439537d551a91fb3a, type: 3}
     - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: monsterDeath1
       value: 
@@ -27003,9 +27023,29 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1532731872}
+    - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: iceWandSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0ab2d341e934a9045aafddf606b9f05c, type: 3}
+    - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: SpellIndicator
       value: 
       objectReference: {fileID: 110224236}
+    - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: basicWandSound
+      value: 
+      objectReference: {fileID: 8300000, guid: addcc3776782a074482b22f378990d69, type: 3}
+    - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: laserWandSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 45ccf48d65f97f5429a0ad21a676da90, type: 3}
+    - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: explosionWandSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 36663742d4554d14486270c4788998ee, type: 3}
     - target: {fileID: 4082111688445329411, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: m_Name
       value: WorkingPlayer
