@@ -25,6 +25,7 @@ public class WandShooting : MonoBehaviour
     public AudioClip explosionWandSound;
     public AudioClip laserWandSound;
     public AudioClip iceWandSound;
+    public AudioClip ManaRegen;
 
     public AudioSource audioSource;
 
@@ -137,6 +138,8 @@ public class WandShooting : MonoBehaviour
             else
             {
                 RestoreMana(regen);
+                if (currMana < maxMana)
+                PlaySound(ManaRegen);
             }
             regenDelay = regenUpdateInterval;
         }
