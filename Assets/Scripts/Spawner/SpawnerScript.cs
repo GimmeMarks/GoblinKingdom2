@@ -79,7 +79,7 @@ public class SpawnerScript : MonoBehaviour
             }
             //Once all enemies are dead, increase wave counter and push to the UI element
             waveNumber++;
-            nextWaveStartTime = 30;
+            nextWaveStartTime = 90;
 
         }
     }
