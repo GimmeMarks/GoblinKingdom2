@@ -186,6 +186,13 @@ public class EnemyBaseClass : MonoBehaviour
                 TakeDamage(bullet.damage);
 
             }
+
+            TowerBullet towerBullet = other.GetComponent<TowerBullet>();
+            if (towerBullet != null)
+            {
+                TakeDamage(towerBullet.damage);
+
+            }
         }
         if (other.CompareTag("base"))
         {
