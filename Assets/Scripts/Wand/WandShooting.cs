@@ -81,6 +81,7 @@ public class WandShooting : MonoBehaviour
 
     void Start()
     {
+
         // Initially set the weapon based on what the player has bought
         UpdateWeaponList();
         if (currentWeaponIndex > 0)
@@ -293,7 +294,8 @@ public class WandShooting : MonoBehaviour
         if (currentBulletPrefab == explosionBulletPrefab)
         {
             StartCoroutine(Explode(firepoint.position));
-            var bullet = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
+
+            var bullet = Instantiate(explosionBulletPrefab, firepoint.position, firepoint.rotation);
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
 
@@ -317,18 +319,18 @@ public class WandShooting : MonoBehaviour
         }
     }
 
-    IEnumerator Explode(Vector3 explosionPosition)
+    IEnumerator Explode(Vector3 explosionBulletPrefab)
     {
         yield return new WaitForSeconds(timeDelay);
 
-        Collider[] colliders = Physics.OverlapSphere(explosionPosition, explosionRadius);
+        Collider[] colliders = Physics.OverlapSphere(explosionBulletPrefab, explosionRadius);
         foreach (Collider hit in colliders)
         {
             Rigidbody rb = hit.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                Vector3 explosionDirection = hit.transform.position - explosionPosition;
-                rb.AddExplosionForce(explosionForce, explosionPosition, explosionRadius);
+                Vector3 explosionDirection = hit.transform.position - explosionBulletPrefab;
+                rb.AddExplosionForce(explosionForce, explosionBulletPrefab, explosionRadius);
             }
             Debug.Log("EXPLOSION!!");
             if (hit is SphereCollider sphereCollider)
