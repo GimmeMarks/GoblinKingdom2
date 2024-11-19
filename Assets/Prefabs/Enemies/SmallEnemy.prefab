@@ -60,7 +60,7 @@ MonoBehaviour:
   chaseDistance: 10
   lingerDistance: 20
   playerTransform: {fileID: 0}
-  attackDistance: 8
+  attackDistance: 2
 --- !u!23 &5076919300699123888
 MeshRenderer:
   m_ObjectHideFlags: 0
