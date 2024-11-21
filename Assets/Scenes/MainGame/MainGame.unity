@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 2003931976}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4735,7 +4735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261676368267141395, guid: 7c02b18a9e4602c4da14b79c243cd29f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5264933862753839475, guid: 7c02b18a9e4602c4da14b79c243cd29f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8505,7 +8505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261676368267141395, guid: 7c02b18a9e4602c4da14b79c243cd29f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5264933862753839475, guid: 7c02b18a9e4602c4da14b79c243cd29f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23470,7 +23470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261676368267141395, guid: 7c02b18a9e4602c4da14b79c243cd29f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5264933862753839475, guid: 7c02b18a9e4602c4da14b79c243cd29f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33679,11 +33679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: IceBought
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: LaserBought
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: audioSource
@@ -33715,7 +33715,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 45ccf48d65f97f5429a0ad21a676da90, type: 3}
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: ExplosionBought
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: explosionWandSound
@@ -34017,7 +34017,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5261676368267141395, guid: 7c02b18a9e4602c4da14b79c243cd29f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5264933862753839475, guid: 7c02b18a9e4602c4da14b79c243cd29f, type: 3}
       propertyPath: m_LocalPosition.x
