@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 533.421, y: 7.132, z: 339.62915}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7602397515926882146}
@@ -288,6 +288,21 @@ PrefabInstance:
     - target: {fileID: 1952019119931405687, guid: 1367259e5ebdeec41b79bc148cefae9f, type: 3}
       propertyPath: m_Name
       value: Medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 5097242946122921399, guid: 1367259e5ebdeec41b79bc148cefae9f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3e6192235c31e47498647db71dce9ab2, type: 2}
+    - target: {fileID: 5097242946122921399, guid: 1367259e5ebdeec41b79bc148cefae9f, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'PT_Hips'\n\tTransform 'PT_RightLeg'\n\tTransform
+        'PT_LeftUpLeg'\n\tTransform 'PT_Neck'\n\tTransform 'PT_Spine3'\n\tTransform
+        'PT_RightHandIndex1'\n\tTransform 'PT_LeftForeArm'\n\tTransform 'PT_RightArm'\n\tTransform
+        'PT_Spine2'\n\tTransform 'PT_RightHandRing2'\n\tand more ...\n\tFrom animation
+        clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip
+        'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
