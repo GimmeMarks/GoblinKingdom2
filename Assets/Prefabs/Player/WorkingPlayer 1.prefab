@@ -60,6 +60,9 @@ MonoBehaviour:
   waveNumberUI: {fileID: 0}
   goldTextUI: {fileID: 0}
   SensSlider: {fileID: 0}
+  coinCollect: {fileID: 8300000, guid: 944ba4722d5709447b748f2c3650ccc2, type: 3}
+  jumpSound: {fileID: 0}
+  footstepSound: {fileID: 0}
   maxHealth: 100
   currHealth: 100
   KingdomHealth: 100
@@ -91,10 +94,17 @@ MonoBehaviour:
   WandExplosion: {fileID: 1894208621340011126, guid: bed691b6881a6cf45a8fb609498074b1, type: 3}
   WandIce: {fileID: 4039412713285941216, guid: aeef5fb9fa706e94da414fb6855354b6, type: 3}
   WandLaser: {fileID: 7706106833710840685, guid: 2c944149dc1a2c5429f7ef9e58b606fd, type: 3}
+  basicWandSound: {fileID: 0}
+  explosionWandSound: {fileID: 0}
+  laserWandSound: {fileID: 0}
+  iceWandSound: {fileID: 0}
+  ManaRegen: {fileID: 0}
+  audioSource: {fileID: 0}
   SpellIndicator: {fileID: 0}
   chargeTime: 1
   currMana: 100
   maxMana: 100
+  BasicShootCost: 0
   LaserShootCost: 10
   IceShootCost: 20
   ExplosionShootCost: 50
@@ -102,6 +112,7 @@ MonoBehaviour:
   LaserFireRate: 1
   IceFireRate: 1
   ExplosionFireRate: 4
+  canShoot: 1
   PlayerController: {fileID: 337779528071532861}
   regen: 1
   regenDelay: 0

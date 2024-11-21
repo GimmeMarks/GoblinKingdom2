@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 443930462002471775}
   - component: {fileID: 6491852470891984103}
   - component: {fileID: 209214145783392048}
-  - component: {fileID: 312127750772869473}
   - component: {fileID: 6781477282069731200}
   - component: {fileID: -8273750143986394134}
   - component: {fileID: -7658595036659326327}
+  - component: {fileID: 312127750772869473}
   m_Layer: 0
   m_Name: FlyingEnemy
   m_TagString: enemy
@@ -114,29 +114,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &312127750772869473
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3116840150935933324}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 3
-  m_Direction: 0
-  m_Center: {x: 0, y: 6, z: 0}
 --- !u!135 &6781477282069731200
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -156,8 +133,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.22
-  m_Center: {x: 0, y: -0.08, z: 0}
+  m_Radius: 0.1155241
+  m_Center: {x: 0, y: 0.03161554, z: 0}
 --- !u!54 &-8273750143986394134
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -207,6 +184,29 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &312127750772869473
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3116840150935933324}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 3
+  m_Direction: 0
+  m_Center: {x: 0, y: 6, z: 0}
 --- !u!1001 &1778287861955390567
 PrefabInstance:
   m_ObjectHideFlags: 0

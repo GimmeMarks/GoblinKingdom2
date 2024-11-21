@@ -21,16 +21,14 @@ public class PlayerController : MonoBehaviour
     public TMP_Text waveNumberUI;
     public TMP_Text goldTextUI;
     public Slider SensSlider;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     [Foldout("Sound Effects")]
     public AudioClip coinCollect;
-    [EndFoldout]
-
-    [Tab("Sounds")]
     public AudioClip jumpSound;
     public AudioClip footstepSound;
-    [EndTab]
+    [EndFoldout]
+
 
     [Tab("PlayerStats")]
     //Stats that can be changed buy NPCs
@@ -133,6 +131,14 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        //Checks if in conv
+        if (inConversation)
+        {
+            moveDirection = Vector3.zero; // Reset movement direction
+            characterController.Move(Vector3.zero); // Ensure the player doesn't slide
+            return;
+        }
+
         // Movement
         float moveDirectionY = moveDirection.y;
         moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
@@ -219,7 +225,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Gold"))
         {
             Debug.Log("Gold acquired");
-            audioSource.PlayOneShot(coinCollect);
+            PlaySound(coinCollect);
             goldScript goldCode = other.GetComponent<goldScript>();
             goldCount += goldCode.goldAmount;
             goldCode.DestroyMe();
@@ -227,28 +233,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-    public void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("NPC"))
-        {
-            inConversation = true;
-
-        }
-
-    }
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("NPC"))
-        {
-            inConversation = false;
-
-        }
-
-    }
-
-    
-
 
 
     //-----------------------------------------------------------

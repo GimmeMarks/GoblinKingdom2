@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Medium
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 45f944a4396b0a54398eb1abe6743296, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3e6192235c31e47498647db71dce9ab2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4705411063828911794, guid: 45f944a4396b0a54398eb1abe6743296, type: 3}
