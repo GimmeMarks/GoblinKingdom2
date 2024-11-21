@@ -133,6 +133,14 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+        //Checks if in conv
+        if (inConversation)
+        {
+            moveDirection = Vector3.zero; // Reset movement direction
+            characterController.Move(Vector3.zero); // Ensure the player doesn't slide
+            return;
+        }
+
         // Movement
         float moveDirectionY = moveDirection.y;
         moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
@@ -227,28 +235,6 @@ public class PlayerController : MonoBehaviour
         }
 
     }
-
-    public void OnTriggerStay(Collider other)
-    {
-        if (other.CompareTag("NPC"))
-        {
-            inConversation = true;
-
-        }
-
-    }
-    public void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("NPC"))
-        {
-            inConversation = false;
-
-        }
-
-    }
-
-    
-
 
 
     //-----------------------------------------------------------

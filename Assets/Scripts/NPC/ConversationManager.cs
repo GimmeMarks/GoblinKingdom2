@@ -149,6 +149,9 @@ namespace DialogueEditor
             m_conversation = conversation.Deserialize();
             OnConversationStarted?.Invoke(); // Using null-conditional operator
 
+            if (PlayerController.Instance != null)
+                PlayerController.Instance.inConversation = true; // Lock player movement
+
             TurnOnUI();
             UnlockMouse(); // Unlock mouse when starting conversation
             m_currentSpeech = m_conversation.Root;
@@ -159,6 +162,11 @@ namespace DialogueEditor
         {
             SetState(eState.TransitioningDialogueOff);
             LockMouse(); // Lock mouse when ending conversation
+
+            if (PlayerController.Instance != null)
+                PlayerController.Instance.inConversation = false; // Unlock player movement
+
+            ClearOptions();
 
             OnConversationEnded?.Invoke(); // Using null-conditional operator
         }
