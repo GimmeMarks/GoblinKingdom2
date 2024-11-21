@@ -218,6 +218,7 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Gold"))
         {
+            Debug.Log("Gold acquired");
             audioSource.PlayOneShot(coinCollect);
             goldScript goldCode = other.GetComponent<goldScript>();
             goldCount += goldCode.goldAmount;

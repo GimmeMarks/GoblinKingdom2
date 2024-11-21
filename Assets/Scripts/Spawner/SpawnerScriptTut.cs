@@ -12,8 +12,6 @@ public class SpawnerScriptTut : MonoBehaviour
     // Win Game Amount
     // ----------------------------------------
 
-    int winNumber = 1;
-
     // ----------------------------------------
 
     [SerializeField] Transform[] redSpawnLocations;
@@ -38,13 +36,13 @@ public class SpawnerScriptTut : MonoBehaviour
     void Start()
     {
         //Set Wave number
-        waveNumber = 2;
+        waveNumber = 1;
         StartCoroutine("WaveManager");
 
     }
     IEnumerator WaveManager()
     {
-        int nextWaveStartTime = 1; // WaveDelay
+        int nextWaveStartTime = 5; // WaveDelay
 
         while (true)
         {
@@ -53,36 +51,25 @@ public class SpawnerScriptTut : MonoBehaviour
             {
                 countdownTextObject.SetActive(true);
                 roundText.text = ("Round: " + waveNumber).ToString();
-                countdownText.text = (waveNumber >= winNumber)
-                    ? "Final Round Starts in " + nextWaveStartTime.ToString()
-                    : "Round Starts in " + nextWaveStartTime.ToString();
-
-                yield return new WaitForSeconds(1);
+                countdownText.text = "Round Starts in " + nextWaveStartTime.ToString();
                 nextWaveStartTime--;
+
+                // Wait for 1 second before continuing
+                yield return new WaitForSeconds(1f);
+
             }
 
             countdownTextObject.SetActive(false);
 
             //Smallest = Wavenumber * 3, Largest = Wavenumber * 5
-            int enemyBudget = Random.Range(waveNumber * 3 + 5, waveNumber * 5 + 10);
+            int enemyBudget = Random.Range(1 * 3 + 5, 1 * 5 + 10);
             //Start the coroutine to spawn enemies by feeding it the value generated
             yield return StartCoroutine(SpawnEnemies(enemyBudget));
             //Wait until the game can't find any enemies left
 
             yield return new WaitUntil(() => AllEnemiesDefeated());
-            //Check if last wave is cleared
-            
-            if (waveNumber >= winNumber)
-            {
-                //Destroy(this);
-                //PlayerController.Instance.EndGame();
-                //winScreen.SetActive(true);
-                break;
-            }
-            //Once all enemies are dead, increase wave counter and push to the UI element
-            waveNumber++;
-            nextWaveStartTime = 30;
-
+            roundText.text = ("Nice Job!");
+            break;
         }
     }
 
