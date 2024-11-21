@@ -5,9 +5,9 @@ public class TotemSpawner : MonoBehaviour
 {
     public GameObject[] totemPrefabs;       // Array to hold different totem prefabs
     public Transform[] spawnLocations;      // Array of spawn locations
-    public float minSpawnTime = 3f;         // Minimum spawn time
-    public float maxSpawnTime = 10f;        // Maximum spawn time
-    public float totemLifetime = 5f;        // Lifetime of the totem before it despawns (in seconds)
+    public float minSpawnTime = 30f;         // Minimum spawn time
+    public float maxSpawnTime = 120f;        // Maximum spawn time
+    public float totemLifetime = 30f;        // Lifetime of the totem before it despawns (in seconds)
 
     private GameObject currentTotem;        // Reference to the currently spawned totem
     private bool totemActive = false;       // Flag to track if a totem is currently active
