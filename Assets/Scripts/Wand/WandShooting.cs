@@ -41,6 +41,7 @@ public class WandShooting : MonoBehaviour
     // Laser weapon variables
     private bool isCharging = false;
     public float chargeTime;
+    public GameObject ChargeEffect;
 
     // Explosion weapon variables
     private float explosionRadius = 5.0f;
@@ -216,6 +217,7 @@ public class WandShooting : MonoBehaviour
     IEnumerator ChargeLaser()
     {
         isCharging = true;
+        ChargeEffect.SetActive(true);
         Debug.Log("Charging laser... ");
         PlaySound(laserWandSound);
         yield return new WaitForSeconds(chargeTime);
@@ -344,6 +346,7 @@ public class WandShooting : MonoBehaviour
 
     void ShootLaser()
     {
+        ChargeEffect.SetActive(false);
         var laser = Instantiate(currentBulletPrefab, firepoint.position, firepoint.rotation);
         var bulletSpeed = laser.GetComponent<Bullet>().speed;
         laser.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
