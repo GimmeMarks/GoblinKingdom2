@@ -14,7 +14,7 @@ public class ConversationStarter : MonoBehaviour
         if (other.CompareTag("Player"))
         {
 
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 ConversationManager.Instance.StartConversation(myConversation);
                 ConversationManager.Instance.SetInt("Gold", PlayerController.goldCount);
