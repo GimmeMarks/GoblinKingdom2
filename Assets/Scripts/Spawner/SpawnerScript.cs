@@ -12,7 +12,7 @@ public class SpawnerScript : MonoBehaviour
     // Win Game Amount
     // ----------------------------------------
 
-    int winNumber = 5;
+    int winNumber = 15;
 
     // ----------------------------------------
 
@@ -79,11 +79,14 @@ public class SpawnerScript : MonoBehaviour
                     winScreen.SetActive(true);
                     break;
                 }
+
+                /*
             if (waveNumber % 5 == 0)
                 flagActivated = false;
                 //Once all enemies are dead, increase wave counter and push to the UI element
                 waveNumber++;
                 nextWaveStartTime = 60;
+                */
             
         }
     }
