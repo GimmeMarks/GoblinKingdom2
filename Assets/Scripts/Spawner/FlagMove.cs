@@ -18,12 +18,14 @@ public class FlagMove : MonoBehaviour
         transform.position += new Vector3(0, amount, 0);
         spawnerScript.flagActivated = true;
         spawnerScript.StartCoroutine("WaveManager");
+        Destroy(this);
     }
+    /*
     public void MoveFlagDown()
     {
         transform.position -= new Vector3(0, amount, 0);
     }
-
+    */
 
 
 
