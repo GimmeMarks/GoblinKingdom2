@@ -53,6 +53,7 @@ public class WandShooting : MonoBehaviour
     public int maxMana = 100;
 
     // Weapon Costs
+    public int BasicShootCost;
     public int LaserShootCost;
     public int IceShootCost;
     public int ExplosionShootCost;
@@ -100,11 +101,11 @@ public class WandShooting : MonoBehaviour
         Regen();
 
         // Check for weapon switch inputs (scroll with 1 and 2)
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
             SwitchWeapon(-1);  // Scroll backward through available weapons
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
             SwitchWeapon(1);  // Scroll forward through available weapons
         }
@@ -198,6 +199,7 @@ public class WandShooting : MonoBehaviour
             if (Input.GetButton("Fire1") && Time.time >= nextTimeToFire && !inMenuLocal && !PlayerController.inConversation == true)
             {
                 Shoot();
+                currMana -= BasicShootCost;
                 PlaySound(basicWandSound);
             }
         }

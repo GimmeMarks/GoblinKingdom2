@@ -134,11 +134,11 @@ public class EventManager : MonoBehaviour
 
     public void BuyTrapTowerL()
     {
-        if (PlayerController.goldCount >= 50) // Check if player has enough gold
+        if (PlayerController.goldCount >= 25) // Check if player has enough gold
         {
-            PlayerController.goldCount -= 50;
+            PlayerController.goldCount -= 25;
             PlayerController.Bought7 = true;
-            OnBuyTrapTower?.Invoke(50); // Triggers to buy tower
+            OnBuyTrapTower?.Invoke(25); // Triggers to buy tower
             Debug.Log("Wall Traps bought! Remaining gold: " + PlayerController.goldCount);
         }
         else
@@ -149,11 +149,11 @@ public class EventManager : MonoBehaviour
 
     public void BuyTrapTowerR()
     {
-        if (PlayerController.goldCount >= 50) // Check if player has enough gold
+        if (PlayerController.goldCount >= 25) // Check if player has enough gold
         {
-            PlayerController.goldCount -= 50;
+            PlayerController.goldCount -= 25;
             PlayerController.Bought8 = true;
-            OnBuyTrapTower?.Invoke(50); // Triggers to buy tower
+            OnBuyTrapTower?.Invoke(25); // Triggers to buy tower
             Debug.Log("Wall Traps bought! Remaining gold: " + PlayerController.goldCount);
         }
         else
