@@ -297,7 +297,7 @@ public class WandShooting : MonoBehaviour
         {
             StartCoroutine(Explode(firepoint.position));
 
-            var bullet = Instantiate(explosionBulletPrefab, firepoint.position, firepoint.rotation);
+            var bullet = Instantiate(explosionBulletPrefab, firepoint.position, Quaternion.Euler(new Vector3(0, 90, 90)));
             var bulletSpeed = bullet.GetComponent<Bullet>().speed;
             bullet.GetComponent<Rigidbody>().velocity = firepoint.forward * bulletSpeed;
 
