@@ -21,16 +21,14 @@ public class PlayerController : MonoBehaviour
     public TMP_Text waveNumberUI;
     public TMP_Text goldTextUI;
     public Slider SensSlider;
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     [Foldout("Sound Effects")]
     public AudioClip coinCollect;
-    [EndFoldout]
-
-    [Tab("Sounds")]
     public AudioClip jumpSound;
     public AudioClip footstepSound;
-    [EndTab]
+    [EndFoldout]
+
 
     [Tab("PlayerStats")]
     //Stats that can be changed buy NPCs
@@ -219,7 +217,7 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Gold"))
         {
             Debug.Log("Gold acquired");
-            audioSource.PlayOneShot(coinCollect);
+            PlaySound(coinCollect);
             goldScript goldCode = other.GetComponent<goldScript>();
             goldCount += goldCode.goldAmount;
             goldCode.DestroyMe();
