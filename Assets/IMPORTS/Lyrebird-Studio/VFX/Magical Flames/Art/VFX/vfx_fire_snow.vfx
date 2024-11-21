@@ -64,7 +64,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":9.18958568572998,"g":9.18958568572998,"b":9.18958568572998,"a":1.0}'
+      m_SerializableObject: '{"r":0.3172031342983246,"g":9.359207153320313,"b":9.606718063354493,"a":1.0}'
     min: -Infinity
     max: Infinity
     enumValues: []
@@ -2598,8 +2598,7 @@ MonoBehaviour:
   castShadows: 0
   useExposureWeight: 0
   needsOwnSort: 0
-  shaderGraph: {fileID: 4333940904281232215, guid: 8d8b8e91aa55f3145a9a644e270e4803,
-    type: 3}
+  shaderGraph: {fileID: 4333940904281232215, guid: 8d8b8e91aa55f3145a9a644e270e4803, type: 3}
   materialSettings:
     m_PropertyNames:
     - _QueueOffset
@@ -3681,8 +3680,7 @@ MonoBehaviour:
   castShadows: 0
   useExposureWeight: 0
   needsOwnSort: 0
-  shaderGraph: {fileID: 4333940904281232215, guid: 08364555ff200634bb446979102ec3c8,
-    type: 3}
+  shaderGraph: {fileID: 4333940904281232215, guid: 08364555ff200634bb446979102ec3c8, type: 3}
   materialSettings:
     m_PropertyNames:
     - _QueueOffset
@@ -4497,7 +4495,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":9.18958568572998,"g":9.18958568572998,"b":9.18958568572998,"a":1.0}'
+      m_SerializableObject: '{"r":0.3172031342983246,"g":9.359207153320313,"b":9.606718063354493,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: o
