@@ -12,7 +12,7 @@ public class SpawnerScript : MonoBehaviour
     // Win Game Amount
     // ----------------------------------------
 
-    int winNumber = 5;
+    int winNumber = 15;
 
     // ----------------------------------------
 
@@ -32,55 +32,59 @@ public class SpawnerScript : MonoBehaviour
     public Transform baseLocation1;
     public Transform baseLocation2;
     public Transform playerLocation;
+    public bool flagActivated = false;
 
     // Start is called before the first frame update
     void Start()
     {
         //Set Wave number
         waveNumber = 1;
-        StartCoroutine("WaveManager");
+        flagActivated = false;
+        
 
     }
     IEnumerator WaveManager()
     {
         int nextWaveStartTime = 1; // WaveDelay
-
-        while (true)
-        {
-            // Countdown before starting the next wave
-            while (nextWaveStartTime >= 0)
+        
+            while (flagActivated == true)
             {
-                countdownTextObject.SetActive(true);
-                roundText.text = ("Round: " + waveNumber).ToString();
-                countdownText.text = (waveNumber >= winNumber)
-                    ? "Final Round Starts in " + nextWaveStartTime.ToString()
-                    : "Round Starts in " + nextWaveStartTime.ToString();
+                // Countdown before starting the next wave
+                while (nextWaveStartTime >= 0)
+                {
+                    countdownTextObject.SetActive(true);
+                    roundText.text = ("Round: " + waveNumber).ToString();
+                    countdownText.text = (waveNumber >= winNumber)
+                        ? "Final Round Starts in " + nextWaveStartTime.ToString()
+                        : "Round Starts in " + nextWaveStartTime.ToString();
 
-                yield return new WaitForSeconds(1);
-                nextWaveStartTime--;
-            }
+                    yield return new WaitForSeconds(1);
+                    nextWaveStartTime--;
+                }
 
-            countdownTextObject.SetActive(false);
+                countdownTextObject.SetActive(false);
 
-            //Smallest = Wavenumber * 3, Largest = Wavenumber * 5
-            int enemyBudget = Random.Range(waveNumber * 3 + 5, waveNumber * 5 + 10);
-            //Start the coroutine to spawn enemies by feeding it the value generated
-            yield return StartCoroutine(SpawnEnemies(enemyBudget));
-            //Wait until the game can't find any enemies left
+                //Smallest = Wavenumber * 3, Largest = Wavenumber * 5
+                int enemyBudget = Random.Range(waveNumber * 3 + 5, waveNumber * 5 + 10);
+                //Start the coroutine to spawn enemies by feeding it the value generated
+                yield return StartCoroutine(SpawnEnemies(enemyBudget));
+                //Wait until the game can't find any enemies left
+
+                yield return new WaitUntil(() => AllEnemiesDefeated());
+                //Check if last wave is cleared
+                if (waveNumber >= winNumber)
+                {
+
+                    PlayerController.Instance.EndGame();
+                    winScreen.SetActive(true);
+                    break;
+                }
+            if (waveNumber % 5 == 0)
+                flagActivated = false;
+                //Once all enemies are dead, increase wave counter and push to the UI element
+                waveNumber++;
+                nextWaveStartTime = 60;
             
-            yield return new WaitUntil(() => AllEnemiesDefeated());
-           //Check if last wave is cleared
-            if (waveNumber >= winNumber)
-            {
-                
-                PlayerController.Instance.EndGame();
-                winScreen.SetActive(true);
-                break;
-            }
-            //Once all enemies are dead, increase wave counter and push to the UI element
-            waveNumber++;
-            nextWaveStartTime = 90;
-
         }
     }
 
@@ -142,6 +146,8 @@ public class SpawnerScript : MonoBehaviour
             return false;
         }
     }
+
+    
 
     //Select an enemy type based on the available budget
     GameObject GetEnemyBasedOnBudget(ref int enemyBudget)

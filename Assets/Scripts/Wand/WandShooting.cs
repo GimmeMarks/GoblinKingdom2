@@ -230,7 +230,7 @@ public class WandShooting : MonoBehaviour
     void ChangeWeapon(int WeaponIndex)
     {
         // Only allow changing to a weapon if it's been bought
-        if (WeaponIndex == 1 && BasicBought)
+        if (WeaponIndex == 1)
         {
             currentBulletPrefab = baseBulletPrefab;
             currentWandPrefab = WandBasic;
@@ -352,9 +352,15 @@ public class WandShooting : MonoBehaviour
 
     void UpdateGunUI()
     {
-
-        SpellIndicator.text = currentBulletPrefab.GetComponent<Bullet>().bulletName;
-
+        if (currentBulletPrefab != null)
+        {
+            SpellIndicator.text = currentBulletPrefab.GetComponent<Bullet>().bulletName;
+        }
+        else
+        {
+            // Handle the case where there is no current bullet prefab
+            SpellIndicator.text = "Wand";
+        }
     }
 
     void UpdateWeaponList()
