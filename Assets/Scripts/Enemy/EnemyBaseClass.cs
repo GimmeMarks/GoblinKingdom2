@@ -14,8 +14,9 @@ public class EnemyBaseClass : MonoBehaviour
     //Initialization
     public enum EnemyState { March, Chase, Attack}
     protected EnemyState enemyState;
-    protected AudioSource audioSource;
-    [SerializeField] protected AudioClip deathSound;
+    public AudioSource audioSource;
+    public AudioClip deathSound;
+    public AudioClip attackSound;
     //private int waveNumber;
     protected Animator anim;
     //Gold Prefab
@@ -151,6 +152,7 @@ public class EnemyBaseClass : MonoBehaviour
     IEnumerator AI_Attack()
     {
         Debug.Log("Attacking, RAH!");
+        PlaySound(attackSound);
         float elapsedTime = 0f;
         while (true)
         {
@@ -216,6 +218,7 @@ public class EnemyBaseClass : MonoBehaviour
         eHealth -= (int)damage;
         if (eHealth <= 0)
         {
+            PlaySound(deathSound);
             dropGold(CalcGold());
             Destroy(gameObject);
         }
@@ -232,5 +235,13 @@ public class EnemyBaseClass : MonoBehaviour
         GameObject goldInstance = Instantiate(goldDrop, transform.position, Quaternion.identity);
         goldScript goldScript = goldInstance.GetComponent<goldScript>();
         goldScript.setGold(gold);
+    }
+
+    void PlaySound(AudioClip clip)
+    {
+        if (clip != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(clip);
+        }
     }
 }
