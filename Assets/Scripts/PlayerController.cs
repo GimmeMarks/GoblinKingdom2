@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
         audioSource = GetComponent<AudioSource>();
 
-        goldCount = 0;
+        goldCount = 500;
 
 
         //---------------------------------------------------------------------

@@ -7,8 +7,9 @@ public class ManaTotem : MonoBehaviour
     public GameObject particleEffectPrefab;        // Particle effect to show when collected
     private WandShooting WandShooting;
 
-        // Called when the player collects the totem
-        private void OnTriggerEnter(Collider other)
+
+    // Called when the player collects the totem
+    private void OnTriggerEnter(Collider other)
     {
 
         WandShooting = other.GetComponent<WandShooting>();
