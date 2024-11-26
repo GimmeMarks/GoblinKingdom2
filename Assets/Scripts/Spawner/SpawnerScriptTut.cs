@@ -42,7 +42,7 @@ public class SpawnerScriptTut : MonoBehaviour
     }
     IEnumerator WaveManager()
     {
-        int nextWaveStartTime = 5; // WaveDelay
+        int nextWaveStartTime = 3; // WaveDelay
 
         while (true)
         {
@@ -50,7 +50,7 @@ public class SpawnerScriptTut : MonoBehaviour
             while (nextWaveStartTime >= 0)
             {
                 countdownTextObject.SetActive(true);
-                roundText.text = ("Round: " + waveNumber).ToString();
+                roundText.text = ("Defend the Kingdom").ToString();
                 countdownText.text = "Round Starts in " + nextWaveStartTime.ToString();
                 nextWaveStartTime--;
 
@@ -68,7 +68,7 @@ public class SpawnerScriptTut : MonoBehaviour
             //Wait until the game can't find any enemies left
 
             yield return new WaitUntil(() => AllEnemiesDefeated());
-            roundText.text = ("Nice Job!");
+            roundText.text = ("Nice Job! See the Goblin at the Kingdom.");
             break;
         }
     }
@@ -113,7 +113,7 @@ public class SpawnerScriptTut : MonoBehaviour
     }
     bool SpawnPointGenerator()
     {
-        roundText.text = ("Enemy Horde Approaching From Blue Side!");
+        roundText.text = ("Defend the Kingdom");
         return true;
     }
 

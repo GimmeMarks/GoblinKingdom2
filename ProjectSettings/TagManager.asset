@@ -12,6 +12,9 @@ TagManager:
   - NPC
   - Gold
   - base
+  - Fire
+  - FirePoint
+  - tutArea
   layers:
   - Default
   - TransparentFX

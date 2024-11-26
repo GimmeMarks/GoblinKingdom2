@@ -8,6 +8,12 @@ public class EventManager : MonoBehaviour
     public SpawnerScript spawner;
     public PlayerController PlayerController;
     public WandShooting WandShooting;
+    public PauseScreen pauseScreen;
+    public int HealthBuffNum;
+    public int ManaBuffNum;
+    public int DamageBuffNum;
+    public int ManaRegenBuffNum;
+    public int SpeedBuffNum;
 
     //public Bullet Bullet;
     public double damageBuff;
@@ -167,9 +173,10 @@ public class EventManager : MonoBehaviour
         if (PlayerController.goldCount >= 30) // Check if player has enough gold
         {
             PlayerController.goldCount -= 30;
+            pauseScreen.healthNum += 1;
             OnBuyHealthUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Health Upgrade bought! Remaining gold: " + PlayerController.goldCount);
-
+            PlayerController.currHealth += 20; // Increases player max health
             PlayerController.maxHealth += 20; // Increases player max health
         }
         else
@@ -182,6 +189,7 @@ public class EventManager : MonoBehaviour
         if (PlayerController.goldCount >= 30) // Check if player has enough gold
         {
             PlayerController.goldCount -= 30;
+            pauseScreen.manaNum += 1;
             OnBuyManaUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Mana upgrade bought! Remaining gold: " + PlayerController.goldCount);
 
@@ -198,6 +206,7 @@ public class EventManager : MonoBehaviour
         if (PlayerController.goldCount >= 30) // Check if player has enough gold
         {
             PlayerController.goldCount -= 30;
+            pauseScreen.damageNum += 1;
             OnBuyDamageUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Damage upgrade bought! Remaining gold: " + PlayerController.goldCount);
 
@@ -213,6 +222,7 @@ public class EventManager : MonoBehaviour
         if (PlayerController.goldCount >= 30) // Check if player has enough gold
         {
             PlayerController.goldCount -= 30;
+            pauseScreen.manaRegenNum += 1;
             OnBuyRegenUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Regen upgrade bought! Remaining gold: " + PlayerController.goldCount);
 
@@ -228,6 +238,7 @@ public class EventManager : MonoBehaviour
         if (PlayerController.goldCount >= 30) // Check if player has enough gold
         {
             PlayerController.goldCount -= 30;
+            pauseScreen.speedNum += 1;
             OnBuySpeedUp?.Invoke(30); // Triggers to buy Upgrade
             Debug.Log("Speed upgrade bought! Remaining gold: " + PlayerController.goldCount);
 

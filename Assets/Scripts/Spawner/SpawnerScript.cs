@@ -40,14 +40,14 @@ public class SpawnerScript : MonoBehaviour
         //Set Wave number
         waveNumber = 1;
         flagActivated = false;
-        
+        StartCoroutine("WaveManager");
 
     }
     IEnumerator WaveManager()
     {
         int nextWaveStartTime = 1; // WaveDelay
         
-            while (flagActivated == true)
+            while (true)
             {
                 // Countdown before starting the next wave
                 while (nextWaveStartTime >= 0)
