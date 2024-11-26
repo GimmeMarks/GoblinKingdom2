@@ -220,10 +220,21 @@ public class EnemyBaseClass : MonoBehaviour
         {
             PlaySound(deathSound);
             dropGold(CalcGold());
-            Destroy(gameObject);
+            Invoke("DestroyObject", 1f);
         }
     }
-   
+
+    void DestroyObject()
+    {
+        Destroy(gameObject);
+    }
+    /*
+    void OnDestroy()
+    {
+        audioSource.PlayOneShot(deathSound);
+        Debug.Log("Playing sound ");
+    }
+    */
     int CalcGold()
     {
         float rawGold = eMaxHealth * 0.20f;
