@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
     private bool isMoving = false;  // To track if the player is moving
+    private bool inTutArea = false;
 
     //NPC Tower Buys (Allows to check if a tower is bought or not)
     public bool inConversation = false;
@@ -131,8 +132,8 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        //Checks if in conv
-        if (inConversation)
+        //Controls Camera when in conv
+        if (inConversation && !inTutArea)
         {
             moveDirection = Vector3.zero; // Reset movement direction
             characterController.Move(Vector3.zero); // Ensure the player doesn't slide
@@ -166,11 +167,11 @@ public class PlayerController : MonoBehaviour
 
         if (moving && !isMoving)
         {
-            Debug.Log("FOOTSTEPS");
+            Debug.Log("Player Moving");
             isMoving = true;
-            PlaySound(footstepSound);
         }
 
+        //Controls Camera when not in conv
         if (!inConversation)
         {
             // Camera rotation
@@ -231,6 +232,13 @@ public class PlayerController : MonoBehaviour
             goldCode.DestroyMe();
 
         }
+
+        if (other.CompareTag("tutArea"))
+        {
+            Debug.Log("In Tutorial Area");
+            inTutArea = true;
+        } else inTutArea = false;
+
 
     }
 
