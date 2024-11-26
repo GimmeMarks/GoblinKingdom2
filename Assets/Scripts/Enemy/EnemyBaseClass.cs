@@ -29,7 +29,8 @@ public class EnemyBaseClass : MonoBehaviour
     [SerializeField] protected int eDamage;
     [SerializeField] protected string eName;
     [SerializeField] protected float eAttackSpeed;
-    
+    public bool isDead = false;
+
 
     //March info
     protected NavMeshAgent agent;
@@ -180,36 +181,37 @@ public class EnemyBaseClass : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet"))
+        if (!isDead)
         {
-            Bullet bullet = other.GetComponent<Bullet>();
-            if (bullet != null)
+            if (other.CompareTag("Bullet"))
             {
-                TakeDamage(bullet.damage);
+                Bullet bullet = other.GetComponent<Bullet>();
+                if (bullet != null)
+                {
+                    TakeDamage(bullet.damage);
 
+                }
+
+                TowerBullet towerBullet = other.GetComponent<TowerBullet>();
+                if (towerBullet != null)
+                {
+                    TakeDamage(towerBullet.damage);
+
+                }
             }
-
-            TowerBullet towerBullet = other.GetComponent<TowerBullet>();
-            if (towerBullet != null)
+            if (other.CompareTag("base"))
             {
-                TakeDamage(towerBullet.damage);
-
+                float healthDamage = eMaxHealth * .5f;
+                int healthDamageReal = Mathf.RoundToInt(healthDamage);
+                PlayerController.Instance.KingdomHealth -= healthDamageReal;
+                Destroy(gameObject);
+            }
+            if (other.CompareTag("Spikes"))
+            {
+                TakeDamage(15);
             }
         }
-        if (other.CompareTag("base"))
-        {
-            float healthDamage = eMaxHealth *.5f;
-            int healthDamageReal = Mathf.RoundToInt(healthDamage);
-            PlayerController.Instance.KingdomHealth -= healthDamageReal;
-            Destroy(gameObject);
-        }
-        if (other.CompareTag("Spikes"))
-        {
-            TakeDamage(15);
-        }
-
-
-
+        
     }
     //If taking damage and health drops below zero, destroy and drop gold
     void TakeDamage(double damage)
@@ -218,6 +220,7 @@ public class EnemyBaseClass : MonoBehaviour
         eHealth -= (int)damage;
         if (eHealth <= 0)
         {
+            isDead = true;
             PlaySound(deathSound);
             dropGold(CalcGold());
             Invoke("DestroyObject", 1f);
@@ -228,13 +231,7 @@ public class EnemyBaseClass : MonoBehaviour
     {
         Destroy(gameObject);
     }
-    /*
-    void OnDestroy()
-    {
-        audioSource.PlayOneShot(deathSound);
-        Debug.Log("Playing sound ");
-    }
-    */
+    
     int CalcGold()
     {
         float rawGold = eMaxHealth * 0.20f;
