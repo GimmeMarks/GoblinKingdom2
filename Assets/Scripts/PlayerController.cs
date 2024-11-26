@@ -10,11 +10,11 @@ using VInspector;
 public class PlayerController : MonoBehaviour
 {
     [Tab("Movement")]
-    //public float sprintSpeed = 10.0f;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
     public float gravity;
     public float speed = 5.0f;
+    public float sprintSpeed = 10.0f;
     public float jumpForce = 3f;
     public static int goldCount; //Got to start at ground zero
 
@@ -43,11 +43,12 @@ public class PlayerController : MonoBehaviour
     public GameObject PlayerUI;
     private Camera playerCamera;
     private CharacterController characterController;
+    private bool isSprinting = false;
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
     private bool isMoving = false;  // To track if the player is moving
     private bool inTutArea = false;
-    //private bool isSprinting = false;
+    
 
     //NPC Tower Buys (Allows to check if a tower is bought or not)
     public bool inConversation = false;
@@ -142,6 +143,10 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
+        isSprinting = Input.GetKey(KeyCode.LeftShift);
+
+        float currentSpeed = isSprinting ? sprintSpeed : speed;
+
         // Movement
         float moveDirectionY = moveDirection.y;
         moveDirection = (transform.forward * Input.GetAxis("Vertical")) + (transform.right * Input.GetAxis("Horizontal"));
@@ -150,7 +155,6 @@ public class PlayerController : MonoBehaviour
 
         bool moving = moveDirection.x != 0 || moveDirection.z != 0;  // Check if there's horizontal or vertical movement
 
-        //isSprinting = Input.GetButton("Sprint");
 
         if (characterController.isGrounded)
         {
@@ -166,7 +170,7 @@ public class PlayerController : MonoBehaviour
         }
 
         moveDirection.y -= gravity * Time.deltaTime;
-        characterController.Move(moveDirection * speed * Time.deltaTime);
+        characterController.Move(moveDirection * currentSpeed * Time.deltaTime);
 
         if (moving && !isMoving)
         {

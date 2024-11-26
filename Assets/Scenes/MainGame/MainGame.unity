@@ -35374,6 +35374,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 944ba4722d5709447b748f2c3650ccc2, type: 3}
     - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: sprintSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 337779528071532861, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: waveNumberUI
       value: 
       objectReference: {fileID: 110224236}
