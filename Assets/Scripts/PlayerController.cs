@@ -10,7 +10,7 @@ using VInspector;
 public class PlayerController : MonoBehaviour
 {
     [Tab("Movement")]
-    public float sprintSpeed = 10.0f;
+    //public float sprintSpeed = 10.0f;
     public float lookSpeed = 2.0f;
     public float lookXLimit = 45.0f;
     public float gravity;
@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     private float rotationX = 0;
     private bool isMoving = false;  // To track if the player is moving
     private bool inTutArea = false;
-    private bool isSprinting = false;
+    //private bool isSprinting = false;
 
     //NPC Tower Buys (Allows to check if a tower is bought or not)
     public bool inConversation = false;
@@ -150,6 +150,7 @@ public class PlayerController : MonoBehaviour
 
         bool moving = moveDirection.x != 0 || moveDirection.z != 0;  // Check if there's horizontal or vertical movement
 
+        //isSprinting = Input.GetButton("Sprint");
 
         if (characterController.isGrounded)
         {
