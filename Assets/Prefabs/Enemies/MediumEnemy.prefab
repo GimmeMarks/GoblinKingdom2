@@ -56,7 +56,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 7dbba4e0b1a2a5449b7c0999d633691b, type: 3}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 55
-  eSpeed: 2
+  eSpeed: 1
   eDamage: 5
   eName: Knight
   eAttackSpeed: 3
@@ -284,6 +284,18 @@ PrefabInstance:
     - target: {fileID: 7276489566506522712, guid: 0cbc1a18dd4cacd418e9d72515af2f54, type: 3}
       propertyPath: m_Name
       value: Icon_Medium
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301352332500719531, guid: 0cbc1a18dd4cacd418e9d72515af2f54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301352332500719531, guid: 0cbc1a18dd4cacd418e9d72515af2f54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301352332500719531, guid: 0cbc1a18dd4cacd418e9d72515af2f54, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7301352332500719531, guid: 0cbc1a18dd4cacd418e9d72515af2f54, type: 3}
       propertyPath: m_LocalPosition.x
