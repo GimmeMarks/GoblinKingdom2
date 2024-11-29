@@ -59,10 +59,11 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 15
-  eSpeed: 3
+  eSpeed: 2
   eDamage: 2
   eName: Flyer
   eAttackSpeed: 2
+  isDead: 0
   chaseDistance: 0
   lingerDistance: 0
   playerTransform: {fileID: 0}
@@ -206,7 +207,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.85
   m_Height: 3
   m_Direction: 0
   m_Center: {x: 0, y: 6, z: 0}
@@ -319,12 +320,24 @@ PrefabInstance:
       value: Icon_Flying
       objectReference: {fileID: 0}
     - target: {fileID: 3974094211243308744, guid: cd7275f3d4563e249a899d219ed09361, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974094211243308744, guid: cd7275f3d4563e249a899d219ed09361, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974094211243308744, guid: cd7275f3d4563e249a899d219ed09361, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974094211243308744, guid: cd7275f3d4563e249a899d219ed09361, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3974094211243308744, guid: cd7275f3d4563e249a899d219ed09361, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3974094211243308744, guid: cd7275f3d4563e249a899d219ed09361, type: 3}
       propertyPath: m_LocalPosition.z

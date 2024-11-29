@@ -35397,6 +35397,14 @@ PrefabInstance:
       propertyPath: monsterDeath3
       value: 
       objectReference: {fileID: 8300000, guid: 8460ad942417a814ea38742bab4b5f7a, type: 3}
+    - target: {fileID: 893042309620393758, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: orthographic size
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 893042309620393758, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_OcclusionCulling
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2733152591286186584, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: m_LocalPosition.x
       value: -512.37164
@@ -35488,6 +35496,14 @@ PrefabInstance:
     - target: {fileID: 4082111688445329411, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: m_Name
       value: WorkingPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4482437898154661412, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877159210050564791, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6877159210050564791, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: m_Materials.Array.data[0]

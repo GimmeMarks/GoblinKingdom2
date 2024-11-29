@@ -57,10 +57,11 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: b474946e73248b94ea24af0f9a3152c0, type: 3}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 100
-  eSpeed: 1
+  eSpeed: 2
   eDamage: 10
   eName: Tank
   eAttackSpeed: 1
+  isDead: 0
   chaseDistance: 10
   lingerDistance: 20
   playerTransform: {fileID: 4474298836982701179, guid: e9f2e30183953554cb1209f29c0bce01, type: 3}
@@ -182,7 +183,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0.45
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!82 &2886627864949826419
@@ -292,6 +293,18 @@ PrefabInstance:
     - target: {fileID: 1162746650118052492, guid: 9178ebb41a52be14ab91129a07d0d571, type: 3}
       propertyPath: m_Name
       value: Icon_Large
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514671824330265017, guid: 9178ebb41a52be14ab91129a07d0d571, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514671824330265017, guid: 9178ebb41a52be14ab91129a07d0d571, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4514671824330265017, guid: 9178ebb41a52be14ab91129a07d0d571, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514671824330265017, guid: 9178ebb41a52be14ab91129a07d0d571, type: 3}
       propertyPath: m_LocalPosition.x
@@ -419,14 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 53096e80d65e6cd41ac6ba10ea0e143e, type: 2}
     - target: {fileID: 1240018878491776598, guid: cc68b6e45a8305647ad419544eac8e3a, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'PT_Hips'\n\tTransform 'PT_RightLeg'\n\tTransform
-        'PT_LeftUpLeg'\n\tTransform 'PT_Neck'\n\tTransform 'PT_Spine3'\n\tTransform
-        'PT_RightHandIndex1'\n\tTransform 'PT_LeftForeArm'\n\tTransform 'PT_RightArm'\n\tTransform
-        'PT_Spine2'\n\tTransform 'PT_RightHandRing2'\n\tand more ...\n\tFrom animation
-        clip 'mixamo.com'\n\tFrom animation clip 'mixamo.com'\n\tFrom animation clip
-        'mixamo.com'\n\tFrom animation clip 'mixamo.com'"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5176116245652180012, guid: cc68b6e45a8305647ad419544eac8e3a, type: 3}
       propertyPath: m_LocalPosition.x

@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5076919300699123888}
   - component: {fileID: 4514512635787827526}
   - component: {fileID: 4382991547889311033}
-  - component: {fileID: 8261663745372619616}
   - component: {fileID: 6740053238950030464}
+  - component: {fileID: 2283898976758216054}
   m_Layer: 0
   m_Name: SmallEnemy
   m_TagString: enemy
@@ -56,10 +56,11 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 4fce3638e207fa9488000f9fa9392d78, type: 3}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 25
-  eSpeed: 3
+  eSpeed: 2
   eDamage: 2
   eName: Grunt
   eAttackSpeed: 2
+  isDead: 0
   chaseDistance: 10
   lingerDistance: 20
   playerTransform: {fileID: 0}
@@ -152,32 +153,9 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0.45
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!136 &8261663745372619616
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1642028293503218175}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1.7812554
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.39062768, z: 0}
 --- !u!82 &6740053238950030464
 AudioSource:
   m_ObjectHideFlags: 0
@@ -274,6 +252,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &2283898976758216054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642028293503218175}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
 --- !u!1001 &3532112065141322838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -282,6 +281,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1284422628733537334}
     m_Modifications:
+    - target: {fileID: 7522780932279374563, guid: 6184a8518603cc24a8f4753d75525819, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522780932279374563, guid: 6184a8518603cc24a8f4753d75525819, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7522780932279374563, guid: 6184a8518603cc24a8f4753d75525819, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7522780932279374563, guid: 6184a8518603cc24a8f4753d75525819, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
