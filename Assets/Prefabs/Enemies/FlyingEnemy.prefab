@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: -7658595036659326327}
   - component: {fileID: 312127750772869473}
   - component: {fileID: 266216735966741239}
+  - component: {fileID: 5241801750967219125}
   m_Layer: 0
   m_Name: FlyingEnemy
   m_TagString: enemy
@@ -68,6 +69,7 @@ MonoBehaviour:
   lingerDistance: 0
   playerTransform: {fileID: 0}
   attackDistance: 0
+  animator: {fileID: 0}
 --- !u!33 &6491852470891984103
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -307,6 +309,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &5241801750967219125
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3116840150935933324}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 86b218d3ae7649141a8a0fdb8cee785a, type: 3}
+  m_Controller: {fileID: 9100000, guid: 26af49243c8ac8b4aae61d8aa15ef873, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1778287861955390567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -520,7 +543,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 26af49243c8ac8b4aae61d8aa15ef873, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9500000, guid: 86b218d3ae7649141a8a0fdb8cee785a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
