@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: -2367831869591368709}
   - component: {fileID: 5873415673778887080}
   - component: {fileID: 3307719158898329286}
+  - component: {fileID: 1987517542577119880}
   m_Layer: 0
   m_Name: GiantEnemy
   m_TagString: enemy
@@ -66,6 +67,7 @@ MonoBehaviour:
   lingerDistance: 20
   playerTransform: {fileID: 0}
   attackDistance: 2
+  animator: {fileID: 0}
 --- !u!33 &7602329030657723631
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -282,6 +284,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &1987517542577119880
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7233184053589551852}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 68b885f1af58bfe46a6155259127e5d0, type: 3}
+  m_Controller: {fileID: 9100000, guid: 8f94d216970f84f419ee3a53541db3a0, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4723500375355922998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -342,7 +365,8 @@ PrefabInstance:
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: 68b885f1af58bfe46a6155259127e5d0, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

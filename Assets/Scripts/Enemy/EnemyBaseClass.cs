@@ -12,7 +12,7 @@ public class EnemyBaseClass : MonoBehaviour
     //https://docs.unity3d.com/Manual/JobSystem.html
 
     //Initialization
-    public enum EnemyState { March, Chase, Attack}
+    public enum EnemyState { March, Chase, Attack, Dead}
     protected EnemyState enemyState;
     public AudioSource audioSource;
     public AudioClip deathSound;
@@ -30,7 +30,7 @@ public class EnemyBaseClass : MonoBehaviour
     [SerializeField] protected string eName;
     [SerializeField] protected float eAttackSpeed;
     public bool isDead = false;
-
+    
 
     //March info
     protected NavMeshAgent agent;
@@ -45,6 +45,9 @@ public class EnemyBaseClass : MonoBehaviour
     //Attack info
     [SerializeField] protected float attackDistance;
 
+    //Animation Handling
+    public Animator animator; // Reference to Animator component
+
 
     void Start()
     {
@@ -56,8 +59,10 @@ public class EnemyBaseClass : MonoBehaviour
         ChangeState(enemyState);
         eMaxHealth = eHealth;
         audioSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
+
     }
- 
+
     private void OnDrawGizmos()
     {
         //Visuals for different ranges
@@ -88,6 +93,9 @@ public class EnemyBaseClass : MonoBehaviour
             case EnemyState.Attack:
                 StartCoroutine("AI_Attack");
                 break;
+            case EnemyState.Dead:
+                StartCoroutine(AI_Dead());
+                break;
         }
     }
 
@@ -95,7 +103,7 @@ public class EnemyBaseClass : MonoBehaviour
     IEnumerator AI_March()
     {
 
-       
+
         print("March Beginning!");
         //Depending on which base is closer, target the closest option
         if (Vector3.Distance(baseTransform1.position, transform.position) < Vector3.Distance(baseTransform2.position, transform.position))
@@ -105,6 +113,9 @@ public class EnemyBaseClass : MonoBehaviour
 
         while (true)
         {
+            animator.SetBool("isWalking", true);  // Continuous walking animation
+            animator.SetBool("isTowards", false); // Not in chase mode
+
             //If player is in range, chase!
             if (Vector3.Distance(playerTransform.position, transform.position) < chaseDistance)
             {
@@ -133,6 +144,9 @@ public class EnemyBaseClass : MonoBehaviour
 
         while (true)
         {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isTowards", true);
+
             agent.SetDestination(playerTransform.position);
             //if agent is in attack distance, attack!
             if(Vector3.Distance(transform.position, playerTransform.position) < attackDistance)
@@ -152,17 +166,16 @@ public class EnemyBaseClass : MonoBehaviour
     //enemy attacking behavior
     IEnumerator AI_Attack()
     {
+
         Debug.Log("Attacking, RAH!");
         PlaySound(attackSound);
         float elapsedTime = 0f;
         while (true)
-        {
-            
+        {         
 
-            if(Vector3.Distance(transform.position, playerTransform.position) > attackDistance)
+            if (Vector3.Distance(transform.position, playerTransform.position) > attackDistance)
             {
                 
-                Debug.Log("Get back here!");
                 ChangeState(EnemyState.Chase);
                 yield break;
             }
@@ -174,11 +187,28 @@ public class EnemyBaseClass : MonoBehaviour
                 PlayerController.Instance.TakeDamage(eDamage);
                 Debug.Log(name + "Attacking for " + eDamage);
 
+                animator.SetTrigger("isAttacking");
+
                 elapsedTime = 0f;
             }
             yield return null;
         }
     }
+    IEnumerator AI_Dead()
+    {
+        // Make the NPC stand still and disable movement
+        agent.isStopped = true;
+        animator.SetBool("isWalking", false);
+        animator.SetBool("isTowards", false);
+        animator.SetTrigger("isDead");
+
+        PlaySound(deathSound);
+
+        yield return new WaitForSeconds(3f);  // Adjust time based on death animation duration
+
+        Destroy(gameObject);  // Destroy the NPC after death animation
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (!isDead)
@@ -213,6 +243,7 @@ public class EnemyBaseClass : MonoBehaviour
         }
         
     }
+
     //If taking damage and health drops below zero, destroy and drop gold
     void TakeDamage(double damage)
     {
@@ -220,16 +251,12 @@ public class EnemyBaseClass : MonoBehaviour
         eHealth -= (int)damage;
         if (eHealth <= 0)
         {
+            Debug.Log(eName + "has died!");
             isDead = true;
-            PlaySound(deathSound);
+            ChangeState(EnemyState.Dead);  // Transition to Dead state
             dropGold(CalcGold());
-            Invoke("DestroyObject", 1f);
-        }
-    }
 
-    void DestroyObject()
-    {
-        Destroy(gameObject);
+        }
     }
     
     int CalcGold()

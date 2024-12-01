@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5393259682176593323}
   - component: {fileID: 5850964568086459623}
   - component: {fileID: 2932840157072658290}
+  - component: {fileID: 3540248779232874437}
   m_Layer: 0
   m_Name: MediumEnemy
   m_TagString: enemy
@@ -65,6 +66,7 @@ MonoBehaviour:
   lingerDistance: 20
   playerTransform: {fileID: 0}
   attackDistance: 5
+  animator: {fileID: 0}
 --- !u!23 &2485543640033701083
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -273,6 +275,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.9, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &3540248779232874437
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449021822638516710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 45f944a4396b0a54398eb1abe6743296, type: 3}
+  m_Controller: {fileID: 9100000, guid: 3e6192235c31e47498647db71dce9ab2, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &924004291479245001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -407,7 +430,8 @@ PrefabInstance:
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5097242946122921399, guid: 1367259e5ebdeec41b79bc148cefae9f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
