@@ -65,7 +65,7 @@ public class SpawnerScript : MonoBehaviour
                 countdownTextObject.SetActive(false);
 
                 //Smallest = Wavenumber * 3, Largest = Wavenumber * 5
-                int enemyBudget = Random.Range(waveNumber * 3 + 5, waveNumber * 5 + 10);
+                int enemyBudget = Random.Range(waveNumber * 3 + 2, waveNumber * 5 + 6); // Randomize Range for budge
                 //Start the coroutine to spawn enemies by feeding it the value generated
                 yield return StartCoroutine(SpawnEnemies(enemyBudget));
                 //Wait until the game can't find any enemies left

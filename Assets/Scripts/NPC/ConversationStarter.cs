@@ -1,18 +1,21 @@
 using DialogueEditor;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ConversationStarter : MonoBehaviour
 {
 
     [SerializeField] private NPCConversation myConversation;
+    public GameObject interactable;
 
 
     private void OnTriggerStay(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+            interactable.SetActive(true);
 
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -34,6 +37,8 @@ public class ConversationStarter : MonoBehaviour
             }
 
         }
+        
+
 
 
     }
@@ -44,6 +49,7 @@ public class ConversationStarter : MonoBehaviour
         {
             ConversationManager.Instance.EndConversation(); // Call the method to end the conversation
         }
+        interactable.SetActive(false);
     }
 
 

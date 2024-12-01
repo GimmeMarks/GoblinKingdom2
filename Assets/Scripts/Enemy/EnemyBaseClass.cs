@@ -25,7 +25,7 @@ public class EnemyBaseClass : MonoBehaviour
     //Base Stats
     protected int eMaxHealth;
     [SerializeField] protected int eHealth;
-    [SerializeField] protected int eSpeed;
+    [SerializeField] protected float eSpeed;
     [SerializeField] protected int eDamage;
     [SerializeField] protected string eName;
     [SerializeField] protected float eAttackSpeed;

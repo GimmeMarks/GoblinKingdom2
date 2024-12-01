@@ -57,7 +57,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 4fce3638e207fa9488000f9fa9392d78, type: 3}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 25
-  eSpeed: 2
+  eSpeed: 1.65
   eDamage: 2
   eName: Grunt
   eAttackSpeed: 2
@@ -304,17 +304,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1284422628733537334}
     m_Modifications:
+    - target: {fileID: 1654463973048803510, guid: 6184a8518603cc24a8f4753d75525819, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 7522780932279374563, guid: 6184a8518603cc24a8f4753d75525819, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7522780932279374563, guid: 6184a8518603cc24a8f4753d75525819, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7522780932279374563, guid: 6184a8518603cc24a8f4753d75525819, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 7522780932279374563, guid: 6184a8518603cc24a8f4753d75525819, type: 3}
       propertyPath: m_LocalPosition.x
