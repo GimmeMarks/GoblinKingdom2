@@ -12,7 +12,7 @@ public class SpawnerScript : MonoBehaviour
     // Win Game Amount
     // ----------------------------------------
 
-    int winNumber = 15;
+    int winNumber = 10;
 
     // ----------------------------------------
 
@@ -43,9 +43,14 @@ public class SpawnerScript : MonoBehaviour
         StartCoroutine("WaveManager");
 
     }
+    public void EndlessMode()
+    {
+        winNumber = 999999;
+    }
+
     IEnumerator WaveManager()
     {
-        int nextWaveStartTime = 1; // WaveDelay
+        int nextWaveStartTime = 90; // WaveDelay
         
             while (true)
             {
