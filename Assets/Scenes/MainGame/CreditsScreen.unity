@@ -692,9 +692,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 743e81bf2cf946a42abb38e87d910e95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Play: {fileID: 0}
-  Tutorial: {fileID: 0}
-  Credits: {fileID: 0}
+  Play: {fileID: 22705538}
+  Tutorial: {fileID: 704105936}
+  Credits: {fileID: 184619211}
   Menu: {fileID: 1679764276}
   Quit: {fileID: 0}
 --- !u!1 &248464431
