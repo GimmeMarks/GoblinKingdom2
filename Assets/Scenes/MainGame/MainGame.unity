@@ -13616,9 +13616,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotPoint: {fileID: 1408142338}
   bulletPrefab: {fileID: 4327763063461813562, guid: b8e028626e9d0ba469d9448402d5683c, type: 3}
-  shootDelay: 3
+  shootDelay: 4
   rotationSpeed: 30
-  bulletForce: 20000
+  bulletForce: 10000
   targetEnemy: {fileID: 0}
   magetowerSound: {fileID: 8300000, guid: 3648efbba527a844282478c5427d408a, type: 3}
   audioSource: {fileID: 1532731872}
@@ -15664,9 +15664,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotPoint: {fileID: 670801684}
   bulletPrefab: {fileID: 1240887441953726, guid: 8a976dcd328a4664c85144f33b9c46b0, type: 3}
-  shootDelay: 2
+  shootDelay: 2.5
   rotationSpeed: 10
-  bulletForce: 2500
+  bulletForce: 3000
   targetEnemy: {fileID: 0}
   cannontowerSound: {fileID: 8300000, guid: 3ece77dfee0511a429a655faace69308, type: 3}
   audioSource: {fileID: 1532731872}
@@ -17896,9 +17896,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotPoint: {fileID: 1649340986}
   bulletPrefab: {fileID: 1240887441953726, guid: 8a976dcd328a4664c85144f33b9c46b0, type: 3}
-  shootDelay: 1
+  shootDelay: 2.5
   rotationSpeed: 10
-  bulletForce: 2500
+  bulletForce: 3000
   targetEnemy: {fileID: 0}
   cannontowerSound: {fileID: 8300000, guid: 3ece77dfee0511a429a655faace69308, type: 3}
   audioSource: {fileID: 1532731872}
@@ -23062,9 +23062,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotPoint: {fileID: 1947246551}
   bulletPrefab: {fileID: 1240887441953726, guid: 8a976dcd328a4664c85144f33b9c46b0, type: 3}
-  shootDelay: 1
+  shootDelay: 2.5
   rotationSpeed: 10
-  bulletForce: 2500
+  bulletForce: 3000
   targetEnemy: {fileID: 0}
   cannontowerSound: {fileID: 8300000, guid: 3ece77dfee0511a429a655faace69308, type: 3}
   audioSource: {fileID: 1532731872}
@@ -24048,9 +24048,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotPoint: {fileID: 865258711}
   bulletPrefab: {fileID: 1240887441953726, guid: 8a976dcd328a4664c85144f33b9c46b0, type: 3}
-  shootDelay: 1
+  shootDelay: 2.5
   rotationSpeed: 10
-  bulletForce: 2500
+  bulletForce: 3000
   targetEnemy: {fileID: 0}
   cannontowerSound: {fileID: 8300000, guid: 3ece77dfee0511a429a655faace69308, type: 3}
   audioSource: {fileID: 1532731872}
@@ -29850,9 +29850,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotPoint: {fileID: 1499605057}
   bulletPrefab: {fileID: 4327763063461813562, guid: b8e028626e9d0ba469d9448402d5683c, type: 3}
-  shootDelay: 3
+  shootDelay: 4
   rotationSpeed: 30
-  bulletForce: 20000
+  bulletForce: 10000
   targetEnemy: {fileID: 0}
   magetowerSound: {fileID: 8300000, guid: 3648efbba527a844282478c5427d408a, type: 3}
   audioSource: {fileID: 1532731872}
