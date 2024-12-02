@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour
     public float lookXLimit = 45.0f;
     public float gravity;
     public float speed = 5.0f;
-    public float sprintSpeed = 10.0f;
-    public float jumpForce = 3f;
+    public float sprintSpeed = 7.0f;
+    public float jumpForce = 1.5f;
     public static int goldCount; //Got to start at ground zero
 
     [Tab("Serializables")]
