@@ -140,6 +140,7 @@ public class PlayerController : MonoBehaviour
         {
             moveDirection = Vector3.zero; // Reset movement direction
             characterController.Move(Vector3.zero); // Ensure the player doesn't slide
+            UnlockMouse();
             return;
         }
 
