@@ -19,7 +19,7 @@ public class TitleScreen : MonoBehaviour
         Play.onClick.AddListener(playClick);
         Tutorial.onClick.AddListener(tutorialClick);
         Credits.onClick.AddListener(creditsClick);
-        Menu.onClick.AddListener(menuClick);
+        Menu.onClick.AddListener(titleClick);
         Quit.onClick.AddListener(quitClick);
     }
 
@@ -35,7 +35,7 @@ public class TitleScreen : MonoBehaviour
     {
         SceneManager.LoadScene("CreditsScreen");
     }
-    void menuClick()
+    void titleClick()
     {
         SceneManager.LoadScene("TitleScreen");
     }
