@@ -18,6 +18,8 @@ public class TitleScreen : MonoBehaviour
     {
         Play.onClick.AddListener(playClick);
         Tutorial.onClick.AddListener(tutorialClick);
+        Credits.onClick.AddListener(creditsClick);
+        Menu.onClick.AddListener(menuClick);
         Quit.onClick.AddListener(quitClick);
     }
 
