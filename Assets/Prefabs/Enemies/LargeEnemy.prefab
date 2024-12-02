@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6532090205212112279}
   - component: {fileID: 466918492982190241}
   - component: {fileID: 2886627864949826419}
+  - component: {fileID: 28103016078467921}
   m_Layer: 0
   m_Name: LargeEnemy
   m_TagString: enemy
@@ -57,7 +58,7 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: b474946e73248b94ea24af0f9a3152c0, type: 3}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 100
-  eSpeed: 2
+  eSpeed: 1
   eDamage: 10
   eName: Tank
   eAttackSpeed: 1
@@ -66,6 +67,7 @@ MonoBehaviour:
   lingerDistance: 20
   playerTransform: {fileID: 4474298836982701179, guid: e9f2e30183953554cb1209f29c0bce01, type: 3}
   attackDistance: 5
+  animator: {fileID: 0}
 --- !u!33 &9086585270915458026
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -282,6 +284,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &28103016078467921
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2202550640828498185}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 45f944a4396b0a54398eb1abe6743296, type: 3}
+  m_Controller: {fileID: 9100000, guid: 53096e80d65e6cd41ac6ba10ea0e143e, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5286430410063877350
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -296,15 +319,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4514671824330265017, guid: 9178ebb41a52be14ab91129a07d0d571, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514671824330265017, guid: 9178ebb41a52be14ab91129a07d0d571, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514671824330265017, guid: 9178ebb41a52be14ab91129a07d0d571, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 4514671824330265017, guid: 9178ebb41a52be14ab91129a07d0d571, type: 3}
       propertyPath: m_LocalPosition.x
@@ -478,7 +501,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Large
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1240018878491776598, guid: cc68b6e45a8305647ad419544eac8e3a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 8137162058704306189, guid: cc68b6e45a8305647ad419544eac8e3a, type: 3}
