@@ -10,6 +10,8 @@ public class TitleScreen : MonoBehaviour
 
     [SerializeField] Button Play;
     [SerializeField] Button Tutorial;
+    [SerializeField] Button Credits;
+    [SerializeField] Button Menu;
     [SerializeField] Button Quit;
 
     private void Awake()
@@ -26,6 +28,14 @@ public class TitleScreen : MonoBehaviour
     void tutorialClick()
     {
         SceneManager.LoadScene("Tutorial");
+    }
+    void creditsClick()
+    {
+        SceneManager.LoadScene("CreditsScreen");
+    }
+    void menuClick()
+    {
+        SceneManager.LoadScene("TitleScreen");
     }
     void quitClick()
     {
