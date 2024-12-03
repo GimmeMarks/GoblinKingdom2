@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public TMP_Text goldTextUI;
     public Slider SensSlider;
     public AudioSource audioSource;
+    public GameObject PlayerHitNoti;
+
 
     [Foldout("Sound Effects")]
     public AudioClip coinCollect;
@@ -97,7 +99,7 @@ public class PlayerController : MonoBehaviour
         Cursor.visible = false;
         audioSource = GetComponent<AudioSource>();
 
-        goldCount = 500;
+        goldCount = 0;
 
 
         //---------------------------------------------------------------------
@@ -197,10 +199,22 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int enemyDamage)
     {
+        
+        PlayerHitNoti.SetActive(true);
+        StartCoroutine("HurtNoti");
+
         currHealth -= enemyDamage;
         Debug.Log("Health = " + currHealth);
 
     }
+
+    IEnumerator HurtNoti()
+    {
+        yield return new WaitForSeconds(0.4f);
+        PlayerHitNoti.SetActive(false);
+    }
+
+
     private void UnlockMouse()
     {
         Cursor.lockState = CursorLockMode.None; // Unlock the cursor
