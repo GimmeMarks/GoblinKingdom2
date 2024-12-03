@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aabbbb2a98bbd5649a65b15e21fef793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
+  damage: 45
   lifetime: 1
   speed: 30
   bulletName: Lightning
