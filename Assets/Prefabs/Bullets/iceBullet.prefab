@@ -178,7 +178,10 @@ VisualEffect:
     m_Vector3f:
       m_Array: []
     m_Vector4f:
-      m_Array: []
+      m_Array:
+      - m_Value: {x: 0.31720313, y: 9.359207, z: 9.606718, w: 1}
+        m_Name: SnowColor
+        m_Overridden: 1
     m_Uint:
       m_Array: []
     m_Int:

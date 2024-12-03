@@ -38592,6 +38592,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1907375180}
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: IceShootCost
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: iceWandSound
       value: 
       objectReference: {fileID: 8300000, guid: 0ab2d341e934a9045aafddf606b9f05c, type: 3}
@@ -38602,6 +38606,10 @@ PrefabInstance:
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: BasicShootCost
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: LaserShootCost
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: SpellIndicator
@@ -38618,6 +38626,10 @@ PrefabInstance:
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: ExplosionBought
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
+      propertyPath: ExplosionShootCost
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3081210611125155570, guid: 8b2ad8d99e6999345a18235758cd3b96, type: 3}
       propertyPath: explosionWandSound
