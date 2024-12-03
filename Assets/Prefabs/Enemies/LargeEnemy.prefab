@@ -61,7 +61,7 @@ MonoBehaviour:
   eSpeed: 1
   eDamage: 10
   eName: Tank
-  eAttackSpeed: 1
+  eAttackSpeed: 3
   isDead: 0
   chaseDistance: 10
   lingerDistance: 20

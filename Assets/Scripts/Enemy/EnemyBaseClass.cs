@@ -34,6 +34,7 @@ public class EnemyBaseClass : MonoBehaviour
 
     //March info
     protected NavMeshAgent agent;
+    protected BoxCollider boxCollide;
     public Transform baseTransform1 { get; set; }
     public Transform baseTransform2 { get; set; }
 
@@ -48,18 +49,36 @@ public class EnemyBaseClass : MonoBehaviour
     //Animation Handling
     public Animator animator; // Reference to Animator component
 
+    private bool isWalking = true;
+    private bool isChasing = false;
+
 
     void Start()
     {
         //Intitializing agents calling methods. 
         agent = GetComponent<NavMeshAgent>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
         agent.speed = eSpeed;
         enemyState = EnemyState.March;
         ChangeState(enemyState);
         eMaxHealth = eHealth;
         audioSource = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
+        boxCollide = GetComponent<BoxCollider>();
+
+    }
+    private void Update()
+    {
+        if (isWalking)
+        {
+            animator.SetBool("isWalking", true);  // Continuous walking animation
+            animator.SetBool("isTowards", false); // Not in chase mode
+        }
+        if (isChasing)
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isTowards", true);
+        }
 
     }
 
@@ -113,9 +132,8 @@ public class EnemyBaseClass : MonoBehaviour
 
         while (true)
         {
-            //animator.SetBool("isWalking", true);  // Continuous walking animation
-            //animator.SetBool("isTowards", false); // Not in chase mode
-
+            isWalking = true;
+            isChasing = false;
             //If player is in range, chase!
             if (Vector3.Distance(playerTransform.position, transform.position) < chaseDistance)
             {
@@ -144,8 +162,9 @@ public class EnemyBaseClass : MonoBehaviour
 
         while (true)
         {
-            //animator.SetBool("isWalking", false);
-            //animator.SetBool("isTowards", true);
+            isWalking = false;
+            isChasing = true;
+            
 
             agent.SetDestination(playerTransform.position);
             //if agent is in attack distance, attack!
@@ -203,6 +222,7 @@ public class EnemyBaseClass : MonoBehaviour
         animator.SetTrigger("isDead");
 
         PlaySound(deathSound);
+        boxCollide.enabled = false;
 
         yield return new WaitForSeconds(3f);  // Adjust time based on death animation duration
 

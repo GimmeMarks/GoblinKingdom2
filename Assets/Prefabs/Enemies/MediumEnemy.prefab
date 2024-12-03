@@ -58,9 +58,9 @@ MonoBehaviour:
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 55
   eSpeed: 1.25
-  eDamage: 5
+  eDamage: 10
   eName: Knight
-  eAttackSpeed: 3
+  eAttackSpeed: 2
   isDead: 0
   chaseDistance: 10
   lingerDistance: 20

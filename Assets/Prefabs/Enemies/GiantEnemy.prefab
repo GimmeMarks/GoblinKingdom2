@@ -59,9 +59,9 @@ MonoBehaviour:
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 160
   eSpeed: 0.8
-  eDamage: 10
+  eDamage: 15
   eName: Rider
-  eAttackSpeed: 1
+  eAttackSpeed: 5
   isDead: 0
   chaseDistance: 10
   lingerDistance: 20

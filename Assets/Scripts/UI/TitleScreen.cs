@@ -33,15 +33,24 @@ public class TitleScreen : MonoBehaviour
     }
     void creditsClick()
     {
+        Debug.Log("Trying to quit");
         SceneManager.LoadScene("CreditsScreen");
     }
     void titleScreenClick()
     {
+        Debug.Log("Trying to quit");
         SceneManager.LoadScene("TitleScreen");
     }
-    void quitClick()
+    public void quitClick()
     {
-        Application.Quit();
+        Debug.Log("Trying to quit");
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+    Application.Quit();
+#endif
+        Debug.Log("It was processed");
     }
+
 
 }

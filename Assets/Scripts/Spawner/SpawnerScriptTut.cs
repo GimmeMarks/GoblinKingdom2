@@ -24,7 +24,6 @@ public class SpawnerScriptTut : MonoBehaviour
     [SerializeField] TMP_Text countdownText;
     [SerializeField] TMP_Text roundText;
     [SerializeField] GameObject countdownTextObject;
-    [SerializeField] GameObject winScreen;
     [SerializeField] GameObject playerUI;
     [SerializeField] GameObject bridgeBarrier;
     //Base Locations

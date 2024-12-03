@@ -13073,6 +13073,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6192894157709613144, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
+      propertyPath: m_text
+      value: Raise the Flag to Start!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192894157709613144, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
+      propertyPath: m_fontSize
+      value: 60.95
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15518,7 +15526,7 @@ MonoBehaviour:
   iceWandSound: {fileID: 8300000, guid: 0ab2d341e934a9045aafddf606b9f05c, type: 3}
   ManaRegen: {fileID: 0}
   audioSource: {fileID: 0}
-  SpellIndicator: {fileID: 0}
+  SpellIndicator: {fileID: 1606875886}
   chargeTime: 1
   ChargeEffect: {fileID: 0}
   currMana: 100
@@ -15532,7 +15540,7 @@ MonoBehaviour:
   IceFireRate: 1
   ExplosionFireRate: 4
   canShoot: 1
-  PlayerController: {fileID: 0}
+  PlayerController: {fileID: 916127826}
   regen: 1
   regenDelay: 0
   regenUpdateInterval: 1
@@ -16389,6 +16397,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4243724423293762, guid: c07f24e35f07ce74ba43afa35d48adf7, type: 3}
   m_PrefabInstance: {fileID: 946816115}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &974038804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6347168123042653808, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
+  m_PrefabInstance: {fileID: 803067010}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &974038806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6226947921171520045, guid: 16b621e06e776a44aa775ec2ef628dc6, type: 3}
+  m_PrefabInstance: {fileID: 803067010}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974038804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &976257582 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4294453333628334, guid: e1ad20f44ad21f6448a11f707d185806, type: 3}
@@ -23759,11 +23783,10 @@ MonoBehaviour:
   largeEnemy: {fileID: 1642028293503218175, guid: 0184ecb48780fe34b9db11690d1cf560, type: 3}
   riderEnemy: {fileID: 449021822638516710, guid: ca8fbbcd71107df4093ff41ee38d7868, type: 3}
   flyerEnemy: {fileID: 3116840150935933324, guid: c63959965ba0f1e4ba6691a8b91672e2, type: 3}
-  countdownText: {fileID: 0}
-  roundText: {fileID: 0}
-  countdownTextObject: {fileID: 0}
-  winScreen: {fileID: 0}
-  playerUI: {fileID: 0}
+  countdownText: {fileID: 974038806}
+  roundText: {fileID: 2132508910}
+  countdownTextObject: {fileID: 974038804}
+  playerUI: {fileID: 803067015}
   bridgeBarrier: {fileID: 1571158636}
   baseLocation1: {fileID: 1400180849}
   baseLocation2: {fileID: 1937580371}
