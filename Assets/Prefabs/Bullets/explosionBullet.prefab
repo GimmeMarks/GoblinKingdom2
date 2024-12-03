@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 40
   lifetime: 10
-  speed: 8
+  speed: 20
   damageBuff: 0
   bulletName: Explosion!
 --- !u!33 &5135760712305374082
@@ -163,7 +163,7 @@ VisualEffect:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9122088148645627994}
   m_Enabled: 1
-  m_Asset: {fileID: 8926484042661614526, guid: a962f3c84b38afc4fb40c620ad151d78, type: 3}
+  m_Asset: {fileID: 8926484042661614526, guid: 4fd54df8c1c4a184eac8a169ce08d934, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
