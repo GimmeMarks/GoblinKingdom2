@@ -58,8 +58,8 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: b474946e73248b94ea24af0f9a3152c0, type: 3}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 100
-  eSpeed: 1
-  eDamage: 10
+  eSpeed: 1.65
+  eDamage: 12
   eName: Tank
   eAttackSpeed: 3
   isDead: 0

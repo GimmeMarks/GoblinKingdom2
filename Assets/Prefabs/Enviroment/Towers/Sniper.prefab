@@ -699,10 +699,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pivotPoint: {fileID: 994931018302566964}
   bulletPrefab: {fileID: 0}
-  shootDelay: 1
+  shootDelay: 5
   rotationSpeed: 5
   bulletForce: 1000
   targetEnemy: {fileID: 0}
+  cannontowerSound: {fileID: 0}
+  audioSource: {fileID: 0}
 --- !u!4 &994931018302566964 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4165866241402844, guid: 997eda0f844715845a30121b4553e2fd, type: 3}

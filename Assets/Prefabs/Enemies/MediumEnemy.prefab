@@ -57,8 +57,8 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: 7dbba4e0b1a2a5449b7c0999d633691b, type: 3}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 55
-  eSpeed: 1.25
-  eDamage: 10
+  eSpeed: 1.8
+  eDamage: 7
   eName: Knight
   eAttackSpeed: 2
   isDead: 0

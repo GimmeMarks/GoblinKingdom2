@@ -61,7 +61,7 @@ MonoBehaviour:
   attackSound: {fileID: 0}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 15
-  eSpeed: 2
+  eSpeed: 2.5
   eDamage: 2
   eName: Flyer
   eAttackSpeed: 2

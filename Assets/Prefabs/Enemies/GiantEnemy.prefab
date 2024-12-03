@@ -58,15 +58,15 @@ MonoBehaviour:
   attackSound: {fileID: 8300000, guid: f969dab9c4260da4087f006fbfca3859, type: 3}
   goldDrop: {fileID: 85020744021286743, guid: 063bb12e61cb5a645b0257090a200d82, type: 3}
   eHealth: 160
-  eSpeed: 0.8
-  eDamage: 15
+  eSpeed: 1.25
+  eDamage: 25
   eName: Rider
   eAttackSpeed: 5
   isDead: 0
   chaseDistance: 10
   lingerDistance: 20
   playerTransform: {fileID: 0}
-  attackDistance: 2
+  attackDistance: 3
   animator: {fileID: 0}
 --- !u!33 &7602329030657723631
 MeshFilter:
