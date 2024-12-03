@@ -50,7 +50,7 @@ public class SpawnerScript : MonoBehaviour
 
     IEnumerator WaveManager()
     {
-        int nextWaveStartTime = 5; // WaveDelay
+        int nextWaveStartTime = 10; // WaveDelay
         
             while (true)
             {
@@ -91,7 +91,7 @@ public class SpawnerScript : MonoBehaviour
             //Once all enemies are dead, increase wave counter and push to the UI element
             */
                 waveNumber++;
-                nextWaveStartTime = 60;
+                nextWaveStartTime = 90;
                 
             
         }
