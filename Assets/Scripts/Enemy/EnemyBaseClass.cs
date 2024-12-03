@@ -113,8 +113,8 @@ public class EnemyBaseClass : MonoBehaviour
 
         while (true)
         {
-            animator.SetBool("isWalking", true);  // Continuous walking animation
-            animator.SetBool("isTowards", false); // Not in chase mode
+            //animator.SetBool("isWalking", true);  // Continuous walking animation
+            //animator.SetBool("isTowards", false); // Not in chase mode
 
             //If player is in range, chase!
             if (Vector3.Distance(playerTransform.position, transform.position) < chaseDistance)
@@ -144,8 +144,8 @@ public class EnemyBaseClass : MonoBehaviour
 
         while (true)
         {
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isTowards", true);
+            //animator.SetBool("isWalking", false);
+            //animator.SetBool("isTowards", true);
 
             agent.SetDestination(playerTransform.position);
             //if agent is in attack distance, attack!
